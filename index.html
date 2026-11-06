@@ -953,6 +953,8 @@
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
         gap: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
         background: rgba(3, 18, 44, 0.78) !important;
         border: 1px solid rgba(255, 255, 255, 0.12) !important;
         border-radius: 14px !important;
@@ -961,6 +963,10 @@
 
       .tf26-feature-item {
         padding: 4px;
+      }
+
+      .tf26-feature-item:last-child {
+        grid-column: 1 / -1;
       }
 
       .tf26-feature-sep {
@@ -4473,7 +4479,7 @@
                 </div>
 
                 <div class="tf26-hero-features" aria-label="Keunggulan Program">
-                  <!-- 1: Talkshow Bersama Alumni -->
+                  <!-- 1: Talkshow Pemateri -->
                   <div class="tf26-feature-item">
                     <div class="tf26-feature-icon" aria-hidden="true">
                       <svg viewBox="0 0 24 24" fill="none" stroke="#ffc72c" stroke-width="2" stroke-linecap="round"
@@ -4491,31 +4497,13 @@
                     </div>
                     <div class="tf26-feature-text">
                       <strong>Talkshow</strong>
-                      <span>Bersama Alumni</span>
+                      <span>Pemateri</span>
                     </div>
                   </div>
 
                   <div class="tf26-feature-sep" aria-hidden="true"></div>
 
-                  <!-- 2: Simulasi & Tryout Seleksi -->
-                  <div class="tf26-feature-item">
-                    <div class="tf26-feature-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="#ffc72c" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <circle cx="12" cy="12" r="6"></circle>
-                        <circle cx="12" cy="12" r="2" fill="#ffc72c"></circle>
-                      </svg>
-                    </div>
-                    <div class="tf26-feature-text">
-                      <strong>Simulasi &amp;</strong>
-                      <span>Tryout Seleksi</span>
-                    </div>
-                  </div>
-
-                  <div class="tf26-feature-sep" aria-hidden="true"></div>
-
-                  <!-- 3: Pemetaan Kesiapan Diri -->
+                  <!-- 2: Pemetaan Kesiapan Diri -->
                   <div class="tf26-feature-item">
                     <div class="tf26-feature-icon" aria-hidden="true">
                       <svg viewBox="0 0 24 24" fill="none" stroke="#ffc72c" stroke-width="2" stroke-linecap="round"
