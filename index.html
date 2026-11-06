@@ -1,0 +1,5575 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#041b3a">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description"
+    content="Taruna Fest 2026. Festival edukasi dan pemetaan kesiapan calon Taruna dan peserta Sekolah Kedinasan di Yogyakarta.">
+  <title>Taruna Fest 2026 | Ukur & Kenali Kesiapanmu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Barlow+Condensed:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://unpkg.com/lenis@1.3.27/dist/lenis.min.js"></script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '636657185718283');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=636657185718283&ev=PageView&noscript=1" alt="" /></noscript>
+  <!-- End Meta Pixel Code -->
+
+
+  <style>
+    /* ================================================================
+   TARUNA FEST 2026 · SINGLE-FILE STYLESHEET
+   All project selectors use the tf26- namespace.
+   ================================================================ */
+    /* ================================================================
+   TARUNA FEST 2026 · IMMERSIVE STORY EXPERIENCE
+   All authored selectors are scoped with the unique tf26- prefix.
+   ================================================================ */
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+
+    .tf26-page {
+      --tf26-navy: #041a38;
+      --tf26-deep: #03132d;
+      --tf26-blue: #07539d;
+      --tf26-blue-bright: #1282d6;
+      --tf26-blue-soft: #8ec9f7;
+      --tf26-gold: #ffbd19;
+      --tf26-gold-2: #ffd35d;
+      --tf26-white: #f7fbff;
+      --tf26-muted: #b6c9df;
+      --tf26-line: rgba(202, 226, 255, .22);
+      --tf26-glass: rgba(4, 26, 56, .66);
+      --tf26-header-h: 76px;
+      --tf26-font: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      --tf26-display: "Barlow Condensed", Impact, sans-serif;
+      position: relative;
+      z-index: 0;
+      width: 100%;
+      max-width: 100vw;
+      margin: 0;
+      overflow-x: hidden;
+      isolation: isolate;
+      background: var(--tf26-deep);
+      color: var(--tf26-white);
+      font-family: var(--tf26-font);
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .tf26-page *,
+    .tf26-page *::before,
+    .tf26-page *::after {
+      box-sizing: border-box;
+    }
+
+    .tf26-page a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .tf26-page img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .tf26-page button,
+    .tf26-page summary {
+      font: inherit;
+    }
+
+    .tf26-page button:focus-visible,
+    .tf26-page a:focus-visible,
+    .tf26-page summary:focus-visible {
+      outline: 3px solid var(--tf26-gold);
+      outline-offset: 4px;
+    }
+
+    .tf26-world {
+      position: fixed;
+      z-index: -1;
+      inset: 0;
+      width: 100vw;
+      max-width: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      background: #061e43;
+    }
+
+    .tf26-world__image {
+      position: absolute;
+      inset: -7% -5%;
+      width: 110%;
+      height: 114%;
+      max-width: none;
+      object-fit: cover;
+      object-position: 49% 38%;
+      opacity: .58;
+      filter: saturate(1.13) contrast(1.05);
+      transform: scale(1.05);
+      will-change: transform;
+    }
+
+    .tf26-world__wash {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(2, 18, 43, .95) 0%, rgba(3, 28, 63, .78) 42%, rgba(4, 38, 78, .38) 72%, rgba(3, 23, 52, .67) 100%),
+        linear-gradient(180deg, rgba(3, 19, 42, .32) 0%, rgba(3, 19, 42, .08) 38%, rgba(3, 14, 34, .84) 100%);
+    }
+
+    .tf26-world__horizon {
+      position: absolute;
+      right: -18vw;
+      bottom: -55vh;
+      left: -18vw;
+      height: 75vh;
+      border: 1px solid rgba(255, 198, 52, .15);
+      border-radius: 50% 50% 0 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(18, 112, 190, .22), rgba(3, 16, 39, .82) 68%);
+      box-shadow: 0 -30px 110px rgba(13, 97, 168, .16);
+    }
+
+    .tf26-world__grain {
+      position: absolute;
+      inset: 0;
+      opacity: .12;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+      mix-blend-mode: soft-light;
+    }
+
+    .tf26-world__coordinates {
+      position: absolute;
+      right: 30px;
+      bottom: 24px;
+      color: rgba(223, 239, 255, .45);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      writing-mode: vertical-rl;
+    }
+
+    .tf26-header {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 72px;
+      min-height: 72px;
+      border-bottom: 1px solid rgba(0, 20, 50, .06);
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 16, 45, .08);
+      color: #071d43;
+    }
+
+    .tf26-header__inner {
+      display: flex;
+      width: min(100% - 54px, 1520px);
+      min-height: var(--tf26-header-h);
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      margin-inline: auto;
+    }
+
+    .tf26-brand {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      width: 210px;
+    }
+
+    .tf26-brand__logo {
+      height: 42px;
+      width: auto;
+      max-height: 42px;
+      object-fit: contain;
+      object-position: left center;
+      display: block;
+    }
+
+    .tf26-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(18px, 2.1vw, 38px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tf26-nav a {
+      position: relative;
+      padding: 9px 0;
+      color: #071d43;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+      transition: color .22s ease;
+    }
+
+    .tf26-nav a::after {
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+      left: 0;
+      height: 2px;
+      background: var(--tf26-gold);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .22s ease;
+    }
+
+    .tf26-nav a:hover,
+    .tf26-nav a.tf26-is-active {
+      color: #0758a7;
+    }
+
+    .tf26-nav a:hover::after,
+    .tf26-nav a.tf26-is-active::after {
+      transform: scaleX(1);
+    }
+
+    .tf26-button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 12px 22px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.15;
+      text-align: center;
+      transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+    }
+
+    .tf26-button:hover {
+      transform: translateY(-3px);
+    }
+
+    .tf26-button--nav,
+    .tf26-button--primary {
+      color: #071b3a;
+      background: linear-gradient(115deg, #ffce42 0%, #ffb500 100%);
+      box-shadow: 0 10px 25px rgba(244, 170, 0, .23), inset 0 1px 0 rgba(255, 255, 255, .65);
+    }
+
+    .tf26-button--nav {
+      min-width: 156px;
+      min-height: 42px;
+      padding: 9px 20px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #071b3a;
+      background: linear-gradient(90deg, #ffbd19 0%, #ffa500 100%);
+      border-radius: 999px;
+      box-shadow: 0 4px 14px rgba(255, 170, 0, .35);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .tf26-button--nav:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(255, 170, 0, .45);
+    }
+
+    .tf26-button--primary:hover,
+    .tf26-button--nav:hover {
+      box-shadow: 0 14px 30px rgba(244, 170, 0, .35), inset 0 1px 0 rgba(255, 255, 255, .65);
+    }
+
+    .tf26-button--ghost {
+      border-color: rgba(236, 246, 255, .68);
+      color: white;
+      background: rgba(5, 29, 66, .36);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12);
+      backdrop-filter: blur(8px);
+    }
+
+    .tf26-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: .8;
+    }
+
+    .tf26-menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 6px;
+      border: 1px solid rgba(4, 32, 69, .18);
+      border-radius: 12px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .tf26-menu-toggle span {
+      display: block;
+      width: 19px;
+      height: 2px;
+      border-radius: 5px;
+      background: #06224b;
+      transition: transform .2s ease;
+    }
+
+    .tf26-main {
+      position: relative;
+      padding-top: var(--tf26-header-h);
+    }
+
+    .tf26-scroll-hint {
+      position: fixed;
+      z-index: 11;
+      right: 26px;
+      bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(238, 247, 255, .64);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .19em;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+
+    .tf26-scroll-hint span {
+      position: relative;
+      display: block;
+      width: 30px;
+      height: 1px;
+      background: var(--tf26-gold);
+    }
+
+    .tf26-scroll-hint span::after {
+      position: absolute;
+      top: -3px;
+      right: 0;
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid var(--tf26-gold);
+      border-right: 1px solid var(--tf26-gold);
+      content: "";
+      transform: rotate(45deg);
+    }
+
+    .tf26-progress {
+      position: fixed;
+      z-index: 48;
+      top: var(--tf26-header-h);
+      left: 0;
+      width: 3px;
+      height: calc(100vh - var(--tf26-header-h));
+      background: rgba(255, 255, 255, .08);
+      pointer-events: none;
+    }
+
+    .tf26-progress__bar {
+      display: block;
+      width: 100%;
+      height: 0;
+      background: linear-gradient(180deg, #fff0a1, var(--tf26-gold), #ec8b00);
+      box-shadow: 0 0 16px rgba(255, 190, 25, .65);
+    }
+
+    .tf26-stage {
+      position: relative;
+      width: 100%;
+    }
+
+    .tf26-chapter {
+      position: relative;
+      scroll-margin-top: calc(var(--tf26-header-h) + 12px);
+      display: flex;
+      min-height: min(100svh, 1020px);
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(38px, 5.2vw, 82px) max(6.4vw, 28px) clamp(40px, 5vw, 76px);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .tf26-chapter::before {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 78% 45%, rgba(19, 114, 194, .25), transparent 42%),
+        linear-gradient(105deg, rgba(2, 16, 39, .8) 0%, rgba(4, 26, 57, .78) 52%, rgba(4, 23, 51, .9) 100%);
+      content: "";
+    }
+
+    .tf26-chapter__topline {
+      position: absolute;
+      top: 28px;
+      right: max(6.4vw, 28px);
+      left: max(6.4vw, 28px);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: rgba(209, 229, 249, .55);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .2em;
+    }
+
+    .tf26-section-kicker {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--tf26-gold);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .19em;
+    }
+
+    .tf26-section-kicker::before {
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--tf26-gold);
+      content: "";
+    }
+
+    .tf26-display {
+      margin: 12px 0 0;
+      color: var(--tf26-white);
+      font-family: var(--tf26-display);
+      font-size: clamp(42px, 5vw, 76px);
+      font-weight: 800;
+      line-height: .89;
+      letter-spacing: -.025em;
+      text-transform: uppercase;
+    }
+
+    .tf26-display em {
+      color: var(--tf26-gold);
+      font-style: normal;
+    }
+
+    /* HERO */
+    /* ====== HERO SECTION ====== */
+    .tf26-chapter--hero {
+      position: relative;
+      z-index: 2;
+      min-height: auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: calc(var(--tf26-header-h) + 16px);
+      padding-bottom: 30px;
+    }
+
+    .tf26-chapter--hero::before {
+      display: none !important;
+    }
+
+    .tf26-hero-wrapper {
+      width: min(100% - 32px, 1420px);
+      margin: 0 auto;
+    }
+
+    .tf26-hero-card {
+      position: relative;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 32px 90px rgba(2, 14, 38, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.12);
+      background: linear-gradient(112deg, #041838 0%, #062656 36%, #0b3e7e 62%, #1660af 82%, #2b7bcc 100%);
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tf26-hero-card:hover {
+      box-shadow: 0 36px 95px rgba(2, 14, 38, 0.72), 0 0 0 1px rgba(255, 189, 25, 0.3);
+    }
+
+    /* Background Atmosphere (Model area reserved empty as requested) */
+    .tf26-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 85% 20%, rgba(180, 225, 255, 0.45) 0%, rgba(80, 160, 240, 0.2) 42%, transparent 70%),
+        radial-gradient(circle at 12% 88%, rgba(2, 16, 42, 0.98) 0%, rgba(4, 25, 62, 0.75) 50%, transparent 80%),
+        linear-gradient(108deg, #041838 0%, #062656 36%, #0b3e7e 62%, #1660af 82%, #2b7bcc 100%);
+    }
+
+    .tf26-hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg,
+          rgba(3, 20, 48, 0.97) 0%,
+          rgba(4, 24, 56, 0.92) 36%,
+          rgba(4, 24, 56, 0.52) 52%,
+          rgba(4, 24, 56, 0.08) 68%,
+          transparent 84%);
+    }
+
+    /* Cadets Trio Model Area (Hero Model) */
+    .tf26-hero-model-area {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: clamp(520px, 57%, 800px);
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .tf26-hero-cadets-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% bottom;
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 6%, black 16%, black 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 6%, black 16%, black 100%);
+    }
+
+    .tf26-hero-model-area::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(3, 18, 44, 0.72) 0%, rgba(3, 18, 44, 0.2) 20%, transparent 42%);
+      pointer-events: none;
+    }
+
+    /* Wavy Indonesian Flag Ribbons */
+    .tf26-flag-ribbon {
+      position: absolute;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .tf26-flag-ribbon--left {
+      bottom: 0;
+      left: 0;
+      width: clamp(160px, 18vw, 250px);
+      height: clamp(50px, 6vw, 85px);
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
+    }
+
+    .tf26-flag-ribbon--right {
+      display: none !important;
+    }
+
+    .tf26-flag-ribbon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Hero Content Overlay (left side) */
+    .tf26-hero-overlay {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(32px, 3.5vw, 44px) clamp(24px, 3.8vw, 50px) 16px;
+      max-width: 520px;
+      overflow: visible;
+    }
+
+    /* Headline Visual: Logo Image (FESTIVAL PERSIAPAN TARUNA - TARUNA FEST 2026) */
+    .tf26-hero__title-visual {
+      margin: 0 0 16px;
+      display: block;
+      width: 100%;
+      max-width: clamp(320px, 32vw, 440px);
+      position: relative;
+    }
+
+    .tf26-hero-headline-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 28px rgba(1, 14, 38, 0.75));
+    }
+
+    .tf26-sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Subtitle */
+    .tf26-hero__subtitle {
+      margin: 0 0 14px;
+      color: #FFFFFF;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(13px, 1.15vw, 15.5px);
+      font-weight: 700;
+      line-height: 1.45;
+      text-shadow: 0 2px 10px rgba(0, 15, 45, 0.85);
+      max-width: 480px;
+    }
+
+    /* Category Chips: AKPOL, AKMIL, KEDINASAN */
+    .tf26-category-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .tf26-category-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(6, 26, 60, 0.72);
+      border: 1.5px solid rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(10px);
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      box-shadow: 0 4px 14px rgba(0, 12, 35, 0.35);
+    }
+
+    .tf26-cat-icon {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+    }
+
+    /* Tagline with Gold Bar */
+    .tf26-hero__tagline {
+      display: flex;
+      align-items: stretch;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .tf26-gold-bar {
+      width: 4.5px;
+      background: #ffc72c;
+      border-radius: 2px;
+      transform: skewX(-14deg);
+      box-shadow: 0 0 12px rgba(255, 199, 44, 0.7);
+      flex-shrink: 0;
+    }
+
+    .tf26-hero__tagline p {
+      margin: 0;
+      color: #ffffff;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(13.5px, 1.2vw, 17px);
+      font-weight: 800;
+      font-style: italic;
+      line-height: 1.35;
+      text-shadow: 0 3px 12px rgba(0, 15, 45, 0.85);
+    }
+
+    /* Bottom Bar: CTA on left + 4 Features */
+    .tf26-hero-bottom-bar {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: clamp(16px, 2.2vw, 34px);
+      padding: 0 clamp(24px, 4vw, 54px) clamp(20px, 2.5vw, 30px);
+    }
+
+    .tf26-hero-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 26px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ffd033 0%, #ff9e00 100%);
+      color: #04142d;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(13px, 1.05vw, 14.5px);
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(255, 175, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .tf26-hero-cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(255, 175, 0, 0.65);
+    }
+
+    .tf26-hero-features {
+      display: flex;
+      align-items: center;
+      gap: clamp(12px, 1.6vw, 24px);
+      background: rgba(3, 18, 44, 0.62);
+      backdrop-filter: blur(8px);
+      padding: 8px clamp(14px, 1.6vw, 22px);
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 6px 20px rgba(0, 8, 24, 0.4);
+    }
+
+    .tf26-feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 4px;
+    }
+
+    .tf26-feature-icon {
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tf26-feature-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .tf26-feature-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+    }
+
+    .tf26-feature-text strong {
+      color: #ffffff;
+      font-size: clamp(10.5px, 0.88vw, 12px);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .tf26-feature-text span {
+      color: #d8e9ff;
+      font-size: clamp(9.5px, 0.8vw, 11px);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .tf26-feature-sep {
+      width: 1px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.22);
+      flex-shrink: 0;
+    }
+
+    .tf26-hero-card .tf26-eventbar {
+      display: none !important;
+    }
+
+    .tf26-hero-mobile-actions,
+    .tf26-eventbar--mobile {
+      display: none !important;
+    }
+
+    @media (max-width: 1024px) {
+      .tf26-hero-overlay {
+        max-width: 520px;
+        padding-right: 20px;
+      }
+
+      .tf26-hero__title-visual {
+        max-width: 420px;
+      }
+
+      .tf26-hero-bottom-bar {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .tf26-hero-features {
+        flex-wrap: wrap;
+        border-radius: 16px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .tf26-chapter--hero {
+        padding-top: 10px !important;
+        padding-bottom: 20px !important;
+      }
+
+      .tf26-hero-wrapper {
+        width: min(100% - 20px, 1440px);
+      }
+
+      .tf26-hero-card {
+        border-radius: 18px;
+        min-height: auto;
+      }
+
+      .tf26-hero-model-area {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.28;
+      }
+
+      .tf26-hero-cadets-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% top;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.35) 45%, rgba(0, 0, 0, 0.05) 75%, transparent 100%);
+        -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.35) 45%, rgba(0, 0, 0, 0.05) 75%, transparent 100%);
+      }
+
+      .tf26-hero-overlay {
+        padding: 22px 16px 14px;
+        max-width: 100%;
+      }
+
+      .tf26-hero__title-visual {
+        max-width: min(100%, 340px);
+        margin: 0 0 14px;
+      }
+
+      .tf26-hero__subtitle {
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+
+      .tf26-category-chips {
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .tf26-category-chip {
+        padding: 5px 12px;
+        font-size: 11px;
+        gap: 6px;
+      }
+
+      .tf26-cat-icon {
+        width: 15px;
+        height: 15px;
+      }
+
+      .tf26-hero__tagline {
+        margin-bottom: 16px;
+        gap: 10px;
+      }
+
+      .tf26-gold-bar {
+        width: 3.5px;
+      }
+
+      .tf26-hero__tagline p {
+        font-size: 12.5px;
+      }
+
+      .tf26-hero-bottom-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 0 16px 20px;
+      }
+
+      .tf26-hero-cta-wrap {
+        width: 100%;
+      }
+
+      .tf26-hero-cta-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 13px 20px;
+        font-size: 13.5px;
+        box-sizing: border-box;
+      }
+
+      .tf26-hero-features {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+        background: rgba(3, 18, 44, 0.78) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        border-radius: 14px !important;
+        padding: 12px 10px !important;
+      }
+
+      .tf26-feature-item {
+        padding: 4px;
+      }
+
+      .tf26-feature-sep {
+        display: none !important;
+      }
+
+      .tf26-flag-ribbon--left {
+        width: 110px;
+        height: 40px;
+        opacity: 0.55;
+        z-index: 0;
+      }
+
+      .tf26-flag-ribbon--right {
+        width: 120px;
+        height: 45px;
+        opacity: 0.55;
+        z-index: 0;
+      }
+    }
+
+    .tf26-hero__content {
+      position: relative;
+      z-index: 3;
+      width: min(52%, 690px);
+      max-width: 690px;
+      margin-left: max(3vw, 12px);
+    }
+
+    .tf26-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      color: rgba(243, 249, 255, .8);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .23em;
+    }
+
+    .tf26-eyebrow__line {
+      display: inline-block;
+      width: 34px;
+      height: 2px;
+      background: var(--tf26-gold);
+    }
+
+    .tf26-hero__coming {
+      display: inline-block;
+      padding: 5px 16px 4px;
+      color: #061b3d;
+      background: var(--tf26-gold);
+      clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+      font-size: 13px;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: .1em;
+    }
+
+    .tf26-hero__title {
+      display: flex;
+      flex-direction: column;
+      margin: 10px 0 8px;
+      color: #fff;
+      font-family: var(--tf26-display);
+      font-size: clamp(76px, 9vw, 142px);
+      font-weight: 900;
+      line-height: .72;
+      letter-spacing: -.035em;
+      text-shadow: 0 10px 36px rgba(0, 11, 32, .3);
+    }
+
+    .tf26-hero__title span+span {
+      margin-top: 12px;
+    }
+
+    .tf26-hero__title em {
+      color: var(--tf26-gold);
+      font-style: normal;
+    }
+
+    .tf26-hero__description {
+      margin: 24px 0 12px;
+      color: #f0f7ff;
+      font-size: clamp(14px, 1.25vw, 18px);
+      font-weight: 700;
+      line-height: 1.38;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+    }
+
+    .tf26-hero__promise {
+      position: relative;
+      margin: 0 0 24px 4px;
+      padding-left: 18px;
+      color: white;
+      font-size: clamp(18px, 1.8vw, 25px);
+      font-weight: 800;
+      font-style: italic;
+      line-height: 1.02;
+      text-shadow: 0 3px 15px rgba(0, 0, 0, .35);
+    }
+
+    .tf26-hero__promise span {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 6px;
+      background: var(--tf26-gold);
+      transform: skew(-17deg);
+    }
+
+    .tf26-hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tf26-hero__actions .tf26-button {
+      min-height: 52px;
+      padding-inline: 24px;
+    }
+
+    .tf26-hero__edition {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 32px;
+      color: rgba(237, 247, 255, .55);
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .2em;
+    }
+
+    .tf26-hero__edition span {
+      color: var(--tf26-gold);
+    }
+
+    .tf26-hero__edition i {
+      display: inline-block;
+      width: 32px;
+      height: 1px;
+      background: rgba(255, 255, 255, .35);
+    }
+
+    .tf26-hero__orbit {
+      position: absolute;
+      z-index: 1;
+      border: 1px solid rgba(255, 196, 45, .18);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .tf26-hero__orbit--one {
+      top: 5%;
+      right: 13%;
+      width: min(43vw, 600px);
+      aspect-ratio: 1;
+      transform: rotate(-27deg) scaleY(.62);
+    }
+
+    .tf26-hero__orbit--two {
+      top: 12%;
+      right: 18%;
+      width: min(32vw, 440px);
+      aspect-ratio: 1;
+      border-color: rgba(186, 224, 255, .16);
+      transform: rotate(24deg) scaleY(.6);
+    }
+
+    .tf26-eventbar {
+      position: relative;
+      z-index: 5;
+      margin: 0 max(4vw, 24px) 24px;
+      display: grid;
+      grid-template-columns: 1fr 1.35fr 1fr 1.2fr;
+      overflow: hidden;
+      border: 1px solid rgba(220, 240, 255, .74);
+      border-radius: 19px;
+      background: rgba(244, 249, 255, .95);
+      box-shadow: 0 18px 45px rgba(0, 15, 40, .26), inset 0 1px 0 #fff;
+      color: #071d43;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .tf26-eventbar__item {
+      position: relative;
+      display: flex;
+      min-height: 72px;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 11px 18px;
+    }
+
+    .tf26-eventbar__item+.tf26-eventbar__item::before {
+      position: absolute;
+      top: 18px;
+      bottom: 18px;
+      left: 0;
+      width: 1px;
+      background: rgba(13, 53, 104, .26);
+      content: "";
+    }
+
+    .tf26-eventbar__icon {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #f5a900;
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .tf26-eventbar__icon svg {
+      width: 34px;
+      height: 34px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .tf26-eventbar__item span:last-child {
+      display: flex;
+      flex-direction: column;
+      font-size: 11px;
+      line-height: 1.25;
+    }
+
+    .tf26-eventbar__item b,
+    .tf26-eventbar__item strong {
+      color: #071d43;
+      font-size: clamp(10px, .92vw, 14px);
+      font-weight: 850;
+    }
+
+    .tf26-eventbar__quota {
+      color: #e72525 !important;
+      font-family: var(--tf26-display);
+      font-size: 23px !important;
+      font-style: italic;
+      line-height: 1;
+    }
+
+    /* ABOUT + FIVE EXPERIENCES */
+    .tf26-chapter--about {
+      justify-content: center;
+      padding-top: 86px;
+      padding-bottom: 48px;
+    }
+
+    .tf26-about__intro {
+      display: grid;
+      grid-template-columns: 1.03fr .97fr;
+      align-items: end;
+      gap: 34px;
+      max-width: 1320px;
+      margin: 0 auto 24px;
+    }
+
+    .tf26-about__intro .tf26-section-kicker {
+      grid-column: 1 / -1;
+      margin-bottom: -16px;
+    }
+
+    .tf26-about__intro .tf26-display {
+      font-size: clamp(48px, 5.5vw, 82px);
+    }
+
+    .tf26-about__intro p {
+      max-width: 510px;
+      margin: 0 0 4px;
+      padding-left: 24px;
+      border-left: 1px solid rgba(211, 230, 251, .45);
+      color: #d4e4f6;
+      font-size: clamp(12px, .98vw, 14px);
+      font-weight: 500;
+      line-height: 1.7;
+    }
+
+    .tf26-about__signals {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 1000px;
+      margin: 0 auto 28px;
+    }
+
+    .tf26-about__signals>div {
+      display: flex;
+      min-height: 66px;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border-top: 1px solid rgba(255, 255, 255, .2);
+      border-bottom: 1px solid rgba(255, 255, 255, .15);
+      background: linear-gradient(90deg, rgba(8, 69, 127, .22), rgba(7, 37, 77, .12));
+    }
+
+    .tf26-signal-icon {
+      color: var(--tf26-gold);
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    .tf26-about__signals b {
+      color: white;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.16;
+    }
+
+    .tf26-experience-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 1320px;
+      margin: 0 auto 14px;
+    }
+
+    .tf26-experience-head .tf26-section-kicker {
+      color: white;
+      font-family: var(--tf26-display);
+      font-size: clamp(21px, 2.2vw, 31px);
+      font-weight: 800;
+      letter-spacing: -.01em;
+    }
+
+    .tf26-experience-head .tf26-section-kicker::before,
+    .tf26-experience-head .tf26-section-kicker::after {
+      display: block;
+      width: 34px;
+      height: 3px;
+      background: var(--tf26-gold);
+      content: "";
+    }
+
+    .tf26-experience-head p {
+      margin: 0 0 2px;
+      color: rgba(215, 233, 250, .65);
+      font-size: 11px;
+    }
+
+    .tf26-experience-track {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 13px;
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .tf26-experience {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(217, 235, 255, .35);
+      border-radius: 15px;
+      background: linear-gradient(145deg, rgba(232, 245, 255, .98), rgba(199, 225, 250, .88));
+      box-shadow: 0 14px 25px rgba(0, 12, 35, .24);
+      color: #071d43;
+      transform: translateZ(0);
+    }
+
+    .tf26-experience__photo {
+      position: relative;
+      height: clamp(108px, 12vw, 155px);
+      overflow: hidden;
+      background: #c8d8e8;
+    }
+
+    .tf26-experience__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s cubic-bezier(.2, .7, .2, 1);
+    }
+
+    .tf26-experience:hover .tf26-experience__photo img {
+      transform: scale(1.08);
+    }
+
+    .tf26-experience__photo span {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: grid;
+      width: 31px;
+      height: 31px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .75);
+      border-radius: 50%;
+      background: rgba(5, 42, 88, .86);
+      color: white;
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .tf26-experience__body {
+      min-height: 77px;
+      padding: 11px 12px 13px;
+      text-align: center;
+    }
+
+    .tf26-experience__body b {
+      display: block;
+      color: #061b40;
+      font-family: var(--tf26-display);
+      font-size: clamp(17px, 1.45vw, 21px);
+      font-weight: 800;
+      line-height: .95;
+    }
+
+    .tf26-experience__body small {
+      display: block;
+      margin-top: 6px;
+      color: #34516e;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .tf26-about__footnote {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 18px auto 0;
+      color: rgba(228, 240, 252, .72);
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .tf26-gold-dot {
+      display: block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--tf26-gold);
+      box-shadow: 0 0 12px rgba(255, 189, 25, .7);
+    }
+
+    /* PROGRAM, RUNDOWN, VENUE */
+    .tf26-chapter--program {
+      padding-top: 84px;
+      padding-bottom: 54px;
+    }
+
+    .tf26-program__heading {
+      max-width: 1320px;
+      margin: 0 auto 26px;
+    }
+
+    .tf26-program__heading .tf26-display {
+      font-size: clamp(45px, 5vw, 72px);
+    }
+
+    .tf26-program__grid {
+      display: grid;
+      grid-template-columns: .92fr 1.25fr .9fr;
+      align-items: stretch;
+      gap: 16px;
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .tf26-why,
+    .tf26-rundown,
+    .tf26-venue {
+      position: relative;
+      min-height: 390px;
+      padding: 23px 22px;
+      border: 1px solid rgba(206, 231, 255, .21);
+      background: linear-gradient(145deg, rgba(5, 43, 88, .82), rgba(3, 22, 52, .73));
+      box-shadow: 0 24px 44px rgba(0, 12, 35, .2), inset 0 1px 0 rgba(255, 255, 255, .05);
+      backdrop-filter: blur(14px);
+    }
+
+    .tf26-why {
+      border-left: 3px solid var(--tf26-gold);
+    }
+
+    .tf26-why__title {
+      margin-bottom: 20px;
+      color: white;
+      font-family: var(--tf26-display);
+      font-size: clamp(25px, 2.6vw, 36px);
+      font-weight: 800;
+      line-height: .94;
+    }
+
+    .tf26-why__title em {
+      color: var(--tf26-gold);
+      font-style: normal;
+    }
+
+    .tf26-why ul {
+      display: grid;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tf26-why li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #e2effc;
+      font-size: 11px;
+      font-weight: 650;
+      line-height: 1.4;
+    }
+
+    .tf26-why li span {
+      display: inline-grid;
+      width: 20px;
+      height: 20px;
+      flex: 0 0 auto;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--tf26-gold);
+      color: #05204b;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .tf26-rundown {
+      padding-inline: 24px;
+      background: linear-gradient(145deg, rgba(241, 248, 255, .97), rgba(212, 231, 251, .94));
+      color: #061c43;
+    }
+
+    .tf26-rundown__heading {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 18px;
+    }
+
+    .tf26-rundown__heading>span {
+      color: #edaa00;
+      font-size: 32px;
+    }
+
+    .tf26-rundown__heading small {
+      color: #426281;
+      font-size: 8px;
+      font-weight: 900;
+      letter-spacing: .18em;
+    }
+
+    .tf26-rundown__heading h3 {
+      margin: 0;
+      font-family: var(--tf26-display);
+      font-size: 30px;
+      font-weight: 800;
+      line-height: .95;
+    }
+
+    .tf26-timeline {
+      position: relative;
+      display: grid;
+      gap: 0;
+      margin-left: 5px;
+    }
+
+    .tf26-timeline::before {
+      position: absolute;
+      top: 9px;
+      bottom: 10px;
+      left: 5px;
+      width: 1px;
+      background: #eead00;
+      content: "";
+    }
+
+    .tf26-timeline__item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      align-items: baseline;
+      gap: 12px;
+      min-height: 39px;
+      padding-left: 22px;
+      color: #0a234d;
+      font-size: 10px;
+      font-weight: 650;
+      line-height: 1.3;
+    }
+
+    .tf26-timeline__item::before {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 11px;
+      height: 11px;
+      border: 2px solid #f0ad00;
+      border-radius: 50%;
+      background: #fff;
+      content: "";
+    }
+
+    .tf26-timeline__item time {
+      color: #09254e;
+      font-size: 10px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .tf26-rundown__note {
+      margin: 7px 0 0 22px;
+      color: #5c7590;
+      font-size: 8px;
+      font-style: italic;
+    }
+
+    .tf26-venue {
+      padding: 0;
+      overflow: hidden;
+      background: rgba(6, 24, 54, .88);
+    }
+
+    .tf26-venue__top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 20px 4px;
+    }
+
+    .tf26-venue__top span {
+      color: var(--tf26-gold);
+      font-size: 30px;
+    }
+
+    .tf26-venue__top small {
+      color: rgba(218, 235, 252, .58);
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .19em;
+    }
+
+    .tf26-venue h3 {
+      margin: 5px 20px 15px;
+      color: white;
+      font-family: var(--tf26-display);
+      font-size: 30px;
+      font-weight: 800;
+      line-height: .93;
+    }
+
+    .tf26-venue img {
+      width: calc(100% - 40px);
+      height: 128px;
+      margin: 0 20px;
+      border: 1px solid rgba(255, 255, 255, .22);
+      object-fit: cover;
+    }
+
+    .tf26-venue p {
+      margin: 12px 20px;
+      color: #d3e5f7;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .tf26-venue a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 0 20px 20px;
+      padding: 10px 13px;
+      border: 1px solid rgba(255, 191, 24, .52);
+      color: var(--tf26-gold);
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .07em;
+    }
+
+    .tf26-venue a span {
+      font-size: 17px;
+    }
+
+    .tf26-program__bottomline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 17px;
+      margin: 22px auto 0;
+      color: rgba(214, 233, 250, .56);
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .14em;
+    }
+
+    .tf26-program__bottomline span {
+      color: var(--tf26-gold);
+    }
+
+    .tf26-program__bottomline i {
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: rgba(255, 255, 255, .34);
+    }
+
+    /* SPEAKERS + TESTIMONIALS */
+    .tf26-chapter--voices {
+      padding-top: 82px;
+      padding-bottom: 50px;
+    }
+
+    .tf26-voices__heading {
+      max-width: 1320px;
+      margin: 0 auto 20px;
+    }
+
+    .tf26-voices__heading .tf26-display {
+      font-size: clamp(43px, 4.8vw, 70px);
+    }
+
+    .tf26-speaker-lineup {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .tf26-speaker {
+      position: relative;
+      text-align: center;
+    }
+
+    .tf26-speaker__portrait {
+      position: relative;
+      width: clamp(112px, 12vw, 160px);
+      aspect-ratio: 1;
+      margin: 0 auto 14px;
+      overflow: hidden;
+      border: 2px solid var(--tf26-gold);
+      border-radius: 50%;
+      background: linear-gradient(145deg, #fff, #d9e9f8);
+      box-shadow: 0 0 0 7px rgba(255, 191, 24, .08), 0 14px 28px rgba(0, 9, 30, .35);
+    }
+
+    .tf26-speaker__portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .tf26-speaker__portrait span {
+      position: absolute;
+      right: 4px;
+      bottom: 6px;
+      display: grid;
+      width: 26px;
+      height: 26px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .8);
+      border-radius: 50%;
+      background: #082b5b;
+      color: var(--tf26-gold);
+      font-size: 8px;
+      font-weight: 900;
+    }
+
+    .tf26-speaker h3 {
+      margin: 0 0 5px;
+      color: white;
+      font-family: var(--tf26-display);
+      font-size: clamp(19px, 1.8vw, 25px);
+      font-weight: 800;
+      line-height: .95;
+    }
+
+    .tf26-speaker p {
+      margin: 0;
+      color: #334155;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.45;
+    }
+
+    .tf26-voices__divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 17px;
+      max-width: 900px;
+      margin: 27px auto 14px;
+      color: var(--tf26-gold);
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .2em;
+    }
+
+    .tf26-voices__divider span {
+      display: block;
+      width: 42px;
+      height: 1px;
+      background: rgba(255, 195, 30, .65);
+    }
+
+    .tf26-testimonials {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .tf26-quote {
+      position: relative;
+      margin: 0;
+      padding: 18px 20px 14px 54px;
+      border-top: 1px solid rgba(226, 240, 255, .4);
+      border-bottom: 1px solid rgba(226, 240, 255, .24);
+      background: linear-gradient(90deg, rgba(240, 247, 255, .96), rgba(221, 237, 253, .88));
+      color: #0a2145;
+      box-shadow: 0 12px 28px rgba(0, 12, 36, .19);
+    }
+
+    .tf26-quote__mark {
+      position: absolute;
+      top: 7px;
+      left: 16px;
+      color: #f4b000;
+      font-family: Georgia, serif;
+      font-size: 58px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .tf26-quote p {
+      min-height: 53px;
+      margin: 0 0 12px;
+      font-size: 11px;
+      font-weight: 650;
+      line-height: 1.48;
+    }
+
+    .tf26-quote footer {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .tf26-quote footer img {
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--tf26-gold);
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .tf26-quote footer span {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .tf26-quote footer b {
+      color: #071d43;
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .tf26-quote footer small {
+      color: #536d89;
+      font-size: 9px;
+      font-weight: 650;
+    }
+
+    /* FACILITIES + REGISTRATION */
+    .tf26-chapter--benefits {
+      padding-top: 84px;
+      padding-bottom: 52px;
+    }
+
+    .tf26-benefits__heading {
+      max-width: 1320px;
+      margin: 0 auto 26px;
+    }
+
+    .tf26-benefits__heading .tf26-display {
+      font-size: clamp(44px, 5vw, 72px);
+    }
+
+    .tf26-benefits__layout {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: stretch;
+      gap: 24px;
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .tf26-benefit-field {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-content: center;
+      gap: 12px;
+      padding: 17px;
+      border-top: 1px solid rgba(255, 255, 255, .22);
+      border-bottom: 1px solid rgba(255, 255, 255, .22);
+      background: linear-gradient(135deg, rgba(5, 54, 108, .65), rgba(2, 23, 54, .5));
+    }
+
+    .tf26-benefit {
+      display: flex;
+      min-height: 132px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      padding: 13px 9px;
+      border: 1px solid rgba(236, 246, 255, .78);
+      border-radius: 12px;
+      background: linear-gradient(145deg, rgba(248, 252, 255, .98), rgba(219, 236, 252, .92));
+      color: #061d43;
+      text-align: center;
+      box-shadow: 0 10px 21px rgba(0, 9, 30, .16);
+    }
+
+    .tf26-benefit>span {
+      color: #efa900;
+      font-size: 37px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .tf26-benefit b {
+      font-size: 10px;
+      font-weight: 850;
+      line-height: 1.25;
+    }
+
+    .tf26-registration {
+      position: relative;
+      padding: 24px 26px 22px;
+      border-left: 2px solid var(--tf26-gold);
+      background: linear-gradient(145deg, rgba(3, 27, 61, .9), rgba(5, 63, 116, .6));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .09);
+    }
+
+    .tf26-registration__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: rgba(221, 237, 252, .65);
+      font-size: 8px;
+      font-weight: 900;
+      letter-spacing: .16em;
+    }
+
+    .tf26-registration__top span {
+      padding: 5px 8px;
+      background: var(--tf26-gold);
+      color: #071d43;
+      letter-spacing: .08em;
+    }
+
+    .tf26-registration h3 {
+      margin: 17px 0 22px;
+      color: white;
+      font-family: var(--tf26-display);
+      font-size: 42px;
+      font-weight: 800;
+      line-height: .85;
+      text-transform: uppercase;
+    }
+
+    .tf26-registration h3 em {
+      color: var(--tf26-gold);
+      font-style: normal;
+    }
+
+    .tf26-registration__step {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      padding: 0 0 16px;
+    }
+
+    .tf26-registration__step>span {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      flex: 0 0 auto;
+      place-items: center;
+      border: 1px solid rgba(255, 192, 25, .9);
+      border-radius: 50%;
+      color: var(--tf26-gold);
+      font-family: var(--tf26-display);
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .tf26-registration__step b {
+      color: #f8fbff;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .tf26-registration__step p {
+      margin: 3px 0 0;
+      color: #bdd2e8;
+      font-size: 9px;
+      line-height: 1.4;
+    }
+
+    .tf26-registration__cta {
+      width: 100%;
+      min-height: 44px;
+      margin-top: 2px;
+      border-radius: 7px;
+    }
+
+    /* FAQ */
+    .tf26-chapter--faq {
+      padding-top: 84px;
+      padding-bottom: 56px;
+    }
+
+    .tf26-faq__layout {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      align-items: center;
+      gap: clamp(35px, 6vw, 90px);
+      width: min(100%, 1280px);
+      margin: 0 auto;
+    }
+
+    .tf26-faq__intro .tf26-display {
+      font-size: clamp(48px, 5.5vw, 78px);
+    }
+
+    .tf26-faq__intro>p {
+      max-width: 350px;
+      margin: 22px 0 28px;
+      color: #d1e2f3;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .tf26-faq__contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 7px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    .tf26-faq__contact span {
+      color: rgba(221, 236, 251, .55);
+      font-size: 8px;
+      font-weight: 900;
+      letter-spacing: .16em;
+    }
+
+    .tf26-faq__contact a {
+      color: var(--tf26-gold);
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .tf26-faq__list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .tf26-faq-item {
+      overflow: hidden;
+      border: 1px solid rgba(216, 235, 255, .55);
+      border-radius: 9px;
+      background: linear-gradient(90deg, rgba(246, 251, 255, .96), rgba(219, 237, 254, .91));
+      color: #061c42;
+      box-shadow: 0 8px 19px rgba(0, 11, 32, .14);
+    }
+
+    .tf26-faq-item summary {
+      display: flex;
+      min-height: 54px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 12px 17px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 850;
+      list-style: none;
+    }
+
+    .tf26-faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .tf26-faq-item summary i {
+      display: grid;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 auto;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--tf26-gold);
+      color: #071d43;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 900;
+      transition: transform .2s ease;
+    }
+
+    .tf26-faq-item[open] summary i {
+      transform: rotate(45deg);
+    }
+
+    .tf26-faq-item p {
+      margin: 0;
+      padding: 0 52px 17px 17px;
+      color: #3c5775;
+      font-size: 11px;
+      font-weight: 550;
+      line-height: 1.65;
+    }
+
+    .tf26-faq__watermark {
+      position: absolute;
+      right: -3%;
+      bottom: -3%;
+      z-index: 0;
+      color: rgba(190, 222, 255, .035);
+      font-family: var(--tf26-display);
+      font-size: clamp(150px, 28vw, 370px);
+      font-weight: 900;
+      line-height: .7;
+      pointer-events: none;
+    }
+
+    /* FINAL CTA + FOOTER */
+    .tf26-chapter--final {
+      justify-content: flex-end;
+      padding-top: 54px;
+      padding-bottom: 0;
+    }
+
+    .tf26-chapter--final::before {
+      background:
+        linear-gradient(180deg, rgba(3, 22, 51, .28), rgba(2, 15, 36, .88) 38%, rgba(1, 13, 31, .98) 100%),
+        radial-gradient(ellipse at 50% 25%, rgba(22, 112, 195, .32), transparent 52%);
+    }
+
+    .tf26-final__banner {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(280px, .88fr) 1.35fr auto;
+      align-items: center;
+      gap: 32px;
+      width: min(100%, 1420px);
+      min-height: 250px;
+      margin: auto auto 34px;
+      padding: 0 40px 0 0;
+      overflow: hidden;
+      border: 1px solid rgba(255, 189, 25, .28);
+      border-radius: 20px;
+      background:
+        linear-gradient(105deg, rgba(3, 24, 58, 0.95) 0%, rgba(4, 46, 98, 0.92) 42%, rgba(2, 22, 53, 0.96) 100%),
+        url("assets/cadets-tugu.jpg") right center / cover no-repeat;
+      box-shadow: 0 24px 60px rgba(0, 7, 26, .45), inset 0 1px 0 rgba(255, 255, 255, .12);
+    }
+
+    .tf26-final__banner::after {
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: repeating-linear-gradient(135deg, transparent 0 18px, rgba(255, 255, 255, .025) 18px 19px);
+      content: "";
+      pointer-events: none;
+    }
+
+    .tf26-final__students {
+      position: relative;
+      z-index: 2;
+      align-self: end;
+      height: 100%;
+      min-height: 240px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      margin: 0;
+      padding-left: 14px;
+    }
+
+    .tf26-final__students img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      max-height: 260px;
+      object-fit: contain;
+      object-position: bottom left;
+      filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.5));
+    }
+
+    .tf26-final__copy {
+      position: relative;
+      z-index: 2;
+      padding: 24px 0;
+    }
+
+    .tf26-final__stamp {
+      display: inline-block;
+      padding: 6px 14px 5px;
+      background: #ffb703;
+      color: #041a38;
+      font-family: var(--tf26-sans);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      border-radius: 6px;
+      transform: skew(-8deg);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .tf26-final__copy h2 {
+      margin: 6px 0 10px;
+      color: #ffffff;
+      font-family: var(--tf26-display);
+      font-size: clamp(34px, 4.2vw, 54px);
+      font-weight: 900;
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+    }
+
+    .tf26-final__copy h2 em {
+      color: #ffb703;
+      font-style: normal;
+      display: block;
+    }
+
+    .tf26-final__copy p {
+      max-width: 530px;
+      margin: 0;
+      padding-left: 12px;
+      border-left: 3px solid #ffb703;
+      color: #e2e8f0;
+      font-size: clamp(12px, 1.1vw, 13.5px);
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    .tf26-final__button {
+      position: relative;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 30px;
+      background: #ffb703;
+      color: #041a38;
+      font-family: var(--tf26-sans);
+      font-weight: 800;
+      font-size: 15px;
+      border-radius: 999px;
+      border: none;
+      white-space: nowrap;
+      box-shadow: 0 10px 25px rgba(255, 183, 3, .38);
+      transition: all .25s ease;
+      text-decoration: none;
+    }
+
+    .tf26-final__button:hover {
+      background: #ffc226;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(255, 183, 3, .5);
+      color: #021226;
+    }
+
+    .tf26-footer {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr .65fr;
+      gap: 36px;
+      width: min(100%, 1420px);
+      margin: 0 auto;
+      padding: 25px 0 18px;
+      border-top: 1px solid rgba(222, 239, 255, .42);
+      color: #e4f0fc;
+    }
+
+    .tf26-footer__brand img {
+      width: auto;
+      max-width: 180px;
+      height: 44px;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .tf26-footer__brand p {
+      max-width: 355px;
+      margin: 12px 0 0;
+      color: #b9cce0;
+      font-size: 9px;
+      line-height: 1.55;
+    }
+
+    .tf26-footer__contact,
+    .tf26-footer__social {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      padding-left: 26px;
+      border-left: 1px solid rgba(225, 239, 253, .36);
+    }
+
+    .tf26-footer h3 {
+      margin: 0 0 4px;
+      color: white;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .tf26-footer__contact a,
+    .tf26-footer__contact .tf26-footer__item {
+      display: flex;
+      gap: 10px;
+      color: #d5e5f5;
+      font-size: 10px;
+      font-weight: 600;
+      cursor: default;
+      user-select: text;
+    }
+
+    .tf26-footer__contact a:first-letter,
+    .tf26-footer__contact .tf26-footer__item:first-letter {
+      color: var(--tf26-gold);
+    }
+
+    .tf26-footer__social a {
+      color: var(--tf26-gold);
+      font-size: 11px;
+      font-weight: 850;
+    }
+
+    .tf26-footer__social span {
+      color: #c4d7e9;
+      font-size: 10px;
+    }
+
+    .tf26-footer__bottom {
+      display: flex;
+      grid-column: 1 / -1;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 7px;
+      padding-top: 13px;
+      border-top: 1px solid rgba(222, 239, 255, .2);
+      color: rgba(219, 234, 248, .65);
+      font-size: 9px;
+    }
+
+    .tf26-footer__bottom>span:last-child {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .tf26-footer__bottom i {
+      display: block;
+      width: 1px;
+      height: 11px;
+      background: rgba(255, 255, 255, .35);
+    }
+
+    /* DESKTOP / TABLET */
+    @media (max-width: 1180px) {
+      .tf26-brand {
+        width: 180px;
+      }
+
+      .tf26-header__inner {
+        gap: 18px;
+        width: min(100% - 36px, 1520px);
+      }
+
+      .tf26-nav {
+        gap: 15px;
+      }
+
+      .tf26-nav a {
+        font-size: 10px;
+      }
+
+      .tf26-button--nav {
+        min-width: 150px;
+        padding-inline: 14px;
+      }
+
+      .tf26-hero__content {
+        width: 57%;
+      }
+
+      .tf26-eventbar__item {
+        gap: 9px;
+        padding-inline: 10px;
+      }
+
+      .tf26-eventbar__icon {
+        width: 34px;
+        height: 34px;
+        font-size: 28px;
+      }
+
+      .tf26-program__grid {
+        grid-template-columns: .9fr 1.2fr .85fr;
+        gap: 10px;
+      }
+
+      .tf26-why,
+      .tf26-rundown {
+        padding-inline: 16px;
+      }
+
+      .tf26-venue h3 {
+        font-size: 25px;
+      }
+
+      .tf26-benefits__layout {
+        grid-template-columns: 1fr .9fr;
+        gap: 16px;
+      }
+
+      .tf26-benefit-field {
+        gap: 8px;
+        padding: 12px;
+      }
+
+      .tf26-benefit {
+        min-height: 120px;
+      }
+    }
+
+    @media (max-width: 900px) and (min-width: 761px) {
+      .tf26-page {
+        --tf26-header-h: 68px;
+      }
+
+      .tf26-header__inner {
+        width: calc(100% - 28px);
+        gap: 12px;
+      }
+
+      .tf26-brand {
+        width: 142px;
+      }
+
+      .tf26-nav {
+        gap: 10px;
+      }
+
+      .tf26-nav a {
+        font-size: 9px;
+      }
+
+      .tf26-button--nav {
+        min-width: 128px;
+        min-height: 40px;
+        font-size: 10px;
+      }
+
+      .tf26-hero__content {
+        width: 57%;
+        margin-left: 0;
+      }
+
+      .tf26-hero__title {
+        font-size: clamp(72px, 10vw, 100px);
+      }
+
+      .tf26-eventbar {
+        left: 18px;
+        right: 18px;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .tf26-eventbar__item {
+        padding-inline: 7px;
+      }
+
+      .tf26-eventbar__item span:last-child {
+        font-size: 9px;
+      }
+
+      .tf26-eventbar__item b,
+      .tf26-eventbar__item strong {
+        font-size: 9px;
+      }
+
+      .tf26-eventbar__quota {
+        font-size: 18px !important;
+      }
+
+      .tf26-chapter {
+        padding-right: 4vw;
+        padding-left: 4vw;
+      }
+
+      .tf26-chapter__topline {
+        right: 4vw;
+        left: 4vw;
+      }
+
+      .tf26-about__intro {
+        gap: 18px;
+      }
+
+      .tf26-about__intro .tf26-display {
+        font-size: 48px;
+      }
+
+      .tf26-about__intro p {
+        font-size: 10px;
+      }
+
+      .tf26-experience-track {
+        gap: 8px;
+      }
+
+      .tf26-experience__body {
+        padding-inline: 6px;
+      }
+
+      .tf26-experience__body b {
+        font-size: 16px;
+      }
+
+      .tf26-program__grid {
+        grid-template-columns: .9fr 1.2fr .82fr;
+        gap: 8px;
+      }
+
+      .tf26-why,
+      .tf26-rundown {
+        padding: 14px 12px;
+      }
+
+      .tf26-why li {
+        font-size: 9px;
+        gap: 7px;
+      }
+
+      .tf26-timeline__item {
+        grid-template-columns: 90px 1fr;
+        gap: 6px;
+        font-size: 8px;
+      }
+
+      .tf26-timeline__item time {
+        font-size: 8px;
+      }
+
+      .tf26-venue h3 {
+        margin-inline: 14px;
+        font-size: 22px;
+      }
+
+      .tf26-venue__top {
+        padding-inline: 14px;
+      }
+
+      .tf26-venue img {
+        width: calc(100% - 28px);
+        margin-inline: 14px;
+      }
+
+      .tf26-venue p,
+      .tf26-venue a {
+        margin-inline: 14px;
+      }
+
+      .tf26-speaker-lineup {
+        gap: 10px;
+      }
+
+      .tf26-speaker__portrait {
+        width: 112px;
+      }
+
+      .tf26-speaker h3 {
+        font-size: 18px;
+      }
+
+      .tf26-benefits__layout {
+        grid-template-columns: 1fr .9fr;
+        gap: 10px;
+      }
+
+      .tf26-benefit {
+        min-height: 112px;
+      }
+
+      .tf26-benefit b {
+        font-size: 9px;
+      }
+
+      .tf26-registration {
+        padding: 18px 16px;
+      }
+
+      .tf26-registration__step {
+        padding-bottom: 11px;
+      }
+
+      .tf26-faq__layout {
+        gap: 28px;
+      }
+
+      .tf26-final__banner {
+        grid-template-columns: .7fr 1.3fr .7fr;
+        gap: 14px;
+        padding: 18px;
+      }
+
+      .tf26-final__students {
+        margin-left: -18px;
+      }
+
+      .tf26-final__copy h2 {
+        font-size: 46px;
+      }
+
+      .tf26-footer {
+        gap: 18px;
+      }
+    }
+
+    /* MOBILE: preserve the same world, but use natural scrolling for readable content. */
+    @media (max-width: 760px) {
+      .tf26-page {
+        --tf26-header-h: 66px;
+      }
+
+      .tf26-world__image {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: .38;
+      }
+
+      .tf26-world__horizon {
+        display: none;
+      }
+
+      .tf26-world__wash {
+        background:
+          linear-gradient(180deg, rgba(2, 18, 43, .78), rgba(3, 26, 57, .8) 35%, rgba(2, 14, 34, .95) 100%),
+          linear-gradient(90deg, rgba(3, 18, 42, .7), rgba(3, 18, 42, .45));
+      }
+
+      .tf26-world__coordinates {
+        display: none;
+      }
+
+      .tf26-header__inner {
+        width: calc(100% - 28px);
+        gap: 10px;
+      }
+
+      .tf26-brand {
+        width: auto;
+        max-width: 135px;
+        flex: 0 1 auto;
+      }
+
+      .tf26-brand__logo {
+        height: 32px;
+        max-height: 32px;
+      }
+
+      .tf26-menu-toggle {
+        display: flex;
+        order: 3;
+        width: 36px;
+        height: 36px;
+      }
+
+      .tf26-menu-toggle[aria-expanded="true"] span:first-child {
+        transform: translateY(4px) rotate(45deg);
+      }
+
+      .tf26-menu-toggle[aria-expanded="true"] span:last-child {
+        transform: translateY(-4px) rotate(-45deg);
+      }
+
+      .tf26-nav {
+        position: absolute;
+        top: calc(var(--tf26-header-h) - 1px);
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 20px 17px;
+        border-top: 1px solid rgba(6, 32, 70, .1);
+        background: rgba(244, 249, 255, .98);
+        box-shadow: 0 18px 24px rgba(1, 15, 37, .17);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
+      }
+
+      .tf26-nav.tf26-is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .tf26-nav a {
+        padding: 12px 2px;
+        border-bottom: 1px solid rgba(5, 39, 81, .08);
+        font-size: 12px;
+      }
+
+      .tf26-nav a::after {
+        display: none;
+      }
+
+      .tf26-button--nav {
+        min-width: 0;
+        min-height: 34px;
+        margin-left: auto;
+        padding: 6px 12px;
+        gap: 4px;
+        font-size: 11px;
+        white-space: nowrap;
+        flex: 0 0 auto;
+      }
+
+      .tf26-button--nav .tf26-arrow {
+        font-size: 15px;
+      }
+
+      .tf26-main {
+        padding-top: var(--tf26-header-h);
+      }
+
+      .tf26-scroll-hint,
+      .tf26-progress {
+        display: none;
+      }
+
+      .tf26-stage {
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+      }
+
+      .tf26-chapter {
+        position: relative;
+        inset: auto;
+        display: flex;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        justify-content: center;
+        padding: 76px 22px 58px;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto;
+        overflow: hidden;
+        transform: none !important;
+      }
+
+      .tf26-chapter::before {
+        background:
+          radial-gradient(ellipse at 85% 30%, rgba(17, 111, 190, .22), transparent 42%),
+          linear-gradient(105deg, rgba(2, 16, 39, .91), rgba(4, 26, 57, .86));
+      }
+
+      .tf26-chapter__topline {
+        top: 24px;
+        right: 22px;
+        left: 22px;
+        font-size: 7px;
+        letter-spacing: .12em;
+      }
+
+      .tf26-chapter__topline span:last-child {
+        text-align: right;
+      }
+
+      .tf26-section-kicker {
+        font-size: 8px;
+        letter-spacing: .14em;
+      }
+
+      .tf26-display {
+        font-size: clamp(43px, 12vw, 62px) !important;
+      }
+
+      .tf26-chapter--hero {
+        min-height: auto !important;
+        padding: 10px 0 20px !important;
+      }
+
+      .tf26-chapter--hero::before {
+        display: none !important;
+      }
+
+      .tf26-about__intro {
+        display: block;
+        margin-bottom: 22px;
+      }
+
+      .tf26-about__intro .tf26-section-kicker {
+        margin-bottom: 0;
+      }
+
+      .tf26-about__intro .tf26-display {
+        margin-top: 13px;
+      }
+
+      .tf26-about__intro p {
+        margin-top: 19px;
+        padding: 0 0 0 15px;
+        font-size: 11px;
+      }
+
+      .tf26-about__signals {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+        margin-bottom: 28px;
+      }
+
+      .tf26-about__signals>div {
+        min-height: 58px;
+        gap: 8px;
+      }
+
+      .tf26-signal-icon {
+        font-size: 27px;
+      }
+
+      .tf26-about__signals b {
+        font-size: 9px;
+      }
+
+      .tf26-experience-head {
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      .tf26-experience-head .tf26-section-kicker {
+        font-size: 21px;
+        line-height: 1;
+      }
+
+      .tf26-experience-head p {
+        margin-top: 8px;
+        font-size: 9px;
+      }
+
+      .tf26-experience-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+      }
+
+      .tf26-experience:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 5px);
+        justify-self: center;
+      }
+
+      .tf26-experience__photo {
+        height: 108px;
+      }
+
+      .tf26-experience__body {
+        min-height: 73px;
+        padding: 9px 5px;
+      }
+
+      .tf26-experience__body b {
+        font-size: 17px;
+      }
+
+      .tf26-experience__body small {
+        font-size: 8px;
+      }
+
+      .tf26-about__footnote {
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 9px;
+        line-height: 1.5;
+      }
+
+      .tf26-about__footnote .tf26-gold-dot {
+        flex: 0 0 auto;
+        margin-top: 4px;
+      }
+
+      .tf26-program__heading {
+        margin-bottom: 22px;
+      }
+
+      .tf26-program__grid {
+        grid-template-columns: 1fr;
+        gap: 11px;
+      }
+
+      .tf26-why,
+      .tf26-rundown {
+        min-height: 0;
+        padding: 20px;
+      }
+
+      .tf26-why__title {
+        font-size: 32px;
+      }
+
+      .tf26-why ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+      }
+
+      .tf26-why li {
+        font-size: 9px;
+      }
+
+      .tf26-rundown__heading h3 {
+        font-size: 27px;
+      }
+
+      .tf26-timeline__item {
+        grid-template-columns: 105px 1fr;
+        min-height: 40px;
+        font-size: 9px;
+      }
+
+      .tf26-timeline__item time {
+        font-size: 9px;
+      }
+
+      .tf26-venue h3 {
+        font-size: 28px;
+      }
+
+      .tf26-venue img {
+        height: 170px;
+      }
+
+      .tf26-venue p {
+        font-size: 10px;
+      }
+
+      .tf26-program__bottomline {
+        flex-wrap: wrap;
+        gap: 9px;
+        font-size: 7px;
+        letter-spacing: .08em;
+      }
+
+      .tf26-speaker-lineup {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .tf26-speaker__portrait {
+        width: min(34vw, 142px);
+        margin-bottom: 10px;
+      }
+
+      .tf26-speaker h3 {
+        font-size: 20px;
+      }
+
+      .tf26-speaker p {
+        font-size: 9px;
+      }
+
+      .tf26-voices__divider {
+        margin-top: 24px;
+      }
+
+      .tf26-testimonials {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .tf26-quote {
+        padding: 16px 15px 13px 48px;
+      }
+
+      .tf26-quote p {
+        min-height: 0;
+        font-size: 10px;
+      }
+
+      .tf26-quote__mark {
+        left: 12px;
+      }
+
+      .tf26-benefits__layout {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .tf26-benefit-field {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        padding: 10px;
+      }
+
+      .tf26-benefit {
+        min-height: 112px;
+      }
+
+      .tf26-benefit>span {
+        font-size: 33px;
+      }
+
+      .tf26-benefit b {
+        font-size: 9px;
+      }
+
+      .tf26-registration {
+        padding: 22px 19px;
+      }
+
+      .tf26-registration h3 {
+        font-size: 38px;
+      }
+
+      .tf26-faq__layout {
+        grid-template-columns: 1fr;
+        gap: 27px;
+      }
+
+      .tf26-faq__intro>p {
+        max-width: 100%;
+        font-size: 11px;
+      }
+
+      .tf26-faq-item summary {
+        min-height: 50px;
+        padding: 10px 12px;
+        font-size: 10px;
+      }
+
+      .tf26-faq-item p {
+        padding: 0 13px 14px;
+        font-size: 10px;
+      }
+
+      .tf26-faq__contact {
+        padding-top: 12px;
+      }
+
+      .tf26-final__banner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 24px 20px 0;
+        margin-bottom: 28px;
+      }
+
+      .tf26-final__copy {
+        order: 1;
+        padding: 0;
+      }
+
+      .tf26-final__copy h2 {
+        font-size: clamp(32px, 8vw, 42px);
+      }
+
+      .tf26-final__copy p {
+        font-size: 11px;
+      }
+
+      .tf26-final__button {
+        order: 2;
+        width: 100%;
+        min-height: 48px;
+      }
+
+      .tf26-final__students {
+        order: 3;
+        margin: 12px -20px 0;
+        padding-left: 0;
+        justify-content: center;
+        min-height: 0;
+      }
+
+      .tf26-final__students img {
+        width: auto;
+        max-width: 90%;
+        max-height: 220px;
+        object-fit: contain;
+        object-position: bottom center;
+        margin: 0 auto;
+        mask-image: none;
+      }
+
+      .tf26-footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px 13px;
+        padding: 22px 0 16px;
+      }
+
+      .tf26-footer__brand {
+        grid-column: 1 / -1;
+      }
+
+      .tf26-footer__brand img {
+        width: auto;
+        max-width: 155px;
+        height: 38px;
+      }
+
+      .tf26-footer__brand p {
+        max-width: 100%;
+        font-size: 9px;
+      }
+
+      .tf26-footer__contact,
+      .tf26-footer__social {
+        padding-left: 13px;
+      }
+
+      .tf26-footer__contact a,
+      .tf26-footer__contact .tf26-footer__item {
+        font-size: 8px;
+      }
+
+      .tf26-footer__bottom {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 8px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .tf26-brand {
+        width: 132px;
+      }
+
+      .tf26-button--nav {
+        padding-inline: 9px;
+        font-size: 9px;
+      }
+
+      .tf26-hero__title {
+        font-size: clamp(32px, 10vw, 44px);
+      }
+
+      .tf26-eventbar__item {
+        gap: 6px;
+        padding-inline: 7px;
+      }
+
+      .tf26-eventbar__icon {
+        width: 24px;
+        height: 24px;
+        font-size: 20px;
+      }
+
+      .tf26-eventbar__item b,
+      .tf26-eventbar__item strong {
+        font-size: 7px;
+      }
+
+      .tf26-eventbar__quota {
+        font-size: 15px !important;
+      }
+
+      .tf26-timeline__item {
+        grid-template-columns: 92px 1fr;
+        font-size: 8px;
+      }
+
+      .tf26-timeline__item time {
+        font-size: 8px;
+      }
+
+      .tf26-speaker h3 {
+        font-size: 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .tf26-page *,
+      .tf26-page *::before,
+      .tf26-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
+
+    /* ================================================================
+   SCROLL REFINEMENT + MOTION SYSTEM
+   Natural document flow replaces the previous pinned chapter stack.
+   ================================================================ */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    html.lenis,
+    html.lenis body {
+      height: auto;
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+
+    .lenis.lenis-stopped {
+      overflow: clip;
+    }
+
+    .lenis.lenis-smooth iframe {
+      pointer-events: none;
+    }
+
+    .tf26-page {
+      --tf26-motion-ease: cubic-bezier(.22, .75, .25, 1);
+      scroll-behavior: auto;
+    }
+
+    .tf26-header {
+      transition: background .35s ease, box-shadow .35s ease, border-color .35s ease;
+    }
+
+    .tf26-header.tf26-header--scrolled {
+      background: rgba(246, 250, 255, .985);
+      border-bottom-color: rgba(5, 44, 88, .14);
+      box-shadow: 0 12px 36px rgba(1, 13, 31, .18);
+    }
+
+    .tf26-stage {
+      position: relative;
+      display: block;
+      overflow: visible;
+    }
+
+    .tf26-chapter {
+      min-height: max(760px, 90svh);
+      height: auto;
+      overflow: clip;
+      padding-top: clamp(84px, 9vh, 118px);
+      padding-bottom: clamp(76px, 8vh, 108px);
+      scroll-margin-top: calc(var(--tf26-header-h) + 18px);
+    }
+
+    .tf26-chapter:not(.tf26-chapter--hero)::before {
+      background:
+        radial-gradient(ellipse at 15% 48%, rgba(14, 107, 190, .17), transparent 40%),
+        radial-gradient(ellipse at 88% 72%, rgba(255, 184, 25, .055), transparent 34%),
+        linear-gradient(108deg, rgba(2, 17, 40, .72), rgba(3, 27, 59, .62) 48%, rgba(3, 17, 40, .76));
+    }
+
+    .tf26-chapter:not(.tf26-chapter--hero)::after {
+      position: absolute;
+      z-index: -1;
+      right: 6.4vw;
+      bottom: 0;
+      left: 6.4vw;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 198, 52, .28), rgba(175, 218, 255, .2), transparent);
+      content: "";
+    }
+
+    .tf26-chapter--hero {
+      min-height: auto;
+      padding-top: clamp(58px, 7vh, 88px);
+      padding-bottom: 40px;
+    }
+
+    .tf26-hero__content>* {
+      transform-origin: left center;
+    }
+
+    .tf26-hero__title span {
+      display: block;
+      overflow: visible;
+    }
+
+    .tf26-hero__orbit {
+      animation: tf26-orbit-drift 18s ease-in-out infinite alternate;
+      transform-origin: center;
+    }
+
+    .tf26-hero__orbit--two {
+      animation-duration: 24s;
+      animation-direction: alternate-reverse;
+    }
+
+    @keyframes tf26-orbit-drift {
+      0% {
+        transform: translate3d(0, 0, 0) rotate(0deg) scale(.98);
+      }
+
+      100% {
+        transform: translate3d(14px, -18px, 0) rotate(12deg) scale(1.035);
+      }
+    }
+
+    .tf26-button--primary,
+    .tf26-button--nav,
+    .tf26-final__button {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .tf26-button--primary::after,
+    .tf26-button--nav::after,
+    .tf26-final__button::after {
+      position: absolute;
+      z-index: -1;
+      top: -65%;
+      bottom: -65%;
+      left: -42%;
+      width: 30%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .62), transparent);
+      content: "";
+      transform: skewX(-22deg);
+      transition: left .7s ease;
+    }
+
+    .tf26-button--primary:hover::after,
+    .tf26-button--nav:hover::after,
+    .tf26-final__button:hover::after {
+      left: 125%;
+    }
+
+    .tf26-eventbar {
+      box-shadow: 0 18px 45px rgba(0, 15, 40, .26), 0 0 0 1px rgba(255, 255, 255, .18), inset 0 1px 0 #fff;
+      /* animation removed */
+    }
+
+    .tf26-eventbar__icon {
+      animation: tf26-icon-float 3.2s ease-in-out infinite;
+    }
+
+    .tf26-eventbar__item:nth-child(2) .tf26-eventbar__icon {
+      animation-delay: .35s;
+    }
+
+    .tf26-eventbar__item:nth-child(3) .tf26-eventbar__icon {
+      animation-delay: .7s;
+    }
+
+    .tf26-eventbar__item:nth-child(4) .tf26-eventbar__icon {
+      animation-delay: 1.05s;
+    }
+
+    @keyframes tf26-eventbar-arrive {
+      from {
+        opacity: 0;
+        transform: translateY(34px) scale(.985);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes tf26-icon-float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+
+    .tf26-experience,
+    .tf26-speaker,
+    .tf26-quote,
+    .tf26-benefit,
+    .tf26-why,
+    .tf26-rundown,
+    .tf26-venue,
+    .tf26-registration,
+    .tf26-faq-item {
+      transition: transform .35s var(--tf26-motion-ease), box-shadow .35s ease, border-color .35s ease;
+    }
+
+    .tf26-experience:hover,
+    .tf26-speaker:hover,
+    .tf26-benefit:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 22px 38px rgba(0, 12, 35, .32);
+    }
+
+    .tf26-speaker__portrait img {
+      transition: transform .8s var(--tf26-motion-ease), filter .5s ease;
+    }
+
+    .tf26-speaker:hover .tf26-speaker__portrait img {
+      transform: scale(1.07);
+      filter: saturate(1.08);
+    }
+
+    .tf26-quote:hover,
+    .tf26-why:hover,
+    .tf26-rundown:hover,
+    .tf26-venue:hover,
+    .tf26-registration:hover,
+    .tf26-faq-item:hover {
+      transform: translateY(-3px);
+    }
+
+    .tf26-experience__photo::after {
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(255, 255, 255, .17);
+      content: "";
+      pointer-events: none;
+    }
+
+    .tf26-experience__photo img,
+    .tf26-venue img,
+    .tf26-final__students img {
+      backface-visibility: hidden;
+    }
+
+    .tf26-section-kicker::before {
+      transform-origin: left center;
+    }
+
+    .tf26-timeline__item::before {
+      transition: transform .45s ease, box-shadow .45s ease;
+    }
+
+    .tf26-timeline__item:hover::before {
+      transform: scale(1.38);
+      box-shadow: 0 0 0 5px rgba(255, 189, 25, .12);
+    }
+
+    .tf26-scroll-hint {
+      animation: tf26-scroll-hint 2.4s ease-in-out infinite;
+    }
+
+    @keyframes tf26-scroll-hint {
+
+      0%,
+      100% {
+        transform: translateY(0);
+        opacity: .72;
+      }
+
+      50% {
+        transform: translateY(5px);
+        opacity: 1;
+      }
+    }
+
+    /* JS applies this class only after an element's reveal has completed. */
+    .tf26-reveal-ready {
+      will-change: transform, opacity;
+    }
+
+    .tf26-page--motion-ready .tf26-footer__bottom {
+      transition: border-color .4s ease;
+    }
+
+    @media (max-width: 1180px) {
+      .tf26-chapter {
+        min-height: max(720px, 88svh);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .tf26-chapter {
+        min-height: 0;
+        height: auto;
+        padding-top: 76px;
+        padding-bottom: 64px;
+      }
+
+      .tf26-chapter:not(.tf26-chapter--hero)::after {
+        right: 22px;
+        left: 22px;
+      }
+
+      .tf26-eventbar {
+        animation: none;
+      }
+
+      .tf26-eventbar__icon {
+        animation-duration: 4.5s;
+      }
+
+      .tf26-scroll-hint {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .tf26-hero__orbit,
+      .tf26-eventbar,
+      .tf26-eventbar__icon,
+      .tf26-scroll-hint {
+        animation: none !important;
+      }
+
+      .tf26-experience,
+      .tf26-speaker,
+      .tf26-quote,
+      .tf26-benefit,
+      .tf26-why,
+      .tf26-rundown,
+      .tf26-venue,
+      .tf26-registration,
+      .tf26-faq-item {
+        transition: none !important;
+      }
+    }
+
+
+    @media (max-width: 768px) {
+      .tf26-header {
+        height: 64px;
+        min-height: 64px;
+      }
+
+      .tf26-header__inner {
+        width: calc(100% - 20px);
+        gap: 8px;
+        min-height: 64px;
+      }
+
+      .tf26-brand {
+        width: auto;
+        max-width: 130px;
+      }
+
+      .tf26-brand__logo {
+        height: 32px;
+        max-height: 32px;
+      }
+
+      .tf26-button--nav {
+        min-width: auto;
+        padding: 6px 12px;
+        font-size: 11px;
+        order: 2;
+      }
+
+      .tf26-menu-toggle {
+        display: flex;
+        order: 3;
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+      }
+
+      .tf26-hero-mobile-actions {
+        display: none !important;
+      }
+
+      .tf26-hero-mobile-actions .tf26-button {
+        width: 100%;
+        min-height: 46px;
+        font-size: 13.5px;
+        justify-content: center;
+      }
+
+      .tf26-eventbar--mobile {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        position: static !important;
+        margin-top: 14px !important;
+        border-radius: 16px !important;
+        gap: 8px !important;
+        padding: 12px !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+      }
+
+      .tf26-eventbar--mobile .tf26-eventbar__item {
+        min-height: 60px;
+        padding: 8px 10px;
+        justify-content: flex-start;
+        gap: 8px;
+      }
+
+      .tf26-eventbar--mobile .tf26-eventbar__icon {
+        width: 28px;
+        height: 28px;
+      }
+
+      .tf26-eventbar--mobile .tf26-eventbar__icon svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .tf26-eventbar--mobile .tf26-eventbar__item b,
+      .tf26-eventbar--mobile .tf26-eventbar__item strong {
+        font-size: 11px;
+      }
+    }
+
+    /* FORM PENDAFTARAN STYLES */
+    .tf26-registration {
+      position: relative;
+      scroll-margin-top: calc(var(--tf26-header-h, 76px) + 20px);
+      padding: 30px 28px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 189, 25, 0.35);
+      background: linear-gradient(160deg, rgba(3, 27, 61, .96) 0%, rgba(5, 52, 98, .92) 100%);
+      box-shadow: 0 20px 50px rgba(0, 10, 30, .45), inset 0 1px 0 rgba(255, 255, 255, .1);
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+
+    @keyframes tf26HighlightPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 189, 25, 0.75), 0 20px 50px rgba(0, 10, 30, .45);
+        border-color: rgba(255, 189, 25, 0.9);
+      }
+
+      35% {
+        box-shadow: 0 0 0 10px rgba(255, 189, 25, 0.28), 0 25px 60px rgba(255, 189, 25, .25);
+        border-color: rgba(255, 189, 25, 1);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 189, 25, 0), 0 20px 50px rgba(0, 10, 30, .45);
+        border-color: rgba(255, 189, 25, 0.35);
+      }
+    }
+
+    .tf26-registration.tf26-highlight-pulse {
+      animation: tf26HighlightPulse 1.6s cubic-bezier(0.2, 0.8, 0.25, 1);
+    }
+
+    .tf26-reg-subtitle {
+      color: #cbdcf0;
+      font-size: 12.5px;
+      line-height: 1.5;
+      margin: 0 0 20px;
+    }
+
+    .tf26-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .tf26-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .tf26-form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .tf26-form-group label {
+      color: #f0f6ff;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .tf26-req {
+      color: var(--tf26-gold);
+    }
+
+    .tf26-input,
+    .tf26-select,
+    .tf26-textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(186, 224, 255, .25);
+      background: rgba(1, 18, 44, .7);
+      color: #fff;
+      font-family: var(--tf26-font);
+      font-size: 13px;
+      outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .tf26-input:focus,
+    .tf26-select:focus,
+    .tf26-textarea:focus {
+      border-color: var(--tf26-gold);
+      background: rgba(1, 22, 54, .95);
+      box-shadow: 0 0 0 3px rgba(255, 189, 25, .2);
+    }
+
+    .tf26-select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffbd19' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 16px;
+      padding-right: 36px;
+    }
+
+    .tf26-select option {
+      background: #041a38;
+      color: #fff;
+    }
+
+    .tf26-textarea {
+      resize: vertical;
+      min-height: 56px;
+    }
+
+    .tf26-hint {
+      color: rgba(203, 220, 240, .6);
+      font-size: 10px;
+    }
+
+    .tf26-form-btn {
+      margin-top: 6px;
+      min-height: 50px;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      border: none;
+    }
+
+    .tf26-form-status {
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      line-height: 1.45;
+      margin-top: 8px;
+    }
+
+    .tf26-form-status--success {
+      background: rgba(16, 185, 129, .15);
+      border: 1px solid rgba(16, 185, 129, .5);
+      color: #a7f3d0;
+    }
+
+    .tf26-form-status--loading {
+      background: rgba(255, 189, 25, .15);
+      border: 1px solid rgba(255, 189, 25, .5);
+      color: #fef08a;
+    }
+
+    .tf26-form-status--error {
+      background: rgba(239, 68, 68, .15);
+      border: 1px solid rgba(239, 68, 68, .5);
+      color: #fca5a5;
+    }
+
+    .tf26-status-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: #25d366;
+      color: #041a38;
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .tf26-status-btn:hover {
+      background: #20bd5a;
+    }
+
+    .tf26-reg-sales-direct {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      text-align: center;
+    }
+
+    .tf26-reg-sales-direct span {
+      font-size: 11px;
+      color: #bdd2e8;
+    }
+
+    .tf26-reg-sales-direct a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--tf26-gold);
+      font-weight: 800;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .tf26-reg-sales-direct a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .tf26-form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* ==============================================================
+   PROPOSAL SYNC: SPEAKER SCHEDULE, BOOTHS, PRICING & TICKETS
+   ============================================================== */
+    .tf26-speaker {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background: #ffffff;
+      padding: 24px 22px 24px;
+      border-radius: 16px;
+      border: 1px solid rgba(4, 26, 56, 0.08);
+      box-shadow: 0 4px 20px rgba(4, 26, 56, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      text-align: left;
+    }
+
+    .tf26-speaker:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(4, 26, 56, 0.09);
+    }
+
+    .tf26-speaker__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 14px;
+    }
+
+    .tf26-speaker__icon {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+      background: #041a38;
+      color: #ffbd19;
+      box-shadow: 0 4px 12px rgba(4, 26, 56, 0.15);
+      flex-shrink: 0;
+    }
+
+    .tf26-speaker__time {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(4, 26, 56, 0.06);
+      color: #041a38;
+      border: 1px solid rgba(4, 26, 56, 0.12);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      padding: 5px 11px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+
+    .tf26-speaker h3 {
+      margin: 0 0 4px;
+      font-size: 19px;
+      font-weight: 800;
+      color: #041a38;
+      line-height: 1.25;
+      text-align: left;
+    }
+
+    .tf26-speaker p.tf26-speaker__role,
+    .tf26-speaker__role {
+      color: #1a365d !important;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-align: left;
+      line-height: 1.45;
+    }
+
+    .tf26-speaker__topic {
+      font-size: 11.5px;
+      color: #334155;
+      line-height: 1.5;
+      margin: 0;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(4, 26, 56, 0.14);
+      text-align: left;
+      width: 100%;
+    }
+
+    .tf26-speaker__topic strong {
+      color: #041a38;
+      display: block;
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .tf26-speaker__topic p {
+      margin: 0 0 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #041a38;
+      line-height: 1.4;
+    }
+
+    .tf26-speaker__points {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .tf26-speaker__points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      font-size: 11px;
+      color: #556987;
+      line-height: 1.45;
+    }
+
+    .tf26-speaker__points li span {
+      color: #d97706;
+      font-weight: 900;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    /* 4 Interactive Booths */
+    .tf26-booths-wrapper {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(225, 239, 253, 0.16);
+    }
+
+    .tf26-booths-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 20px;
+    }
+
+    .tf26-booths-header h3 {
+      font-size: clamp(22px, 2.6vw, 28px);
+      font-weight: 800;
+      color: #ffffff !important;
+      margin: 6px 0 8px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .tf26-booths-header p {
+      font-size: 13px;
+      color: #b9cce0 !important;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .tf26-booths-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .tf26-booth-card {
+      background: #ffffff;
+      border: 1px solid rgba(4, 26, 56, 0.08);
+      border-radius: 12px;
+      padding: 18px 16px;
+      box-shadow: 0 4px 14px rgba(4, 26, 56, 0.04);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tf26-booth-badge {
+      display: inline-block;
+      background: rgba(238, 173, 0, 0.15);
+      color: #92400e;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      width: fit-content;
+    }
+
+    .tf26-booth-card h4 {
+      margin: 0 0 6px;
+      font-size: 15px;
+      font-weight: 800;
+      color: #041a38;
+    }
+
+    .tf26-booth-card p {
+      margin: 0;
+      font-size: 11px;
+      line-height: 1.45;
+      color: #556987;
+    }
+
+    /* Pricing & Ticket Packages */
+    .tf26-pricing-section {
+      margin: 28px auto 36px;
+      padding: 32px 24px;
+      background: linear-gradient(180deg, #f8fafc 0%, #edf3fb 100%);
+      border-radius: 18px;
+      border: 1px solid rgba(4, 26, 56, 0.08);
+      max-width: 1040px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .tf26-pricing__header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 28px;
+    }
+
+    .tf26-pricing__title {
+      font-size: clamp(24px, 3.2vw, 32px);
+      font-weight: 800;
+      color: #041a38;
+      margin: 6px 0 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .tf26-pricing__desc {
+      font-size: 13px;
+      color: #556987;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .tf26-pricing__grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .tf26-price-card {
+      position: relative;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 30px 22px 24px;
+      border: 1.5px solid rgba(4, 26, 56, 0.1);
+      box-shadow: 0 6px 20px rgba(4, 26, 56, 0.05);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .tf26-price-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(4, 26, 56, 0.1);
+    }
+
+    .tf26-price-card--featured {
+      border-color: #eead00;
+      background: linear-gradient(180deg, #ffffff 0%, #fffdf8 100%);
+      box-shadow: 0 8px 30px rgba(238, 173, 0, 0.16);
+    }
+
+    .tf26-price-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #eead00, #ff8c00);
+      color: #041a38;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      padding: 5px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(238, 173, 0, 0.35);
+    }
+
+    .tf26-price-head h4 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 800;
+      color: #041a38;
+    }
+
+    .tf26-price-target {
+      font-size: 12px;
+      color: #64748b;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .tf26-price-amount {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin: 14px 0 4px;
+      flex-wrap: wrap;
+    }
+
+    .tf26-price-currency {
+      font-size: 16px;
+      font-weight: 800;
+      color: #041a38;
+      line-height: 1;
+    }
+
+    .tf26-price-number {
+      font-size: clamp(24px, 3.2vw, 36px);
+      font-weight: 900;
+      color: #041a38;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .tf26-price-per {
+      font-size: 11px;
+      font-weight: 700;
+      color: #d97706;
+      margin-bottom: 18px;
+    }
+
+    .tf26-price-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      flex-grow: 1;
+    }
+
+    .tf26-price-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 12px;
+      line-height: 1.45;
+      color: #334155;
+    }
+
+    .tf26-check {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(22, 163, 74, 0.12);
+      color: #16a34a;
+      font-size: 11px;
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .tf26-btn-select-package {
+      width: 100%;
+      padding: 13px 18px;
+      border-radius: 10px;
+      border: 1.5px solid #041a38;
+      background: #ffffff;
+      color: #041a38;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+
+    .tf26-btn-select-package:hover {
+      background: #041a38;
+      color: #ffffff;
+    }
+
+    .tf26-btn-select-package--gold {
+      background: linear-gradient(135deg, #ffbd19, #eead00);
+      border: none;
+      color: #041a38;
+      box-shadow: 0 4px 14px rgba(238, 173, 0, 0.35);
+    }
+
+    .tf26-btn-select-package--gold:hover {
+      background: linear-gradient(135deg, #eead00, #d97706);
+      color: #ffffff;
+      box-shadow: 0 6px 18px rgba(238, 173, 0, 0.45);
+    }
+
+    .tf26-pricing__footer-note {
+      margin-top: 26px;
+      text-align: center;
+    }
+
+    .tf26-quota-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      padding: 8px 18px;
+      border-radius: 30px;
+      border: 1px solid rgba(238, 173, 0, 0.4);
+      font-size: 12px;
+      color: #041a38;
+      box-shadow: 0 2px 8px rgba(4, 26, 56, 0.04);
+    }
+
+    .tf26-quota-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ef4444;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+      animation: tf26-pulse 1.8s infinite;
+    }
+
+    @keyframes tf26-pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+      }
+    }
+
+    .tf26-pricing__footer-note p {
+      font-size: 11px;
+      color: #64748b;
+      margin: 8px 0 0;
+    }
+
+    /* Package radio options inside registration form */
+    .tf26-package-radios {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .tf26-pkg-radio-card {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1.5px solid rgba(4, 26, 56, 0.15);
+      background: #f8fafc;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tf26-pkg-radio-card input[type="radio"] {
+      margin: 3px 8px 0 0;
+      accent-color: #eead00;
+      cursor: pointer;
+    }
+
+    .tf26-pkg-active {
+      border-color: #eead00;
+      background: #fffdf5;
+      box-shadow: 0 2px 10px rgba(238, 173, 0, 0.18);
+    }
+
+    .tf26-pkg-name {
+      font-size: 13px;
+      font-weight: 800;
+      color: #041a38;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tf26-pkg-tag {
+      background: #ffbd19;
+      color: #041a38;
+      font-size: 9px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 10px;
+    }
+
+    .tf26-pkg-sub {
+      font-size: 10px;
+      color: #64748b;
+      margin: 2px 0;
+    }
+
+    .tf26-pkg-cost {
+      font-size: 12px;
+      font-weight: 900;
+      color: #d97706;
+    }
+
+    .tf26-pkg-cost small {
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    @media (max-width: 860px) {
+      .tf26-pricing__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .tf26-booths-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .tf26-package-radios {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .tf26-booths-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tf26-page" id="tf26-page">
+    <div class="tf26-world" aria-hidden="true">
+      <img class="tf26-world__image"
+        src="assets/cadets-tugu.jpg"
+        alt="">
+      <div class="tf26-world__wash"></div>
+      <div class="tf26-world__horizon"></div>
+      <div class="tf26-world__grain"></div>
+      <div class="tf26-world__coordinates">YOGYAKARTA · 07°46' S / 110°24' E</div>
+    </div>
+
+    <header class="tf26-header" id="tf26-header">
+      <div class="tf26-header__inner">
+        <a class="tf26-brand" href="#tf26-home" aria-label="Akademi Taruna, kembali ke awal" data-tf26-go="0">
+          <img src="assets/logo-akademi-taruna.png" alt="Akademi Taruna" class="tf26-brand__logo" width="142"
+            height="40">
+        </a>
+
+        <button class="tf26-menu-toggle" type="button" aria-label="Buka navigasi" aria-expanded="false"
+          aria-controls="tf26-nav">
+          <span></span><span></span>
+        </button>
+
+        <nav class="tf26-nav" id="tf26-nav" aria-label="Navigasi utama">
+          <a href="#tentang-acara" data-tf26-go="1">Tentang Acara</a>
+          <a href="#rangkaian-acara" data-tf26-go="2">Rangkaian Acara</a>
+          <a href="#pembicara" data-tf26-go="3">Pembicara</a>
+          <a href="#fasilitas" data-tf26-go="4">Fasilitas</a>
+          <a href="#faq" data-tf26-go="5">FAQ</a>
+          <a href="#pendaftaran" style="color: #b45309; font-weight: 800;">Pendaftaran Tiket</a>
+        </nav>
+
+        <a class="tf26-button tf26-button--nav" href="#pendaftaran">
+          Daftar Sekarang <span class="tf26-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="tf26-main">
+      <div class="tf26-scroll-hint" aria-hidden="true"><span></span> SCROLL UNTUK MENJELAJAH</div>
+      <div class="tf26-progress" aria-hidden="true"><span class="tf26-progress__bar"></span></div>
+
+      <div class="tf26-stage" id="tf26-stage">
+        <!-- CHAPTER 01 · HERO -->
+        <section class="tf26-chapter tf26-chapter--hero" id="tf26-home" data-tf26-chapter="0"
+          aria-label="Taruna Fest 2026">
+          <div class="tf26-hero-wrapper">
+            <div class="tf26-hero-card">
+              <!-- Background Atmosphere -->
+              <div class="tf26-hero-bg" aria-hidden="true"></div>
+
+              <!-- Cadets Trio Image (AKPOL, AKMIL, IPDN) -->
+              <div class="tf26-hero-model-area" aria-hidden="true">
+                <img class="tf26-hero-cadets-img" src="assets/cadets-trio-hero.jpg"
+                  alt="Taruna Akpol, Akmil, dan Kedinasan" width="1024" height="512" decoding="async">
+              </div>
+
+              <!-- Wavy Indonesian Flag Ribbon (Bottom-Left) -->
+              <div class="tf26-flag-ribbon tf26-flag-ribbon--left" aria-hidden="true">
+                <svg viewBox="0 0 260 90" preserveAspectRatio="none">
+                  <path
+                    d="M-10,90 C40,65 90,75 140,55 C190,35 220,45 270,15 L270,38 C220,68 190,58 140,78 C90,98 40,88 -10,113 Z"
+                    fill="#e51a24" />
+                  <path
+                    d="M-10,113 C40,88 90,98 140,78 C190,58 220,68 270,38 L270,60 C220,90 190,80 140,100 C90,120 40,110 -10,135 Z"
+                    fill="#ffffff" opacity="0.95" />
+                </svg>
+              </div>
+
+              <!-- Hero Content (Upper Section) -->
+              <div class="tf26-hero-overlay">
+                <!-- Headline Graphic: FESTIVAL PERSIAPAN TARUNA - TARUNA FEST 2026 -->
+                <h1 class="tf26-hero__title-visual">
+                  <img src="assets/taruna-fest-2026-headline.png" alt="Festival Persiapan Taruna - Taruna Fest 2026"
+                    class="tf26-hero-headline-img" width="1755" height="896" decoding="async">
+                  <span class="tf26-sr-only">Festival Persiapan Taruna - Taruna Fest 2026</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="tf26-hero__subtitle">
+                  Event Edukasi &amp; Simulasi Seleksi Taruna<br>
+                  Untuk Siswa SMP/SMA/SMK/Sederajat
+                </p>
+
+                <!-- Category Chips: AKPOL, AKMIL, KEDINASAN -->
+                <div class="tf26-category-chips" aria-label="Kategori Seleksi">
+                  <div class="tf26-category-chip">
+                    <svg class="tf26-cat-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z" fill="none"
+                        stroke="#ffc72c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>AKPOL</span>
+                  </div>
+                  <div class="tf26-category-chip">
+                    <svg class="tf26-cat-icon" viewBox="0 0 24 24" fill="none" stroke="#ffc72c" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="5" y1="19" x2="19" y2="5"></line>
+                      <line x1="15" y1="4" x2="20" y2="9"></line>
+                      <line x1="3" y1="17" x2="7" y2="21"></line>
+                      <line x1="19" y1="19" x2="5" y2="5"></line>
+                      <line x1="4" y1="9" x2="9" y2="4"></line>
+                      <line x1="17" y1="21" x2="21" y2="17"></line>
+                    </svg>
+                    <span>AKMIL</span>
+                  </div>
+                  <div class="tf26-category-chip">
+                    <svg class="tf26-cat-icon" viewBox="0 0 24 24" fill="none" stroke="#ffc72c" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                      <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                    <span>KEDINASAN</span>
+                  </div>
+                </div>
+
+                <!-- Tagline with Gold Slanted Bar -->
+                <div class="tf26-hero__tagline">
+                  <span class="tf26-gold-bar" aria-hidden="true"></span>
+                  <p>
+                    Rancang Strategi, Ukur Kesiapan,<br>
+                    dan Wujudkan Mimpimu Menjadi Taruna
+                  </p>
+                </div>
+              </div>
+
+              <!-- Hero Bottom Bar: CTA Button (Left) + 4 Features (Right) -->
+              <div class="tf26-hero-bottom-bar">
+                <div class="tf26-hero-cta-wrap">
+                  <a class="tf26-button tf26-hero-cta-btn" href="#pendaftaran">
+                    Daftar Sekarang, Kuota Terbatas! <span class="tf26-arrow" aria-hidden="true">›</span>
+                  </a>
+                </div>
+
+                <div class="tf26-hero-features" aria-label="Keunggulan Program">
+                  <!-- 1: Talkshow Bersama Alumni -->
+                  <div class="tf26-feature-item">
+                    <div class="tf26-feature-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#ffc72c" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                        <circle cx="8" cy="14" r="1.2" fill="#ffc72c"></circle>
+                        <circle cx="12" cy="14" r="1.2" fill="#ffc72c"></circle>
+                        <circle cx="16" cy="14" r="1.2" fill="#ffc72c"></circle>
+                        <circle cx="8" cy="18" r="1.2" fill="#ffc72c"></circle>
+                        <circle cx="12" cy="18" r="1.2" fill="#ffc72c"></circle>
+                      </svg>
+                    </div>
+                    <div class="tf26-feature-text">
+                      <strong>Talkshow</strong>
+                      <span>Bersama Alumni</span>
+                    </div>
+                  </div>
+
+                  <div class="tf26-feature-sep" aria-hidden="true"></div>
+
+                  <!-- 2: Simulasi & Tryout Seleksi -->
+                  <div class="tf26-feature-item">
+                    <div class="tf26-feature-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#ffc72c" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="6"></circle>
+                        <circle cx="12" cy="12" r="2" fill="#ffc72c"></circle>
+                      </svg>
+                    </div>
+                    <div class="tf26-feature-text">
+                      <strong>Simulasi &amp;</strong>
+                      <span>Tryout Seleksi</span>
+                    </div>
+                  </div>
+
+                  <div class="tf26-feature-sep" aria-hidden="true"></div>
+
+                  <!-- 3: Pemetaan Kesiapan Diri -->
+                  <div class="tf26-feature-item">
+                    <div class="tf26-feature-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#ffc72c" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                        <path d="M9 14l2 2 4-4"></path>
+                        <line x1="9" y1="10" x2="15" y2="10"></line>
+                      </svg>
+                    </div>
+                    <div class="tf26-feature-text">
+                      <strong>Pemetaan</strong>
+                      <span>Kesiapan Diri</span>
+                    </div>
+                  </div>
+
+                  <div class="tf26-feature-sep" aria-hidden="true"></div>
+
+                  <!-- 4: Konsultasi dengan Mentor -->
+                  <div class="tf26-feature-item">
+                    <div class="tf26-feature-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#ffc72c" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </div>
+                    <div class="tf26-feature-text">
+                      <strong>Konsultasi</strong>
+                      <span>dengan Mentor</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      </section>
+
+      <!-- CHAPTER 02 · ABOUT + EXPERIENCES -->
+      <section class="tf26-chapter tf26-chapter--about" id="tentang-acara" data-tf26-chapter="1"
+        aria-label="Tentang Taruna Fest">
+        <div class="tf26-chapter__topline"><span>01 / THE EXPERIENCE</span><span>KENALI DIRI · UKUR KESIAPAN · SUSUN
+            STRATEGI</span></div>
+        <div class="tf26-about__intro">
+          <div class="tf26-section-kicker">APA ITU TARUNA FEST?</div>
+          <h2 class="tf26-display">Satu hari untuk<br><em>mengenali kesiapanmu.</em></h2>
+          <p>Festival edukasi interaktif untuk membantu siswa dan orang tua memahami alur seleksi, strategi persiapan,
+            serta pemetaan kesiapan masuk SMA Taruna, TNI/Polri, dan Sekolah Kedinasan.</p>
+        </div>
+
+        <div class="tf26-about__signals" aria-label="Keunggulan Taruna Fest">
+          <div><span class="tf26-signal-icon">✧</span><b>Edukasi<br>Lengkap</b></div>
+          <div><span class="tf26-signal-icon">◎</span><b>Pemetaan<br>Kesiapan</b></div>
+          <div><span class="tf26-signal-icon">◉</span><b>Konsultasi<br>Langsung</b></div>
+          <div><span class="tf26-signal-icon">✦</span><b>Bersama<br>Praktisi Ahli</b></div>
+        </div>
+
+        <div class="tf26-experience-head">
+          <span class="tf26-section-kicker">5 PENGALAMAN PERSIAPAN DALAM 1 HARI</span>
+          <p>Kenali aspek yang perlu diperkuat sebelum mengikuti seleksi.</p>
+        </div>
+        <div class="tf26-experience-track">
+          <article class="tf26-experience">
+            <div class="tf26-experience__photo"><img src="assets/exp-kesehatan.jpg"
+                alt="Pemeriksaan kesehatan fisik calon siswa seleksi kedinasan" loading="lazy"><span>01</span></div>
+            <div class="tf26-experience__body"><b>Pemeriksaan<br>Kesehatan</b><small>Kenali kondisi fisik awal</small>
+            </div>
+          </article>
+
+          <article class="tf26-experience">
+            <div class="tf26-experience__photo"><img src="assets/exp-kesamaptaan.jpg"
+                alt="Pengukuran kesamaptaan jasmani dan kebugaran seleksi taruna" loading="lazy"><span>02</span></div>
+            <div class="tf26-experience__body"><b>Pengukuran<br>Kesamaptaan Jasmani</b><small>Kenali kesiapan
+                kebugaran</small></div>
+          </article>
+
+          <article class="tf26-experience">
+            <div class="tf26-experience__photo"><img src="assets/exp-akademik.jpg"
+                alt="Pemetaan kemampuan akademik seleksi masuk taruna" loading="lazy"><span>03</span></div>
+            <div class="tf26-experience__body"><b>Pemetaan Kemampuan<br>Akademik</b><small>Petakan kekuatan
+                akademik</small></div>
+          </article>
+
+          <article class="tf26-experience">
+            <div class="tf26-experience__photo"><img src="assets/exp-psikologi.jpg"
+                alt="Asesmen psikologi dan tes kepribadian calon taruna" loading="lazy"><span>04</span></div>
+            <div class="tf26-experience__body"><b>Asesmen<br>Psikologi</b><small>Profil dan potensi diri</small></div>
+          </article>
+
+          <article class="tf26-experience">
+            <div class="tf26-experience__photo"><img src="assets/exp-wawancara.jpg"
+                alt="Simulasi wawancara dan mental ideologi seleksi kedinasan" loading="lazy"><span>05</span></div>
+            <div class="tf26-experience__body"><b>Simulasi<br>Wawancara</b><small>Pengenalan dan latihan</small></div>
+          </article>
+        </div>
+        <div class="tf26-about__footnote"><span class="tf26-gold-dot"></span> Dapatkan gambaran awal untuk menyusun
+          langkah persiapan yang lebih terarah.</div>
+      </section>
+
+      <!-- CHAPTER 03 · WHY + RUN DOWN + VENUE -->
+      <section class="tf26-chapter tf26-chapter--program" id="rangkaian-acara" data-tf26-chapter="2"
+        aria-label="Rangkaian dan lokasi acara">
+        <div class="tf26-chapter__topline"><span>02 / YOUR ROADMAP</span><span>19 DESEMBER 2026 · YOGYAKARTA</span>
+        </div>
+        <div class="tf26-program__heading">
+          <div class="tf26-section-kicker">PERSIAPAN YANG LEBIH TERARAH</div>
+          <h2 class="tf26-display">Ukur. Pahami.<br><em>Siapkan langkah berikutnya.</em></h2>
+        </div>
+        <div class="tf26-program__grid">
+          <div class="tf26-why">
+            <div class="tf26-why__title">Kenapa harus<br><em>ikut Taruna Fest?</em></div>
+            <ul>
+              <li><span>✓</span>Dapat gambaran nyata proses seleksi</li>
+              <li><span>✓</span>Ukur kesiapan fisik, akademik, dan mental</li>
+              <li><span>✓</span>Konsultasi langsung dengan praktisi</li>
+              <li><span>✓</span>Strategi persiapan lebih terarah</li>
+              <li><span>✓</span>Wawasan dari alumni Taruna/TNI/Polri</li>
+            </ul>
+          </div>
+
+          <div class="tf26-rundown">
+            <div class="tf26-rundown__heading"><span>✣</span>
+              <div><small>THE DAY AT A GLANCE</small>
+                <h3>Rangkaian Acara</h3>
+              </div>
+            </div>
+            <div class="tf26-timeline">
+              <div class="tf26-timeline__item"><time>08.00 – 08.45</time><span><strong>Registrasi Ulang & Penyerahan
+                    Peserta Kit</strong><br><small style="color:#64748b;">Khusus siswa: Jersey resmi, goodie bag, modul
+                    seleksi, worksheet, tumbler, health kit</small></span></div>
+              <div class="tf26-timeline__item"><time>08.45 – 10.15</time><span><strong>Seminar Sesi 1: Roadmap &
+                    Strategi Lolos Seleksi</strong><br><small style="color:#64748b;">Bersama CEO Akademi Prestasi
+                    Indonesia · Pemetaan peluang & persiapan keluarga</small></span></div>
+              <div class="tf26-timeline__item"><time>10.15 – 12.00</time><span><strong>Seminar Sesi 2: Tahapan & Standar
+                    Seleksi Lapangan</strong><br><small style="color:#64748b;">Bersama Praktisi Narasumber TNI & POLRI ·
+                    Standar fisik, tes mental & kelulusan</small></span></div>
+              <div class="tf26-timeline__item"><time>12.00 – 13.00</time><span><strong>Ishoma (Makan Siang &
+                    Sholat)</strong><br><small style="color:#64748b;">Makan siang disediakan bagi seluruh peserta sesuai
+                    paket tiket</small></span></div>
+              <div class="tf26-timeline__item"><time>13.00 – 14.00</time><span><strong>Seminar Sesi 3: Standar Kesehatan
+                    & Medical Check-Up</strong><br><small style="color:#64748b;">Bersama Dokter Taruna · Faktor gugur
+                    kesehatan dan penanganan sejak dini</small></span></div>
+              <div class="tf26-timeline__item"><time>14.15 – 17.00</time><span><strong>Interactive Booth Expo: 4 Booth
+                    Eksplorasi</strong><br><small style="color:#64748b;">Simulasi kesehatan, tes fisik, asesmen
+                    psikologi & konsultasi jalur privat</small></span></div>
+            </div>
+            <p class="tf26-rundown__note">Rundown resmi TARUNA FEST 2026 berdasarkan proposal resmi panitia.</p>
+          </div>
+
+          <div class="tf26-venue">
+            <div class="tf26-venue__top"><span>⌖</span><small>MEET US IN</small></div>
+            <h3>Ballroom Hotel<br>Sahid Raya Yogyakarta</h3>
+            <img src="assets/hotel-sahid-raya.jpg" alt="Ballroom Hotel Sahid Raya Yogyakarta" loading="lazy">
+            <p>Jl. Babarsari No. 2, Caturtunggal, Depok, Sleman, Yogyakarta.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Ballroom+Hotel+Sahid+Raya+Yogyakarta"
+              target="_blank" rel="noopener">LIHAT LOKASI DI MAPS <span>↗</span></a>
+          </div>
+        </div>
+
+        <!-- 4 INTERACTIVE BOOTH EXPO -->
+        <div class="tf26-booths-wrapper">
+          <div class="tf26-booths-header">
+            <div class="tf26-section-kicker">SESI SIANG · 14.15 – 17.00 WIB</div>
+            <h3 style="font-size:clamp(22px, 2.6vw, 28px); font-weight:800; color:#ffffff; margin:6px 0 8px; text-shadow:0 2px 12px rgba(0,0,0,0.45);">Denah 4 Interactive Booth Expo</h3>
+            <p style="font-size:13px; color:#b9cce0; margin:0; line-height:1.5;">Setelah seminar, peserta berpindah ke 4 booth interaktif di ballroom untuk mencoba tes dan berkonsultasi langsung.</p>
+          </div>
+          <div class="tf26-booths-grid">
+            <div class="tf26-booth-card">
+              <span class="tf26-booth-badge">BOOTH 1</span>
+              <h4>Pemeriksaan Kesehatan</h4>
+              <p>Skrining fisik awal, pemeriksaan mata, tensi, postur, serta konsultasi penyebab &amp; faktor gugur tes
+                kesehatan seleksi kedinasan.</p>
+            </div>
+            <div class="tf26-booth-card">
+              <span class="tf26-booth-badge">BOOTH 2</span>
+              <h4>Kesamaptaan Fisik</h4>
+              <p>Uji coba standar tes kesamaptaan jasmani (push-up, sit-up, pull-up, shuttle run) &amp; penetapan target
+                latihan terukur.</p>
+            </div>
+            <div class="tf26-booth-card">
+              <span class="tf26-booth-badge">BOOTH 3</span>
+              <h4>Psikologi &amp; Sikap</h4>
+              <p>Simulasi bentuk tes psikologi kedinasan, tes kecermatan, kepribadian, dan pengenalan asesmen mental
+                ideologi.</p>
+            </div>
+            <div class="tf26-booth-card">
+              <span class="tf26-booth-badge">BOOTH 4</span>
+              <h4>Konsultasi Jalur &amp; Karir</h4>
+              <p>Diskusi privat penentuan sekolah kedinasan (Akmil, Akpol, IPDN, STAN, dll) yang paling sesuai dengan
+                profil &amp; kondisi siswa.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tf26-program__bottomline"><span>01</span> SATU HARI PEMETAAN <i></i> LIMA ASPEK PERSIAPAN <i></i>
+          SATU LANGKAH LEBIH SIAP <span>03</span></div>
+      </section>
+
+      <!-- CHAPTER 04 · SPEAKERS -->
+      <section class="tf26-chapter tf26-chapter--voices" id="pembicara" data-tf26-chapter="3"
+        aria-label="Pembicara seminar">
+        <div class="tf26-chapter__topline"><span>03 / PEOPLE BEHIND THE INSIGHT</span><span>3 SESI NARASUMBER
+            UTAMA</span></div>
+        <div class="tf26-voices__heading">
+          <div class="tf26-section-kicker">PERSPEKTIF AHLI &amp; PRAKTISI</div>
+          <h2 class="tf26-display">Wawasan langsung dari pakar.<br><em>Persiapan terarah tanpa salah langkah.</em></h2>
+        </div>
+        <div class="tf26-speaker-lineup">
+          <!-- 1. CEO API (Internal) -->
+          <article class="tf26-speaker">
+            <div class="tf26-speaker__header">
+              <div class="tf26-speaker__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#ffbd19" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                </svg>
+              </div>
+              <span class="tf26-speaker__time">Sesi 1 · 08.45 – 10.15 WIB</span>
+            </div>
+            <h3>CEO API (internal)</h3>
+            <p class="tf26-speaker__role">Penyelenggara &amp; Tim Ahli Strategi Kelulusan Kedinasan</p>
+          </article>
+
+          <!-- 2. Narasumber TNI / POLRI -->
+          <article class="tf26-speaker">
+            <div class="tf26-speaker__header">
+              <div class="tf26-speaker__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#ffbd19" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+              <span class="tf26-speaker__time">Sesi 2 · 10.15 – 12.00 WIB</span>
+            </div>
+            <h3>Narasumber TNI/POLRI</h3>
+            <p class="tf26-speaker__role">Praktisi Lapangan &amp; Penguji Rekrutmen TNI / POLRI</p>
+          </article>
+
+          <!-- 3. Dokter Taruna -->
+          <article class="tf26-speaker">
+            <div class="tf26-speaker__header">
+              <div class="tf26-speaker__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#ffbd19" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <span class="tf26-speaker__time">Sesi 3 · 13.00 – 14.00 WIB</span>
+            </div>
+            <h3>Dokter Taruna</h3>
+            <p class="tf26-speaker__role">Tim Medis &amp; Spesialis Pemeriksaan Kesehatan Seleksi</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CHAPTER 05 · FACILITIES + REGISTRATION -->
+      <section class="tf26-chapter tf26-chapter--benefits" id="fasilitas" data-tf26-chapter="4"
+        aria-label="Fasilitas dan pendaftaran">
+        <div class="tf26-chapter__topline"><span>04 / WHAT YOU TAKE HOME</span><span>FASILITAS · BENEFIT ·
+            REGISTRASI</span></div>
+        <div class="tf26-benefits__heading">
+          <div class="tf26-section-kicker">PENGALAMAN YANG BERNILAI</div>
+          <h2 class="tf26-display">Lebih banyak insight.<br><em>Lebih jelas arah persiapan.</em></h2>
+        </div>
+
+        <!-- PILIHAN PAKET TIKET & INVESTASI (PROPOSAL MANAJEMEN) -->
+        <div class="tf26-pricing-section" id="paket-tiket">
+          <div class="tf26-pricing__header">
+            <div class="tf26-section-kicker">INVESTASI MASA DEPAN KEDINASAN</div>
+            <h3 class="tf26-pricing__title">Pilihan Paket Tiket Masuk</h3>
+            <p class="tf26-pricing__desc">Sangat disarankan hadir bersama 1 orang tua/pendamping agar rencana dan
+              kesepakatan persiapan karir kedinasan dapat diputuskan bersama secara matang.</p>
+          </div>
+
+          <div class="tf26-pricing__grid">
+            <!-- Card 1: Paket Berdua (Utama & Rekomendasi) -->
+            <div class="tf26-price-card tf26-price-card--featured">
+              <div class="tf26-price-badge">PALING BANYAK DIPILIH · REKOMENDASI</div>
+              <div class="tf26-price-head">
+                <h4>Paket Berdua</h4>
+                <div class="tf26-price-target">1 Siswa + 1 Orang Tua / Pendamping</div>
+              </div>
+              <div class="tf26-price-amount">
+                <span class="tf26-price-currency">Rp</span>
+                <span class="tf26-price-number">1.500.000</span>
+              </div>
+              <div class="tf26-price-per">Hanya Rp750.000 per orang · Investasi Terhemat</div>
+
+              <ul class="tf26-price-features">
+                <li><span class="tf26-check">✓</span> <span><strong>Akses Penuh 3 Sesi Seminar</strong> untuk Siswa
+                    &amp; Orang Tua</span></li>
+                <li><span class="tf26-check">✓</span> <span><strong>Akses Bebas ke 4 Booth</strong> Interactive Booth
+                    Expo</span></li>
+                <li><span class="tf26-check">✓</span> <span><strong>1 Peserta Kit Lengkap Khusus Siswa:</strong> Jersey
+                    Resmi, Goodie Bag, Modul Seleksi, Worksheet, Tumbler, &amp; Health Kit</span></li>
+                <li><span class="tf26-check">✓</span> <span><strong>Sesi Konsultasi Jalur Privat</strong> bersama Tim
+                    Asesor API</span></li>
+                <li><span class="tf26-check">✓</span> <span><strong>Lunch Box &amp; Coffee Break</strong> untuk 2
+                    Orang</span></li>
+                <li><span class="tf26-check">✓</span> <span><strong>Sertifikat Resmi Kepesertaan</strong> Taruna Fest
+                    2026</span></li>
+              </ul>
+
+              <button type="button" class="tf26-btn-select-package tf26-btn-select-package--gold"
+                data-package="Paket Berdua" onclick="selectPackage('Paket Berdua')">
+                <span>Pilih Paket Berdua (Rp1.500.000)</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Card 2: Paket Perorangan -->
+            <div class="tf26-price-card">
+              <div class="tf26-price-head">
+                <h4>Paket Perorangan</h4>
+                <div class="tf26-price-target">1 Siswa Mandiri</div>
+              </div>
+              <div class="tf26-price-amount">
+                <span class="tf26-price-currency">Rp</span>
+                <span class="tf26-price-number">900.000</span>
+              </div>
+              <div class="tf26-price-per">Tarif reguler untuk 1 peserta siswa</div>
+
+              <ul class="tf26-price-features">
+                <li><span class="tf26-check">✓</span> <span><strong>Akses Penuh 3 Sesi Seminar</strong> untuk 1
+                    Siswa</span></li>
+                <li><span class="tf26-check">✓</span> <span><strong>Akses Bebas ke 4 Booth</strong> Interactive Booth
+                    Expo</span></li>
+                <li><span class="tf26-check">✓</span> <span><strong>1 Peserta Kit Lengkap Siswa</strong> (Jersey, Modul,
+                    Worksheet, Goodie Bag, Tumbler, Health Kit)</span></li>
+                <li><span class="tf26-check">✓</span> <span><strong>Konsultasi Jalur</strong> di Booth Expo</span></li>
+                <li><span class="tf26-check">✓</span> <span><strong>Lunch Box &amp; Coffee Break</strong> untuk 1
+                    Orang</span></li>
+                <li><span class="tf26-check">✓</span> <span><strong>Sertifikat Resmi Kepesertaan</strong> Taruna Fest
+                    2026</span></li>
+              </ul>
+
+              <button type="button" class="tf26-btn-select-package" data-package="Paket Perorangan"
+                onclick="selectPackage('Paket Perorangan')">
+                <span>Pilih Paket Perorangan (Rp900.000)</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="tf26-pricing__footer-note">
+            <div class="tf26-quota-pill">
+              <span class="tf26-quota-dot"></span>
+              <span><strong>Kuota Dibatasi Ketat:</strong> Hanya 150 Kursi (75 Siswa + 75 Orang Tua / 75 Paket)</span>
+            </div>
+            <p>Catatan: Pembayaran dan penguncian kursi dikonfirmasi resmi via WhatsApp Sales (0813-2760-627) setelah
+              Anda mengirim formulir.</p>
+          </div>
+        </div>
+
+        <div class="tf26-benefits__layout">
+          <div class="tf26-benefit-field">
+            <div class="tf26-benefit" data-reveal><span>▤</span><b>Materi Seminar &<br>Panduan Persiapan</b></div>
+            <div class="tf26-benefit" data-reveal><span>▧</span><b>Hasil Asesmen<br>Akademik, Psikologi & Fisik</b>
+            </div>
+            <div class="tf26-benefit" data-reveal><span>◎</span><b>Konsultasi Langsung<br>dengan Praktisi</b></div>
+            <div class="tf26-benefit" data-reveal><span>♨</span><b>Snack &<br>Makan Siang</b></div>
+            <div class="tf26-benefit" data-reveal><span>▣</span><b>Sertifikat<br>Peserta</b></div>
+            <div class="tf26-benefit" data-reveal><span>✦</span><b>Merchandise<br>Eksklusif</b></div>
+          </div>
+
+          <!-- REGISTRATION FORM -->
+          <div class="tf26-registration" id="pendaftaran">
+            <div class="tf26-registration__top">
+              <small>FORMULIR RESMI PENDAFTARAN</small>
+              <span>KUOTA 150 KURSI</span>
+            </div>
+            <h3>Pendaftaran<br><em>Taruna Fest 2026</em></h3>
+            <p class="tf26-reg-subtitle">
+              Pilih paket tiket Anda, lalu isi data di bawah ini. Data Anda otomatis tersimpan di database Google Sheets
+              dan langsung terhubung ke WhatsApp Sales (<strong>0813-2760-627</strong>) untuk konfirmasi penguncian
+              kursi.
+            </p>
+
+            <form id="tf26-reg-form" class="tf26-form" autocomplete="on" onsubmit="handleTf26Submit(event)">
+              <!-- Pilihan Paket Radio Cards -->
+              <div class="tf26-form-group">
+                <label class="tf26-label-head"
+                  style="font-weight:800; color:#041a38; font-size:13px; display:block; margin-bottom:6px;">Pilihan
+                  Paket Tiket <span class="tf26-req">*</span></label>
+                <div class="tf26-package-radios">
+                  <label class="tf26-pkg-radio-card tf26-pkg-active" id="tf26-pkg-berdua-label">
+                    <input type="radio" name="paket" value="Paket Berdua" checked
+                      onchange="updatePackageSelection(this.value)">
+                    <div class="tf26-pkg-info">
+                      <div class="tf26-pkg-name">Paket Berdua <span class="tf26-pkg-tag">Rekomendasi</span></div>
+                      <div class="tf26-pkg-sub">1 Siswa + 1 Orang Tua / Pendamping</div>
+                      <div class="tf26-pkg-cost">Rp1.500.000 <small>(Rp750.000/orang)</small></div>
+                    </div>
+                  </label>
+                  <label class="tf26-pkg-radio-card" id="tf26-pkg-mandiri-label">
+                    <input type="radio" name="paket" value="Paket Perorangan"
+                      onchange="updatePackageSelection(this.value)">
+                    <div class="tf26-pkg-info">
+                      <div class="tf26-pkg-name">Paket Perorangan</div>
+                      <div class="tf26-pkg-sub">1 Siswa Mandiri</div>
+                      <div class="tf26-pkg-cost">Rp900.000</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="tf26-form-group">
+                <label for="tf26-name">Nama Lengkap Siswa / Calon Taruna <span class="tf26-req">*</span></label>
+                <input type="text" id="tf26-name" name="nama" class="tf26-input"
+                  placeholder="Contoh: Muhammad Rayhan Pratama" required>
+              </div>
+
+              <div class="tf26-form-row">
+                <div class="tf26-form-group">
+                  <label for="tf26-whatsapp">Nomor WhatsApp Siswa <span class="tf26-req">*</span></label>
+                  <input type="tel" id="tf26-whatsapp" name="whatsapp" class="tf26-input"
+                    placeholder="Contoh: 081234567890" required>
+                  <span class="tf26-hint">Digunakan untuk konfirmasi tiket &amp; pengiriman panduan acara.</span>
+                </div>
+                <div class="tf26-form-group">
+                  <label for="tf26-city">Kota / Kabupaten Domisili <span class="tf26-req">*</span></label>
+                  <input type="text" id="tf26-city" name="kota" class="tf26-input"
+                    placeholder="Contoh: Yogyakarta / Sleman / Bantul" required>
+                </div>
+              </div>
+
+              <!-- Data Orang Tua Khusus Paket Berdua -->
+              <div class="tf26-form-group" id="tf26-parent-group">
+                <div style="background:rgba(255,189,25,0.08); border:1px solid rgba(255,189,25,0.25); border-radius:12px; padding:14px; margin-bottom:4px;">
+                  <div style="font-weight:800; color:#ffbd19; font-size:12px; margin-bottom:10px; display:flex; align-items:center; gap:6px;">
+                    <span>👨‍👩‍👦 Data Orang Tua / Pendamping (Khusus Paket Berdua)</span>
+                  </div>
+                  <div class="tf26-form-row">
+                    <div class="tf26-form-group">
+                      <label for="tf26-parent-name">Nama Orang Tua / Pendamping <span class="tf26-req">*</span></label>
+                      <input type="text" id="tf26-parent-name" name="nama_ortu" class="tf26-input"
+                        placeholder="Nama ayah / ibu / wali" required>
+                    </div>
+                    <div class="tf26-form-group">
+                      <label for="tf26-parent-relation">Hubungan dengan Siswa <span class="tf26-req">*</span></label>
+                      <select id="tf26-parent-relation" name="hubungan" class="tf26-select" required>
+                        <option value="Ayah" selected>Ayah</option>
+                        <option value="Ibu">Ibu</option>
+                        <option value="Wali / Pendamping Keluarga">Wali / Pendamping Keluarga</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="tf26-form-group" style="margin-top:10px;">
+                    <label for="tf26-parent-wa">Nomor WhatsApp Orang Tua / Pendamping <span class="tf26-req">*</span></label>
+                    <input type="tel" id="tf26-parent-wa" name="wa_ortu" class="tf26-input"
+                      placeholder="Contoh: 081234567891 (Boleh sama dengan nomor siswa)" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tf26-form-row">
+                <div class="tf26-form-group">
+                  <label for="tf26-school">Asal Sekolah <span class="tf26-req">*</span></label>
+                  <input type="text" id="tf26-school" name="sekolah" class="tf26-input"
+                    placeholder="Contoh: SMAN 1 Yogyakarta / SMPN 5" required>
+                </div>
+                <div class="tf26-form-group">
+                  <label for="tf26-grade">Tingkat / Kelas Saat Ini <span class="tf26-req">*</span></label>
+                  <select id="tf26-grade" name="tingkat" class="tf26-select" required>
+                    <option value="" disabled selected>-- Pilih Tingkat / Kelas --</option>
+                    <option value="Kelas 7 SMP">Kelas 7 SMP</option>
+                    <option value="Kelas 8 SMP">Kelas 8 SMP</option>
+                    <option value="Kelas 9 SMP">Kelas 9 SMP</option>
+                    <option value="Kelas 10 SMA/SMK">Kelas 10 SMA / SMK</option>
+                    <option value="Kelas 11 SMA/SMK">Kelas 11 SMA / SMK</option>
+                    <option value="Kelas 12 SMA/SMK">Kelas 12 SMA / SMK</option>
+                    <option value="Alumni / Gap Year">Alumni / Gap Year</option>
+                    <option value="Lainnya">Lainnya</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="tf26-form-row">
+                <div class="tf26-form-group">
+                  <label for="tf26-target">Target Jalur Kedinasan (Pilihan 1 - Utama) <span class="tf26-req">*</span></label>
+                  <select id="tf26-target" name="target" class="tf26-select" required>
+                    <option value="" disabled selected>-- Pilih Target Utama --</option>
+                    <option value="Akmil (Akademi Militer - TNI AD)">Akmil (TNI AD)</option>
+                    <option value="AAL (Akademi Angkatan Laut - TNI AL)">AAL (TNI AL)</option>
+                    <option value="AAU (Akademi Angkatan Udara - TNI AU)">AAU (TNI AU)</option>
+                    <option value="Akpol (Akademi Kepolisian - POLRI)">Akpol (POLRI)</option>
+                    <option value="IPDN (Institut Pemerintahan Dalam Negeri)">IPDN (Kemendagri)</option>
+                    <option value="Poltekip / Poltekim (Kemenkumham)">Poltekip / Poltekim</option>
+                    <option value="STAN / STIS / STIN / BSSN">Kedinasan Lainnya (STAN, STIS, STIN, BSSN)</option>
+                    <option value="SMA Taruna (Taruna Nusantara / Pradita / dll)">SMA Taruna (TN, Pradita, dll)</option>
+                    <option value="Belum Menentukan / Mau Konsultasi">Belum Menentukan (Konsultasi)</option>
+                  </select>
+                </div>
+                <div class="tf26-form-group">
+                  <label for="tf26-target2">Target Jalur Kedinasan (Pilihan 2) <small>(Opsional)</small></label>
+                  <select id="tf26-target2" name="target2" class="tf26-select">
+                    <option value="" selected>-- Pilih Target Pilihan Kedua --</option>
+                    <option value="Akmil (Akademi Militer - TNI AD)">Akmil (TNI AD)</option>
+                    <option value="AAL (Akademi Angkatan Laut - TNI AL)">AAL (TNI AL)</option>
+                    <option value="AAU (Akademi Angkatan Udara - TNI AU)">AAU (TNI AU)</option>
+                    <option value="Akpol (Akademi Kepolisian - POLRI)">Akpol (POLRI)</option>
+                    <option value="IPDN (Institut Pemerintahan Dalam Negeri)">IPDN (Kemendagri)</option>
+                    <option value="Poltekip / Poltekim (Kemenkumham)">Poltekip / Poltekim</option>
+                    <option value="STAN / STIS / STIN / BSSN">Kedinasan Lainnya (STAN, STIS, STIN, BSSN)</option>
+                    <option value="SMA Taruna (Taruna Nusantara / Pradita / dll)">SMA Taruna (TN, Pradita, dll)</option>
+                    <option value="Belum Ada Pilihan Kedua">Belum Ada Pilihan Kedua</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="tf26-form-row">
+                <div class="tf26-form-group">
+                  <label for="tf26-readiness">Tingkat Kesiapan Siswa Saat Ini <small>(Opsional)</small></label>
+                  <select id="tf26-readiness" name="kesiapan" class="tf26-select">
+                    <option value="Baru Memulai / Kenal Jalur">Baru Memulai / Kenal Jalur</option>
+                    <option value="Sedang Persiapan Mandiri / Bimbel" selected>Sedang Persiapan Mandiri / Bimbel</option>
+                    <option value="Sudah Pernah Tryout / Intensif">Sudah Pernah Tryout / Intensif</option>
+                    <option value="Tingkat Akhir / Siap Seleksi 2026">Tingkat Akhir / Siap Seleksi 2026</option>
+                  </select>
+                </div>
+                <div class="tf26-form-group">
+                  <label for="tf26-source">Tahu Informasi Dari Mana? <small>(Opsional)</small></label>
+                  <select id="tf26-source" name="sumber" class="tf26-select">
+                    <option value="Instagram (@akademitaruna.id)" selected>Instagram (@akademitaruna.id)</option>
+                    <option value="Rekomendasi Teman / Guru / Alumni">Rekomendasi Teman / Guru / Alumni</option>
+                    <option value="Website / Google">Website / Google</option>
+                    <option value="Brosur / Sosialisasi Sekolah">Brosur / Sosialisasi Sekolah</option>
+                    <option value="Lainnya">Lainnya</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="tf26-form-group">
+                <label for="tf26-notes">Catatan / Hal yang Ingin Dikonsultasikan <small>(Opsional)</small></label>
+                <textarea id="tf26-notes" name="catatan" class="tf26-textarea" rows="2"
+                  placeholder="Tuliskan kendala atau pertanyaan seputar tes fisik, kesehatan, atau konsultasi karir..."></textarea>
+              </div>
+
+              <button type="submit" id="tf26-submit-btn"
+                class="tf26-button tf26-button--primary tf26-btn-block tf26-form-btn">
+                <span class="tf26-btn-text">Kirim Pendaftaran &amp; Konfirmasi WhatsApp</span>
+                <span class="tf26-arrow" aria-hidden="true">›</span>
+              </button>
+
+              <div id="tf26-form-status" class="tf26-form-status" style="display:none;" role="status"></div>
+            </form>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- CHAPTER 06 · FAQ -->
+      <section class="tf26-chapter tf26-chapter--faq" id="faq" data-tf26-chapter="5"
+        aria-label="Pertanyaan yang sering ditanyakan">
+        <div class="tf26-chapter__topline"><span>05 / NEED TO KNOW</span><span>INFORMASI SEBELUM KAMU DATANG</span>
+        </div>
+        <div class="tf26-faq__layout">
+          <div class="tf26-faq__intro">
+            <div class="tf26-section-kicker">FAQ · TARUNA FEST 2026</div>
+            <h2 class="tf26-display">Pertanyaan<br><em>yang sering muncul.</em></h2>
+            <p>Temukan jawaban dari pertanyaan yang paling sering diajukan calon peserta dan orang tua.</p>
+            <div class="tf26-faq__contact"><span>MASIH ADA YANG INGIN DITANYAKAN?</span><a
+                href="https://wa.me/628132760627?text=Halo%20Akademi%20Taruna%2C%20saya%20ingin%20bertanya%20tentang%20Taruna%20Fest%202026."
+                target="_blank" rel="noopener">Hubungi tim kami ↗</a></div>
+          </div>
+          <div class="tf26-faq__list">
+            <details class="tf26-faq-item" open>
+              <summary><span>Siapa yang bisa mengikuti Taruna Fest?</span><i>+</i></summary>
+              <p>Taruna Fest terbuka untuk siswa SMP/SMA yang ingin mengenal jalur SMA Taruna, TNI/Polri, atau Sekolah
+                Kedinasan. Orang tua juga dapat mengikuti acara.</p>
+            </details>
+            <details class="tf26-faq-item">
+              <summary><span>Apakah harus sudah mendaftar di Akademi Taruna?</span><i>+</i></summary>
+              <p>Tidak. Taruna Fest dapat diikuti oleh siswa dan orang tua yang ingin mengenal proses seleksi serta
+                memetakan kesiapan sejak awal.</p>
+            </details>
+            <details class="tf26-faq-item">
+              <summary><span>Apa saja yang perlu dibawa saat acara?</span><i>+</i></summary>
+              <p>Peserta disarankan membawa alat tulis dan bukti konfirmasi pendaftaran. Informasi perlengkapan tambahan
+                akan disampaikan oleh panitia melalui WhatsApp.</p>
+            </details>
+            <details class="tf26-faq-item">
+              <summary><span>Berapa biaya tiket pendaftaran Taruna Fest 2026?</span><i>+</i></summary>
+              <p>Terdapat 2 skema tiket resmi berdasarkan proposal: <strong>1) Paket Berdua (1 Siswa + 1 Orang
+                  Tua/Pendamping)</strong> seharga Rp1.500.000 (hanya Rp750.000/orang — skema utama yang sangat
+                disarankan karena keputusan persiapan karir kedinasan disepakati bersama keluarga); <strong>2) Paket
+                  Perorangan (1 Siswa)</strong> seharga Rp900.000. Kedua paket sudah mencakup akses 3 sesi seminar, 4
+                interactive booth expo, peserta kit lengkap khusus siswa, konsumsi (lunch & coffee break), dan
+                sertifikat resmi kepesertaan.</p>
+            </details>
+            <details class="tf26-faq-item">
+              <summary><span>Bagaimana cara mendaftar?</span><i>+</i></summary>
+              <p>Pendaftaran dilakukan online dengan mengisi <a href="#pendaftaran"
+                  style="color:#ffbd19; font-weight:700; text-decoration:underline;">formulir pendaftaran di atas</a>
+                atau menghubungi WhatsApp Sales. Tim akan memverifikasi ketersediaan kuota (150 Kursi) dan mengirimkan
+                konfirmasi resmi.</p>
+            </details>
+          </div>
+        </div>
+        <div class="tf26-faq__watermark" aria-hidden="true">TF26</div>
+      </section>
+
+      <!-- CHAPTER 07 · FINAL CTA + FOOTER -->
+      <section class="tf26-chapter tf26-chapter--final" id="daftar-taruna-fest" data-tf26-chapter="6"
+        aria-label="Daftar Taruna Fest 2026">
+        <div class="tf26-final__banner">
+          <div class="tf26-final__students"><img src="assets/banner-students.png" alt="Siswa peserta Taruna Fest"
+              loading="lazy"></div>
+          <div class="tf26-final__copy">
+            <div class="tf26-final__stamp">KELAS EKSKLUSIF &amp; TERBATAS</div>
+            <h2>Hanya 150 Kursi<br><em>Peserta</em></h2>
+            <p>Jangan tunda cita-citamu! Kelas eksklusif ini dirancang untuk persiapan intensif, terarah, dan
+              berkesempatan lebih besar untuk lolos.</p>
+          </div>
+          <a class="tf26-button tf26-final__button" href="#pendaftaran">Daftar Sekarang <span
+              class="tf26-arrow">›</span></a>
+        </div>
+
+        <footer class="tf26-footer">
+          <div class="tf26-footer__brand">
+            <a href="https://akademitaruna.co.id/" target="_blank" rel="noopener" aria-label="Website Akademi Taruna">
+              <img src="assets/logo-akademi-taruna-white.png" alt="Akademi Taruna" class="tf26-footer__logo" width="165"
+                height="46">
+            </a>
+            <p>Lembaga pelatihan dan bimbingan persiapan masuk SMA Taruna, TNI/Polri, dan Sekolah Kedinasan dengan
+              metode terstruktur, terarah, dan terbukti.</p>
+          </div>
+          <div class="tf26-footer__contact">
+            <h3>Kontak &amp; Informasi</h3>
+            <div class="tf26-footer__item">◉ <span>0813-2760-627 (WhatsApp Sales)</span></div>
+            <div class="tf26-footer__item">✉ <span>info@akademitaruna.co.id</span></div>
+            <div class="tf26-footer__item">◎ <span>akademitaruna.co.id</span></div>
+          </div>
+          <div class="tf26-footer__social">
+            <h3>Lokasi Acara</h3>
+            <p style="color:#a0aec0; font-size:12px; margin:0 0 8px; line-height:1.4;">Ballroom Hotel Sahid Raya
+              Yogyakarta<br>Sabtu, 19 Desember 2026</p>
+            <a href="https://instagram.com/akademitaruna.id" target="_blank" rel="noopener">Instagram @akademitaruna.id ↗</a>
+          </div>
+          <div class="tf26-footer__bottom">
+            <span>© 2026 Akademi Prestasi Indonesia · Taruna Fest 2026. All rights reserved.</span>
+            <span><a href="https://akademitaruna.co.id/">Kebijakan Privasi</a><i></i><a
+                href="https://akademitaruna.co.id/">Syarat &amp; Ketentuan</a></span>
+          </div>
+        </footer>
+      </section>
+  </div>
+  </main>
+  </div>
+
+  <script>
+    /* ================================================================
+       TARUNA FEST 2026 · LOGIC & INTERACTIONS
+       1. Package Selection Sync
+       2. Google Sheets API Submission & LocalStorage Backup
+       3. WhatsApp Sales Auto-Redirect (0813-2760-627)
+       4. Lenis Smooth Scroll & GSAP ScrollTrigger Animations
+       ================================================================ */
+
+    function selectPackage(pkg) {
+      var radios = document.querySelectorAll('input[name="paket"]');
+      radios.forEach(function (r) {
+        if (r.value === pkg) {
+          r.checked = true;
+          updatePackageSelection(pkg);
+        }
+      });
+      var formEl = document.getElementById('pendaftaran') || document.getElementById('tf26-reg-form');
+      if (formEl) {
+        if (typeof window.tf26ScrollToElement === 'function') {
+          window.tf26ScrollToElement(formEl);
+        } else {
+          formEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        if (typeof window.tf26HighlightForm === 'function') {
+          window.tf26HighlightForm();
+        }
+      }
+    }
+
+    function updatePackageSelection(pkg) {
+      var berduaLabel = document.getElementById('tf26-pkg-berdua-label');
+      var mandiriLabel = document.getElementById('tf26-pkg-mandiri-label');
+      var parentGroup = document.getElementById('tf26-parent-group');
+      var isBerdua = pkg === 'Paket Berdua';
+
+      if (berduaLabel && mandiriLabel) {
+        berduaLabel.classList.toggle('tf26-pkg-active', isBerdua);
+        mandiriLabel.classList.toggle('tf26-pkg-active', !isBerdua);
+      }
+      if (parentGroup) {
+        var parentInputs = parentGroup.querySelectorAll('input, select');
+        if (isBerdua) {
+          parentGroup.style.display = 'block';
+          parentInputs.forEach(function (el) { el.required = true; });
+        } else {
+          parentGroup.style.display = 'none';
+          parentInputs.forEach(function (el) {
+            el.required = false;
+            if (el.tagName === 'INPUT') el.value = '';
+          });
+        }
+      }
+    }
+
+    async function handleTf26Submit(event) {
+      event.preventDefault();
+      var form = document.getElementById('tf26-reg-form');
+      var submitBtn = document.getElementById('tf26-submit-btn');
+      var statusDiv = document.getElementById('tf26-form-status');
+
+      var formData = new FormData(form);
+      var rawPaket = formData.get('paket') || 'Paket Berdua';
+      var isBerdua = rawPaket === 'Paket Berdua';
+
+      var data = {
+        timestamp: new Date().toLocaleString('id-ID', { timeZone: 'Asia/Jakarta' }),
+        nama: (formData.get('nama') || '').trim(),
+        whatsapp: (formData.get('whatsapp') || '').trim(),
+        kota: (formData.get('kota') || '').trim(),
+        nama_ortu: (formData.get('nama_ortu') || '').trim(),
+        hubungan: (formData.get('hubungan') || 'Ayah').trim(),
+        wa_ortu: (formData.get('wa_ortu') || '').trim(),
+        sekolah: (formData.get('sekolah') || '').trim(),
+        tingkat: (formData.get('tingkat') || '').trim(),
+        target: formData.get('target') || '',
+        target2: formData.get('target2') || '-',
+        kesiapan: formData.get('kesiapan') || 'Sedang Persiapan Mandiri / Bimbel',
+        sumber: formData.get('sumber') || 'Instagram (@akademitaruna.id)',
+        paket: rawPaket,
+        catatan: (formData.get('catatan') || '').trim() || '-'
+      };
+
+      // Payload khusus untuk Google Apps Script sesuai fungsi validate_(d)
+      var target1 = data.target;
+      var target2 = data.target2;
+      var targetFull = target1;
+      if (target2 && target2 !== '-' && target2 !== 'Belum Ada Pilihan Kedua') {
+        targetFull += ' (Pilihan 2: ' + target2 + ')';
+      }
+
+      var sheetsPayload = {
+        paket: isBerdua ? 'Paket Berdua' : 'Perorangan',
+        nama_siswa: data.nama,
+        wa_siswa: data.whatsapp,
+        kelas: data.tingkat,
+        sekolah: data.sekolah,
+        kota: data.kota,
+        nama_ortu: isBerdua ? data.nama_ortu : '',
+        hubungan: isBerdua ? data.hubungan : '',
+        wa_ortu: isBerdua ? (data.wa_ortu || data.whatsapp) : '',
+        target: targetFull,
+        kesiapan: data.kesiapan,
+        sumber: data.sumber,
+        pertanyaan: data.catatan,
+        referral: '',
+        page: window.location.href,
+        referrer: document.referrer || '',
+        utm_source: new URLSearchParams(window.location.search).get('utm_source') || '',
+        utm_medium: new URLSearchParams(window.location.search).get('utm_medium') || '',
+        utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || '',
+        utm_content: new URLSearchParams(window.location.search).get('utm_content') || '',
+        utm_term: new URLSearchParams(window.location.search).get('utm_term') || '',
+        fbclid: new URLSearchParams(window.location.search).get('fbclid') || '',
+        gclid: new URLSearchParams(window.location.search).get('gclid') || ''
+      };
+
+      var nominal = isBerdua ? 'Rp1.500.000' : 'Rp900.000';
+      var skema = isBerdua ? '1 Siswa + 1 Orang Tua/Pendamping' : '1 Siswa Mandiri';
+
+      // Meta Pixel Lead Event
+      try {
+        if (typeof window.fbq === 'function') {
+          window.fbq('track', 'Lead', {
+            content_name: 'Taruna Fest 2026',
+            content_category: sheetsPayload.paket,
+            value: isBerdua ? 1500000 : 900000,
+            currency: 'IDR'
+          });
+        }
+      } catch (pixelErr) {
+        console.warn('Meta Pixel error:', pixelErr);
+      }
+
+      // 1. Simpan cadangan ke LocalStorage browser
+      try {
+        var stored = JSON.parse(localStorage.getItem('taruna_fest_leads') || '[]');
+        stored.push(sheetsPayload);
+        localStorage.setItem('taruna_fest_leads', JSON.stringify(stored));
+      } catch (e) {
+        console.warn('LocalStorage error:', e);
+      }
+
+      // 2. Format pesan WhatsApp Sales Resmi
+      var waMessage =
+        '*FORMULIR PENDAFTARAN TARUNA FEST 2026*\n' +
+        '━━━━━━━━━━━━━━━━━━━━━━━━\n' +
+        'Halo Tim Sales Akademi Taruna, saya ingin mengonfirmasi pendaftaran Taruna Fest 2026:\n\n' +
+        '🎟️ *PAKET TIKET:*\n' +
+        '• *Pilihan Paket:* ' + sheetsPayload.paket + ' (' + skema + ')\n' +
+        '• *Investasi:* ' + nominal + '\n\n' +
+        '📋 *DATA PESERTA:*\n' +
+        '• *Nama Siswa:* ' + data.nama + '\n' +
+        '• *No. WhatsApp Siswa:* ' + data.whatsapp + '\n' +
+        '• *Domisili:* ' + data.kota + '\n' +
+        '• *Asal Sekolah:* ' + data.sekolah + '\n' +
+        '• *Tingkat / Kelas:* ' + data.tingkat + '\n' +
+        (isBerdua && data.nama_ortu ? ('• *Nama Ortu/Pendamping:* ' + data.nama_ortu + ' (' + data.hubungan + ')\n• *No. WA Ortu:* ' + (data.wa_ortu || data.whatsapp) + '\n') : '') +
+        '• *Target Jalur 1 (Utama):* ' + data.target + '\n' +
+        (data.target2 && data.target2 !== '-' && data.target2 !== 'Belum Ada Pilihan Kedua' ? ('• *Target Jalur 2 (Cadangan):* ' + data.target2 + '\n') : '') +
+        '• *Catatan / Konsultasi:* ' + data.catatan + '\n\n' +
+        'Data saya telah terdaftar di sistem website. Mohon bantuan konfirmasi ketersediaan kuota (150 Kursi) dan petunjuk pembayaran tiket. Terima kasih!';
+
+      var waUrl = 'https://wa.me/628132760627?text=' + encodeURIComponent(waMessage);
+
+      // 3. Status loading
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Mengamankan Kuota &amp; Menghubungkan WhatsApp...</span>';
+      }
+      if (statusDiv) {
+        statusDiv.style.display = 'block';
+        statusDiv.className = 'tf26-form-status tf26-form-status--loading';
+        statusDiv.innerHTML = '⏳ <strong>Menyimpan data pendaftaran...</strong> Kuota kursi sedang diamankan ke sistem.';
+      }
+
+      // 4. Kirim data ke Google Sheets Web App Resmi
+      var scriptUrl = 'https://script.google.com/macros/s/AKfycbwQt2p9uAH_irav5BqDqpcGZCdZi5Oi-nf67gj2nNCdvovc104ihYg9Xhzgsn2D7gBnKg/exec';
+      try {
+        fetch(scriptUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(sheetsPayload)
+        }).catch(function (err) {
+          console.warn('Sheets fetch warning:', err);
+        });
+      } catch (err) {
+        console.warn('Sheets network error:', err);
+      }
+
+      // 5. Buka WhatsApp secara otomatis
+      setTimeout(function () {
+        if (statusDiv) {
+          statusDiv.className = 'tf26-form-status tf26-form-status--success';
+          statusDiv.innerHTML = '✅ <strong>Pendaftaran Berhasil Tersimpan!</strong> Data Anda sudah tercatat di sistem kami. Jika WhatsApp tidak terbuka otomatis, <a href="' + waUrl + '" target="_blank" rel="noopener" style="color:#ffbd19; font-weight:800; text-decoration:underline;">klik di sini untuk konfirmasi WhatsApp ke Sales 0813-2760-627 ↗</a>';
+        }
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Pendaftaran Berhasil! Lanjut ke WhatsApp ↗</span>';
+        }
+        window.open(waUrl, '_blank');
+      }, 1000);
+    }
+
+    (function () {
+      "use strict";
+
+      function ready(callback) {
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", callback, { once: true });
+        } else {
+          callback();
+        }
+      }
+
+      ready(function initTarunaFest() {
+        var page = document.getElementById("tf26-page");
+        if (!page || page.dataset.tf26Initialized === "true") return;
+        page.dataset.tf26Initialized = "true";
+
+        var header = page.querySelector(".tf26-header");
+        var nav = page.querySelector("#tf26-nav");
+        var menuToggle = page.querySelector(".tf26-menu-toggle");
+        var progressBar = page.querySelector(".tf26-progress__bar");
+        var scrollHint = page.querySelector(".tf26-scroll-hint");
+        var chapters = Array.prototype.slice.call(page.querySelectorAll("[data-tf26-chapter]"));
+        var lenis = null;
+        var lenisRafCallback = null;
+        var lenisRafId = 0;
+        var gsap = window.gsap;
+        var ScrollTrigger = window.ScrollTrigger;
+        var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var resizeTimer = null;
+        var lastScroll = 0;
+
+        function headerHeight() {
+          return header ? Math.round(header.getBoundingClientRect().height) : 0;
+        }
+
+        function closeMenu() {
+          if (!menuToggle || !nav) return;
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Buka navigasi");
+          nav.classList.remove("tf26-is-open");
+        }
+
+        if (menuToggle && nav) {
+          menuToggle.addEventListener("click", function () {
+            var isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!isOpen));
+            menuToggle.setAttribute("aria-label", isOpen ? "Buka navigasi" : "Tutup navigasi");
+            nav.classList.toggle("tf26-is-open", !isOpen);
+          });
+          nav.addEventListener("click", function (event) {
+            if (event.target.closest("a")) closeMenu();
+          });
+          document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") closeMenu();
+          });
+          document.addEventListener("click", function (event) {
+            if (!page.contains(event.target)) closeMenu();
+          });
+        }
+
+        /* Native details FAQ: single-open toggle */
+        page.querySelectorAll(".tf26-faq-item").forEach(function (item) {
+          item.addEventListener("toggle", function () {
+            if (!item.open) return;
+            page.querySelectorAll(".tf26-faq-item").forEach(function (other) {
+              if (other !== item) other.open = false;
+            });
+          });
+        });
+
+        function scrollToElement(target) {
+          if (!target) return;
+          var hh = headerHeight() || 72;
+          var destination = Math.max(0, Math.round(window.scrollY + target.getBoundingClientRect().top - hh - 16));
+          if (lenis && typeof lenis.scrollTo === "function") {
+            lenis.scrollTo(destination, {
+              duration: reducedMotion ? 0 : 1.15,
+              easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }
+            });
+          } else {
+            window.scrollTo({ top: destination, behavior: reducedMotion ? "auto" : "smooth" });
+          }
+        }
+
+        window.tf26ScrollToElement = scrollToElement;
+        window.tf26HighlightForm = function () {
+          var formEl = document.getElementById("pendaftaran") || document.getElementById("tf26-reg-form");
+          if (!formEl) return;
+          formEl.classList.remove("tf26-highlight-pulse");
+          void formEl.offsetWidth;
+          formEl.classList.add("tf26-highlight-pulse");
+        };
+
+        /* Intercept all internal anchor navigation for smooth scrolling */
+        page.querySelectorAll('a[href^="#"]').forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            var hash = link.getAttribute("href");
+            if (!hash || hash === "#") return;
+            var target = page.querySelector(hash) || document.querySelector(hash);
+            if (!target) {
+              var index = Number(link.getAttribute("data-tf26-go"));
+              if (!isNaN(index) && chapters[index]) target = chapters[index];
+            }
+            if (!target) return;
+            event.preventDefault();
+            closeMenu();
+            scrollToElement(target);
+            if (hash === "#pendaftaran" || hash === "#tf26-reg-form") {
+              window.tf26HighlightForm();
+            }
+          });
+        });
+
+        function updateScrollUI() {
+          var y = window.scrollY || window.pageYOffset || 0;
+          var maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+          if (progressBar) progressBar.style.height = Math.min(100, (y / maxScroll) * 100).toFixed(2) + "%";
+          if (header) header.classList.toggle("tf26-header--scrolled", y > 24);
+          if (scrollHint) scrollHint.style.opacity = y > 250 ? "0" : "1";
+          lastScroll = y;
+        }
+
+        window.addEventListener("scroll", updateScrollUI, { passive: true });
+        updateScrollUI();
+
+        if (reducedMotion) {
+          page.classList.add("tf26-page--motion-ready");
+          return;
+        }
+
+        if (window.Lenis) {
+          try {
+            lenis = new window.Lenis({
+              duration: 1.15,
+              smoothWheel: true,
+              syncTouch: false,
+              wheelMultiplier: 0.95,
+              touchMultiplier: 1,
+              anchors: false
+            });
+            window.tf26Lenis = lenis;
+            if (ScrollTrigger) lenis.on("scroll", ScrollTrigger.update);
+            if (gsap) {
+              lenisRafCallback = function (time) {
+                if (lenis) lenis.raf(time * 1000);
+              };
+              gsap.ticker.add(lenisRafCallback);
+              gsap.ticker.lagSmoothing(0);
+            } else {
+              var rafLenis = function (time) {
+                if (!lenis) return;
+                lenis.raf(time);
+                lenisRafId = window.requestAnimationFrame(rafLenis);
+              };
+              lenisRafId = window.requestAnimationFrame(rafLenis);
+            }
+            page.dataset.tf26Lenis = "ready";
+          } catch (error) {
+            lenis = null;
+          }
+        }
+
+        if (!gsap || !ScrollTrigger) {
+          page.classList.add("tf26-page--motion-ready");
+          return;
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+        page.classList.add("tf26-page--motion-ready");
+
+        /* Active navigation follows the visible chapter */
+        function setActiveNav(chapterIndex) {
+          if (!nav) return;
+          nav.querySelectorAll("[data-tf26-go]").forEach(function (link) {
+            link.classList.toggle("tf26-is-active", Number(link.getAttribute("data-tf26-go")) === chapterIndex);
+          });
+        }
+
+        chapters.forEach(function (chapter, index) {
+          ScrollTrigger.create({
+            trigger: chapter,
+            start: "top 52%",
+            end: "bottom 48%",
+            onEnter: function () { setActiveNav(index); },
+            onEnterBack: function () { setActiveNav(index); }
+          });
+        });
+
+        ScrollTrigger.refresh();
+      });
+    })();
+  </script>
+</body>
+
+</html>
