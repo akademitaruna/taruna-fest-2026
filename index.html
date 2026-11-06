@@ -1922,6 +1922,128 @@
       background: rgba(255, 195, 30, .65);
     }
 
+    /* ==============================================
+       TESTIMONI ALUMNI — SLIDE RUNNING PELAN
+       ============================================== */
+    .tf26-chapter--alumni {
+      padding-top: 75px;
+      padding-bottom: 65px;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .tf26-alumni__heading {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 36px;
+      padding: 0 20px;
+    }
+
+    .tf26-alumni__heading .tf26-section-kicker {
+      color: #ffc72c;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .tf26-alumni__heading .tf26-display {
+      color: #ffffff;
+      font-size: clamp(34px, 4.2vw, 56px);
+      margin-bottom: 12px;
+    }
+
+    .tf26-alumni__heading .tf26-display em {
+      color: #ffc72c;
+      font-style: normal;
+    }
+
+    .tf26-alumni__heading p {
+      color: #d1e2f6;
+      font-size: clamp(13px, 1.05vw, 15px);
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+
+    .tf26-alumni-marquee {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 10px 0 24px;
+      mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    }
+
+    .tf26-alumni-track {
+      display: flex;
+      width: max-content;
+      animation: tf26-marquee-slow 35s linear infinite;
+      will-change: transform;
+    }
+
+    .tf26-alumni-marquee:hover .tf26-alumni-track {
+      animation-play-state: paused;
+    }
+
+    .tf26-alumni-group {
+      display: flex;
+      gap: 20px;
+      padding-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .tf26-alumni-card {
+      width: clamp(230px, 20vw, 290px);
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(4, 24, 58, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 12px 30px rgba(0, 10, 28, 0.45);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .tf26-alumni-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      border-color: rgba(255, 199, 44, 0.5);
+      box-shadow: 0 18px 40px rgba(0, 12, 35, 0.65), 0 0 20px rgba(255, 199, 44, 0.2);
+    }
+
+    .tf26-alumni-img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+    }
+
+    @keyframes tf26-marquee-slow {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .tf26-chapter--alumni {
+        padding-top: 50px;
+        padding-bottom: 40px;
+      }
+      .tf26-alumni-group {
+        gap: 14px;
+        padding-right: 14px;
+      }
+      .tf26-alumni-card {
+        width: 195px;
+        border-radius: 14px;
+      }
+      .tf26-alumni-track {
+        animation-duration: 26s;
+      }
+    }
+
     .tf26-testimonials {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4940,6 +5062,74 @@
             <h3>Dokter Taruna</h3>
             <p class="tf26-speaker__role">Tim Medis &amp; Spesialis Pemeriksaan Kesehatan Seleksi</p>
           </article>
+        </div>
+      </section>
+
+      <!-- SECTION 04 · TESTIMONI ALUMNI -->
+      <section class="tf26-chapter tf26-chapter--alumni" id="testimoni" aria-label="Testimoni Alumni Siswa">
+        <div class="tf26-chapter__topline">
+          <span>04 / ALUMNI SUCCESS</span>
+          <span>BUKTI KELULUSAN SISWA · TARUNA FEST</span>
+        </div>
+
+        <div class="tf26-alumni__heading">
+          <div class="tf26-section-kicker">BUKTI NYATA SISWA KAMI</div>
+          <h2 class="tf26-display">Bukti Nyata <em>Siswa Kami</em></h2>
+          <p>Bergabunglah dengan mereka yang telah berhasil meraih seragam kebanggaan di TNI, POLRI, dan Sekolah Kedinasan.</p>
+        </div>
+
+        <div class="tf26-alumni-marquee" aria-label="Galeri foto testimoni alumni">
+          <div class="tf26-alumni-track">
+            <!-- GROUP 1 -->
+            <div class="tf26-alumni-group">
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-1.webp" alt="Testimoni Siswa Lolos Seleksi 1" class="tf26-alumni-img" loading="lazy">
+              </div>
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-2.webp" alt="Testimoni Siswa Lolos Seleksi 2" class="tf26-alumni-img" loading="lazy">
+              </div>
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-3.webp" alt="Testimoni Siswa Lolos Seleksi 3" class="tf26-alumni-img" loading="lazy">
+              </div>
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-4.webp" alt="Testimoni Siswa Lolos Seleksi 4" class="tf26-alumni-img" loading="lazy">
+              </div>
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-5.webp" alt="Testimoni Siswa Lolos Seleksi 5" class="tf26-alumni-img" loading="lazy">
+              </div>
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-6.webp" alt="Testimoni Siswa Lolos Seleksi 6" class="tf26-alumni-img" loading="lazy">
+              </div>
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-7.webp" alt="Testimoni Siswa Lolos Seleksi 7" class="tf26-alumni-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- GROUP 2 (Seamless Continuous Loop) -->
+            <div class="tf26-alumni-group" aria-hidden="true">
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-1.webp" alt="" class="tf26-alumni-img" loading="lazy">
+              </div>
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-2.webp" alt="" class="tf26-alumni-img" loading="lazy">
+              </div>
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-3.webp" alt="" class="tf26-alumni-img" loading="lazy">
+              </div>
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-4.webp" alt="" class="tf26-alumni-img" loading="lazy">
+              </div>
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-5.webp" alt="" class="tf26-alumni-img" loading="lazy">
+              </div>
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-6.webp" alt="" class="tf26-alumni-img" loading="lazy">
+              </div>
+              <div class="tf26-alumni-card">
+                <img src="assets/testimoni-7.webp" alt="" class="tf26-alumni-img" loading="lazy">
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
