@@ -2343,18 +2343,42 @@
     }
 
     .tf26-faq-item summary i {
-      display: grid;
-      width: 24px;
-      height: 24px;
-      flex: 0 0 auto;
-      place-items: center;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      flex: 0 0 32px;
       border-radius: 50%;
-      background: var(--tf26-gold);
-      color: #071d43;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 900;
-      transition: transform .2s ease;
+      background: #ffbd19;
+      color: transparent;
+      font-size: 0;
+      line-height: 0;
+      user-select: none;
+      transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1), background .2s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .tf26-faq-item summary i::before,
+    .tf26-faq-item summary i::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: #071d43;
+      border-radius: 2px;
+      transform: translate(-50%, -50%);
+    }
+
+    .tf26-faq-item summary i::before {
+      width: 13px;
+      height: 2.5px;
+    }
+
+    .tf26-faq-item summary i::after {
+      width: 2.5px;
+      height: 13px;
     }
 
     .tf26-faq-item[open] summary i {
