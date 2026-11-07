@@ -2193,7 +2193,7 @@
 
     .tf26-gallery-card {
       display: grid;
-      grid-template-columns: 1.25fr 1fr;
+      grid-template-columns: 1.3fr 1fr;
       width: 100%;
       max-width: 100%;
       min-width: 0;
@@ -2259,33 +2259,37 @@
     }
 
     .tf26-gallery-info {
-      padding: 28px 26px;
+      padding: 30px 28px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      gap: 16px;
+      justify-content: center;
+      gap: 14px;
       min-width: 0;
       box-sizing: border-box;
     }
 
-    .tf26-gallery-meta {
-      display: flex;
-      flex-wrap: wrap;
+    .tf26-gallery-school-tag {
+      display: inline-flex;
       align-items: center;
-      gap: 8px;
-      min-width: 0;
+      gap: 7px;
+      color: #ffc72c;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
 
-    .tf26-gallery-tag {
-      background: rgba(255, 199, 44, 0.15);
-      border: 1px solid rgba(255, 199, 44, 0.4);
-      color: #ffc72c;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 6px;
+    .tf26-gallery-school-tag svg {
+      flex-shrink: 0;
+    }
+
+    .tf26-gallery-title {
+      color: #ffffff;
+      font-size: clamp(20px, 2vw, 26px);
+      font-weight: 700;
+      line-height: 1.35;
+      margin: 0;
+      word-break: break-word;
     }
 
     .tf26-gallery-filename {
@@ -2295,58 +2299,29 @@
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-size: 11px;
       font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 6px;
+      padding: 6px 12px;
+      border-radius: 8px;
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
+      width: fit-content;
       max-width: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .tf26-gallery-title {
-      color: #ffffff;
-      font-size: clamp(17px, 1.7vw, 22px);
-      font-weight: 700;
-      line-height: 1.35;
-      margin: 0;
       word-break: break-word;
+      line-height: 1.45;
+      margin-top: 2px;
     }
 
-    .tf26-gallery-desc {
-      color: #cbd5e1;
-      font-size: 13.5px;
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    .tf26-gallery-location-box {
-      background: rgba(255, 255, 255, 0.04);
-      border-left: 3px solid #ffc72c;
-      padding: 10px 14px;
-      border-radius: 0 8px 8px 0;
-      margin-top: auto;
-      min-width: 0;
-      box-sizing: border-box;
-    }
-
-    .tf26-gallery-location-label {
-      color: #ffc72c;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 3px;
-    }
-
-    .tf26-gallery-location-val {
-      color: #f1f5f9;
-      font-size: 12.5px;
-      font-weight: 600;
-      line-height: 1.4;
-      word-break: break-word;
+    @media (max-width: 900px) {
+      .tf26-gallery-card {
+        grid-template-columns: 1fr;
+      }
+      .tf26-gallery-info {
+        padding: 22px 20px 24px;
+        gap: 10px;
+      }
+      .tf26-gallery-title {
+        font-size: clamp(18px, 4.5vw, 22px);
+      }
     }
 
     /* Controls Bar: Dots, Counter, Prev/Next */
@@ -5751,7 +5726,7 @@
             <div class="tf26-gallery-track" id="tf26-gallery-track" aria-live="polite">
 
               <!-- SLIDE 1: SMA Attaqwa Bekasi (IHT) -->
-              <article class="tf26-gallery-slide" data-index="0" aria-label="Slide 1 dari 5: In-House Training SMA Attaqwa Bekasi">
+              <article class="tf26-gallery-slide" data-index="0" aria-label="Slide 1 dari 8: SMA Attaqwa Bekasi">
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
                     <img src="assets/galeri-iht-sma-attaqwa-bekasi.jpg" alt="In-House Training di SMA Attaqwa Bekasi" class="tf26-gallery-img" loading="lazy">
@@ -5761,122 +5736,102 @@
                     </div>
                   </div>
                   <div class="tf26-gallery-info">
-                    <div class="tf26-gallery-meta">
-                      <span class="tf26-gallery-tag">In-House Training (IHT)</span>
-                      <span class="tf26-gallery-filename">📁 galeri-iht-sma-attaqwa-bekasi.jpg</span>
+                    <div class="tf26-gallery-school-tag">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <span>SMA Attaqwa Bekasi</span>
                     </div>
-                    <h3 class="tf26-gallery-title">In-House Training: Pengenalan Pembelajaran & Jalur Kedinasan</h3>
-                    <p class="tf26-gallery-desc">Sesi penguatan kurikulum dan pembekalan strategi tembus sekolah kedinasan (Akmil, Akpol, STAN, IPDN) bersama civitas guru dan siswa SMA Attaqwa Bekasi.</p>
-                    <div class="tf26-gallery-location-box">
-                      <div class="tf26-gallery-location-label">Lokasi Kegiatan</div>
-                      <div class="tf26-gallery-location-val">SMA Attaqwa Bekasi · Jl. KH. Noer Ali No. 2, Pejuang, Kota Bekasi</div>
-                    </div>
+                    <h3 class="tf26-gallery-title">In-House Training (IHT) Jalur Kedinasan</h3>
+                    <div class="tf26-gallery-filename">📁 galeri-iht-sma-attaqwa-bekasi.jpg</div>
                   </div>
                 </div>
               </article>
 
-              <!-- SLIDE 2: Aula Pesantren Attaqwa Bekasi (Sosialisasi Akbar) -->
-              <article class="tf26-gallery-slide" data-index="1" aria-label="Slide 2 dari 5: Sosialisasi Akbar Aula Pesantren Attaqwa Bekasi">
+              <!-- SLIDE 2: Pesantren Attaqwa Bekasi (Sosialisasi Akbar) -->
+              <article class="tf26-gallery-slide" data-index="1" aria-label="Slide 2 dari 8: Pesantren Attaqwa Bekasi">
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
-                    <img src="assets/galeri-kegiatan-aula-pesantren-attaqwa-bekasi.jpg" alt="Sosialisasi Akbar di Aula Pesantren Attaqwa Bekasi" class="tf26-gallery-img" loading="lazy">
+                    <img src="assets/galeri-kegiatan-aula-pesantren-attaqwa-bekasi.jpg" alt="Sosialisasi Akbar di Pesantren Attaqwa Bekasi" class="tf26-gallery-img" loading="lazy">
                     <div class="tf26-gallery-badge">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                      <span>Aula Pesantren Attaqwa Bekasi</span>
+                      <span>Pesantren Attaqwa Bekasi</span>
                     </div>
                   </div>
                   <div class="tf26-gallery-info">
-                    <div class="tf26-gallery-meta">
-                      <span class="tf26-gallery-tag">Sosialisasi Akbar</span>
-                      <span class="tf26-gallery-filename">📁 galeri-kegiatan-aula-pesantren-attaqwa-bekasi.jpg</span>
+                    <div class="tf26-gallery-school-tag">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <span>Pesantren Attaqwa Bekasi</span>
                     </div>
-                    <h3 class="tf26-gallery-title">Sosialisasi Akbar & Pengarahan Ratusan Calon Taruna</h3>
-                    <p class="tf26-gallery-desc">Antusiasme ratusan santri dan siswa mengikuti pengarahan strategi kelulusan kedinasan, persiapan tes fisik kesamaptaan jasmani, serta tes psikologi militer.</p>
-                    <div class="tf26-gallery-location-box">
-                      <div class="tf26-gallery-location-label">Lokasi Kegiatan</div>
-                      <div class="tf26-gallery-location-val">Aula Utama Pesantren Attaqwa Pusat · Babelan, Bekasi</div>
-                    </div>
+                    <h3 class="tf26-gallery-title">Sosialisasi Akbar Calon Taruna</h3>
+                    <div class="tf26-gallery-filename">📁 galeri-kegiatan-aula-pesantren-attaqwa-bekasi.jpg</div>
                   </div>
                 </div>
               </article>
 
-              <!-- SLIDE 3: Auditorium Yayasan Attaqwa Bekasi (Seminar Kedinasan) -->
-              <article class="tf26-gallery-slide" data-index="2" aria-label="Slide 3 dari 5: Seminar Kedinasan Auditorium Attaqwa Bekasi">
+              <!-- SLIDE 3: SMA Kebangsaan Lampung (Seminar Kedinasan) -->
+              <article class="tf26-gallery-slide" data-index="2" aria-label="Slide 3 dari 8: SMA Kebangsaan Lampung">
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
-                    <img src="assets/galeri-seminar-kedinasan-aula-attaqwa-bekasi.jpg" alt="Seminar Kedinasan di Auditorium Attaqwa Bekasi" class="tf26-gallery-img" loading="lazy">
+                    <img src="assets/galeri-seminar-sma-kebangsaan-lampung.jpg" alt="Seminar Kedinasan di SMA Kebangsaan Lampung" class="tf26-gallery-img" loading="lazy">
                     <div class="tf26-gallery-badge">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                      <span>Auditorium Yayasan Attaqwa Bekasi</span>
+                      <span>SMA Kebangsaan Lampung</span>
                     </div>
                   </div>
                   <div class="tf26-gallery-info">
-                    <div class="tf26-gallery-meta">
-                      <span class="tf26-gallery-tag">Seminar Strategi Kedinasan</span>
-                      <span class="tf26-gallery-filename">📁 galeri-seminar-kedinasan-aula-attaqwa-bekasi.jpg</span>
+                    <div class="tf26-gallery-school-tag">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <span>SMA Kebangsaan Lampung</span>
                     </div>
-                    <h3 class="tf26-gallery-title">Bedah Tahapan Seleksi & Penandatanganan Komitmen Taruna</h3>
-                    <p class="tf26-gallery-desc">Pemaparan sistematis peta persaingan SKD, TKA, dan tes kesehatan oleh narasumber ahli Akademi Taruna, dilanjutkan penandatanganan kesiapan calon taruna.</p>
-                    <div class="tf26-gallery-location-box">
-                      <div class="tf26-gallery-location-label">Lokasi Kegiatan</div>
-                      <div class="tf26-gallery-location-val">Auditorium Yayasan Attaqwa · Kompleks Perguruan Islam Attaqwa Bekasi</div>
-                    </div>
+                    <h3 class="tf26-gallery-title">Seminar Strategi Kelulusan Kedinasan</h3>
+                    <div class="tf26-gallery-filename">📁 galeri-seminar-sma-kebangsaan-lampung.jpg</div>
                   </div>
                 </div>
               </article>
 
-              <!-- SLIDE 4: Ruang Kelas SMA Bekasi (Roadshow Kelas) -->
-              <article class="tf26-gallery-slide" data-index="3" aria-label="Slide 4 dari 5: Roadshow Kelas SMA Bekasi">
+              <!-- SLIDE 4: SMA Bekasi (Roadshow Kelas) -->
+              <article class="tf26-gallery-slide" data-index="3" aria-label="Slide 4 dari 8: SMA Bekasi">
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
                     <img src="assets/galeri-roadshow-sosialisasi-kelas-sma-bekasi.jpg" alt="Roadshow Kelas di SMA Bekasi" class="tf26-gallery-img" loading="lazy">
                     <div class="tf26-gallery-badge">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                      <span>Ruang Kelas SMA Bekasi</span>
+                      <span>SMA Bekasi</span>
                     </div>
                   </div>
                   <div class="tf26-gallery-info">
-                    <div class="tf26-gallery-meta">
-                      <span class="tf26-gallery-tag">Classroom Roadshow</span>
-                      <span class="tf26-gallery-filename">📁 galeri-roadshow-sosialisasi-kelas-sma-bekasi.jpg</span>
+                    <div class="tf26-gallery-school-tag">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <span>SMA Bekasi</span>
                     </div>
-                    <h3 class="tf26-gallery-title">Pendampingan Interaktif: Konsultasi Jurusan & Modul Belajar</h3>
-                    <p class="tf26-gallery-desc">Mentor Akademi Taruna terjun langsung mendampingi siswa di ruang kelas untuk konsultasi minat bakat kedinasan dan pembedahan modul latihan persiapan.</p>
-                    <div class="tf26-gallery-location-box">
-                      <div class="tf26-gallery-location-label">Lokasi Kegiatan</div>
-                      <div class="tf26-gallery-location-val">Ruang Kelas SMA Mitra Bekasi · Sesi Interaktif Roadshow</div>
-                    </div>
+                    <h3 class="tf26-gallery-title">Roadshow Kelas &amp; Konsultasi Jurusan</h3>
+                    <div class="tf26-gallery-filename">📁 galeri-roadshow-sosialisasi-kelas-sma-bekasi.jpg</div>
                   </div>
                 </div>
               </article>
 
-              <!-- SLIDE 5: Grand Auditorium Yayasan Attaqwa Bekasi (Foto Bersama) -->
-              <article class="tf26-gallery-slide" data-index="4" aria-label="Slide 5 dari 8: Foto Bersama Auditorium Attaqwa Bekasi">
+              <!-- SLIDE 5: SMA Kebangsaan Lampung (Foto Bersama) -->
+              <article class="tf26-gallery-slide" data-index="4" aria-label="Slide 5 dari 8: SMA Kebangsaan Lampung">
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
-                    <img src="assets/galeri-foto-bersama-auditorium-attaqwa-bekasi.jpg" alt="Foto Bersama di Auditorium Attaqwa Bekasi" class="tf26-gallery-img" loading="lazy">
+                    <img src="assets/galeri-foto-bersama-sma-kebangsaan-lampung.jpg" alt="Foto Bersama di SMA Kebangsaan Lampung" class="tf26-gallery-img" loading="lazy">
                     <div class="tf26-gallery-badge">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                      <span>Auditorium Yayasan Attaqwa Bekasi</span>
+                      <span>SMA Kebangsaan Lampung</span>
                     </div>
                   </div>
                   <div class="tf26-gallery-info">
-                    <div class="tf26-gallery-meta">
-                      <span class="tf26-gallery-tag">Deklarasi Calon Taruna</span>
-                      <span class="tf26-gallery-filename">📁 galeri-foto-bersama-auditorium-attaqwa-bekasi.jpg</span>
+                    <div class="tf26-gallery-school-tag">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <span>SMA Kebangsaan Lampung</span>
                     </div>
-                    <h3 class="tf26-gallery-title">Foto Bersama & Deklarasi Semangat Taruna Fest 2026</h3>
-                    <p class="tf26-gallery-desc">Momen kebersamaan ratusan peserta roadshow bersama tim Akademi Taruna menunjukkan simbol kesiapan berjuang merebut tiket kelulusan sekolah kedinasan impian.</p>
-                    <div class="tf26-gallery-location-box">
-                      <div class="tf26-gallery-location-label">Lokasi Kegiatan</div>
-                      <div class="tf26-gallery-location-val">Grand Auditorium Yayasan Attaqwa Bekasi · Sesi Penutupan Akbar</div>
-                    </div>
+                    <h3 class="tf26-gallery-title">Foto Bersama Siswa &amp; Tim Akademi Taruna</h3>
+                    <div class="tf26-gallery-filename">📁 galeri-foto-bersama-sma-kebangsaan-lampung.jpg</div>
                   </div>
                 </div>
               </article>
 
               <!-- SLIDE 6: SMA Islam Al Azhar 17 Karawang (Smart Classroom) -->
-              <article class="tf26-gallery-slide" data-index="5" aria-label="Slide 6 dari 8: Pemaparan Interaktif SMA Al Azhar Karawang">
+              <article class="tf26-gallery-slide" data-index="5" aria-label="Slide 6 dari 8: SMA Islam Al Azhar 17 Karawang">
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
                     <img src="assets/galeri-presentasi-interaktif-sma-al-azhar-karawang.jpg" alt="Pemaparan Materi Seleksi di SMA Islam Al Azhar 17 Karawang" class="tf26-gallery-img" loading="lazy">
@@ -5886,22 +5841,18 @@
                     </div>
                   </div>
                   <div class="tf26-gallery-info">
-                    <div class="tf26-gallery-meta">
-                      <span class="tf26-gallery-tag">Smart Classroom Session</span>
-                      <span class="tf26-gallery-filename">📁 galeri-presentasi-interaktif-sma-al-azhar-karawang.jpg</span>
+                    <div class="tf26-gallery-school-tag">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <span>SMA Islam Al Azhar 17 Karawang</span>
                     </div>
-                    <h3 class="tf26-gallery-title">Pemaparan Interaktif: Kurikulum Terintegrasi & Jalur Kedinasan</h3>
-                    <p class="tf26-gallery-desc">Mentor Akademi Taruna memaparkan sistem pembelajaran terstruktur (modul, latihan intensif, dan analisis kelemahan) menggunakan fasilitas smart classroom kepada siswa SMA Islam Al Azhar 17 Karawang.</p>
-                    <div class="tf26-gallery-location-box">
-                      <div class="tf26-gallery-location-label">Lokasi Kegiatan</div>
-                      <div class="tf26-gallery-location-val">SMA Islam Al Azhar 17 Karawang · Ruang Smart Classroom</div>
-                    </div>
+                    <h3 class="tf26-gallery-title">Pemaparan Materi di Smart Classroom</h3>
+                    <div class="tf26-gallery-filename">📁 galeri-presentasi-interaktif-sma-al-azhar-karawang.jpg</div>
                   </div>
                 </div>
               </article>
 
               <!-- SLIDE 7: SMA Islam Al Azhar 17 Karawang (Sesi Asesmen Online) -->
-              <article class="tf26-gallery-slide" data-index="6" aria-label="Slide 7 dari 8: Sesi Asesmen Online SMA Al Azhar Karawang">
+              <article class="tf26-gallery-slide" data-index="6" aria-label="Slide 7 dari 8: SMA Islam Al Azhar 17 Karawang">
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
                     <img src="assets/galeri-sesi-asesmen-kelas-sma-al-azhar-karawang.jpg" alt="Sesi Asesmen Calon Taruna di SMA Islam Al Azhar 17 Karawang" class="tf26-gallery-img" loading="lazy">
@@ -5911,22 +5862,18 @@
                     </div>
                   </div>
                   <div class="tf26-gallery-info">
-                    <div class="tf26-gallery-meta">
-                      <span class="tf26-gallery-tag">Asesmen &amp; Pembekalan</span>
-                      <span class="tf26-gallery-filename">📁 galeri-sesi-asesmen-kelas-sma-al-azhar-karawang.jpg</span>
+                    <div class="tf26-gallery-school-tag">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <span>SMA Islam Al Azhar 17 Karawang</span>
                     </div>
-                    <h3 class="tf26-gallery-title">Sesi Asesmen Online &amp; Pemetaan Potensi Calon Taruna</h3>
-                    <p class="tf26-gallery-desc">Simulasi tes berbasis komputer langsung di dalam kelas untuk mengukur kesiapan akademik, psikologi, serta memetakan prioritas pilihan akademi militer atau sekolah kedinasan siswa.</p>
-                    <div class="tf26-gallery-location-box">
-                      <div class="tf26-gallery-location-label">Lokasi Kegiatan</div>
-                      <div class="tf26-gallery-location-val">SMA Islam Al Azhar 17 Karawang · Laboratorium &amp; Ruang Kelas</div>
-                    </div>
+                    <h3 class="tf26-gallery-title">Sesi Asesmen Online Calon Taruna</h3>
+                    <div class="tf26-gallery-filename">📁 galeri-sesi-asesmen-kelas-sma-al-azhar-karawang.jpg</div>
                   </div>
                 </div>
               </article>
 
               <!-- SLIDE 8: SMA Islam Al Azhar 17 Karawang (Foto Bersama Koridor) -->
-              <article class="tf26-gallery-slide" data-index="7" aria-label="Slide 8 dari 8: Foto Bersama Koridor SMA Al Azhar Karawang">
+              <article class="tf26-gallery-slide" data-index="7" aria-label="Slide 8 dari 8: SMA Islam Al Azhar 17 Karawang">
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
                     <img src="assets/galeri-foto-bersama-koridor-sma-al-azhar-karawang.jpg" alt="Foto Bersama di Koridor SMA Islam Al Azhar 17 Karawang" class="tf26-gallery-img" loading="lazy">
@@ -5936,16 +5883,12 @@
                     </div>
                   </div>
                   <div class="tf26-gallery-info">
-                    <div class="tf26-gallery-meta">
-                      <span class="tf26-gallery-tag">Sesi Foto Bersama</span>
-                      <span class="tf26-gallery-filename">📁 galeri-foto-bersama-koridor-sma-al-azhar-karawang.jpg</span>
+                    <div class="tf26-gallery-school-tag">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <span>SMA Islam Al Azhar 17 Karawang</span>
                     </div>
-                    <h3 class="tf26-gallery-title">Foto Bersama Siswa &amp; Tim Mentor di Koridor Sekolah</h3>
-                    <p class="tf26-gallery-desc">Momen kebersamaan puluhan siswa bersama jajaran mentor dan konsultan karir Akademi Taruna setelah tuntas menyelenggarakan sosialisasi strategi kelulusan kedinasan.</p>
-                    <div class="tf26-gallery-location-box">
-                      <div class="tf26-gallery-location-label">Lokasi Kegiatan</div>
-                      <div class="tf26-gallery-location-val">SMA Islam Al Azhar 17 Karawang · Koridor Utama Sekolah</div>
-                    </div>
+                    <h3 class="tf26-gallery-title">Foto Bersama di Koridor Sekolah</h3>
+                    <div class="tf26-gallery-filename">📁 galeri-foto-bersama-koridor-sma-al-azhar-karawang.jpg</div>
                   </div>
                 </div>
               </article>
