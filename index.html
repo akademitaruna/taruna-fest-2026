@@ -2102,6 +2102,379 @@
       font-weight: 650;
     }
 
+    /* ==============================================
+       GALERI AKTIVITAS & ROADSHOW — SLIDER MANUAL
+       ============================================== */
+    .tf26-chapter--gallery {
+      padding-top: 80px;
+      padding-bottom: 75px;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .tf26-gallery__heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 36px;
+      padding: 0 20px;
+    }
+
+    .tf26-gallery__heading .tf26-section-kicker {
+      color: #ffc72c;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .tf26-gallery__heading .tf26-display {
+      color: #ffffff;
+      font-size: clamp(30px, 4vw, 54px);
+      margin-bottom: 12px;
+      word-break: break-word;
+    }
+
+    .tf26-gallery__heading .tf26-display em {
+      color: #ffc72c;
+      font-style: normal;
+    }
+
+    .tf26-gallery__heading p {
+      color: #d1e2f6;
+      font-size: clamp(13px, 1.05vw, 15px);
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+
+    .tf26-gallery-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .tf26-gallery-slider {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .tf26-gallery-track {
+      display: flex;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      gap: 0;
+      box-sizing: border-box;
+    }
+
+    .tf26-gallery-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tf26-gallery-slide {
+      flex: 0 0 100%;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+      box-sizing: border-box;
+      padding: 4px;
+    }
+
+    .tf26-gallery-card {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+      background: linear-gradient(135deg, rgba(8, 28, 68, 0.78) 0%, rgba(4, 16, 42, 0.9) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 48px -10px rgba(0, 10, 30, 0.7);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tf26-gallery-card:hover {
+      border-color: rgba(255, 199, 44, 0.45);
+      box-shadow: 0 24px 54px -10px rgba(0, 10, 30, 0.85), 0 0 24px rgba(255, 199, 44, 0.15);
+    }
+
+    .tf26-gallery-img-wrap {
+      position: relative;
+      overflow: hidden;
+      background: #020b18;
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tf26-gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .tf26-gallery-card:hover .tf26-gallery-img {
+      transform: scale(1.03);
+    }
+
+    .tf26-gallery-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(4, 18, 45, 0.92);
+      border: 1px solid rgba(255, 199, 44, 0.55);
+      color: #ffc72c;
+      padding: 6px 13px;
+      border-radius: 999px;
+      font-size: clamp(11px, 2.8vw, 13px);
+      font-weight: 700;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+      z-index: 2;
+    }
+
+    .tf26-gallery-badge svg {
+      flex-shrink: 0;
+    }
+
+    .tf26-gallery-info {
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+
+    .tf26-gallery-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .tf26-gallery-tag {
+      background: rgba(255, 199, 44, 0.15);
+      border: 1px solid rgba(255, 199, 44, 0.4);
+      color: #ffc72c;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .tf26-gallery-filename {
+      background: rgba(147, 197, 253, 0.08);
+      border: 1px solid rgba(147, 197, 253, 0.25);
+      color: #93c5fd;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .tf26-gallery-title {
+      color: #ffffff;
+      font-size: clamp(17px, 1.7vw, 22px);
+      font-weight: 700;
+      line-height: 1.35;
+      margin: 0;
+      word-break: break-word;
+    }
+
+    .tf26-gallery-desc {
+      color: #cbd5e1;
+      font-size: 13.5px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .tf26-gallery-location-box {
+      background: rgba(255, 255, 255, 0.04);
+      border-left: 3px solid #ffc72c;
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      margin-top: auto;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+
+    .tf26-gallery-location-label {
+      color: #ffc72c;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .tf26-gallery-location-val {
+      color: #f1f5f9;
+      font-size: 12.5px;
+      font-weight: 600;
+      line-height: 1.4;
+      word-break: break-word;
+    }
+
+    /* Controls Bar: Dots, Counter, Prev/Next */
+    .tf26-gallery-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 24px;
+      padding: 0 4px;
+    }
+
+    .tf26-gallery-counter {
+      color: #ffc72c;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+      font-size: 13px;
+      font-weight: 800;
+      background: rgba(8, 28, 68, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 6px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.08em;
+    }
+
+    .tf26-gallery-dots {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .tf26-gallery-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.22);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: width 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tf26-gallery-dot:hover {
+      background: rgba(255, 199, 44, 0.6);
+    }
+
+    .tf26-gallery-dot--active {
+      width: 28px;
+      background: #ffc72c;
+      box-shadow: 0 0 12px rgba(255, 199, 44, 0.5);
+    }
+
+    .tf26-gallery-arrows {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .tf26-gallery-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(8, 28, 68, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    .tf26-gallery-btn:hover {
+      background: #ffc72c;
+      border-color: #ffc72c;
+      color: #041226;
+      transform: scale(1.08);
+      box-shadow: 0 6px 18px rgba(255, 199, 44, 0.4);
+    }
+
+    .tf26-gallery-btn:active {
+      transform: scale(0.95);
+    }
+
+    @media (max-width: 900px) {
+      .tf26-gallery-card {
+        grid-template-columns: 1fr;
+      }
+      .tf26-gallery-info {
+        padding: 22px 18px;
+      }
+      .tf26-gallery-img-wrap {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .tf26-chapter--gallery {
+        padding-top: 50px;
+        padding-bottom: 45px;
+      }
+      .tf26-gallery__heading .tf26-display {
+        font-size: clamp(24px, 7vw, 32px);
+      }
+      .tf26-gallery-container {
+        padding: 0 16px;
+      }
+      .tf26-gallery-controls {
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+      }
+      .tf26-gallery-counter {
+        order: 1;
+      }
+      .tf26-gallery-dots {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 4px;
+      }
+      .tf26-gallery-arrows {
+        order: 2;
+      }
+    }
+        order: 2;
+      }
+    }
+
     /* FACILITIES + REGISTRATION */
     .tf26-chapter--benefits {
       padding-top: 84px;
@@ -4861,6 +5234,7 @@
           <a href="#tentang-acara" data-tf26-go="1">Tentang Acara</a>
           <a href="#rangkaian-acara" data-tf26-go="2">Rangkaian Acara</a>
           <a href="#pembicara" data-tf26-go="3">Pembicara</a>
+          <a href="#galeri-aktivitas">Galeri</a>
           <a href="#fasilitas" data-tf26-go="4">Fasilitas</a>
           <a href="#faq" data-tf26-go="5">FAQ</a>
           <a href="#pendaftaran" style="color: #b45309; font-weight: 800;">Pendaftaran Tiket</a>
@@ -5352,6 +5726,179 @@
               <div class="tf26-alumni-card">
                 <img src="assets/testimoni-7.webp" alt="" class="tf26-alumni-img" loading="lazy">
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION · GALERI AKTIVITAS & ROADSHOW -->
+      <section class="tf26-chapter tf26-chapter--gallery" id="galeri-aktivitas" aria-label="Galeri Aktivitas Roadshow dan Kunjungan Sekolah">
+        <div class="tf26-chapter__topline">
+          <span>05 / EVENT & ROADSHOW</span>
+          <span>DOKUMENTASI KEGIATAN & SOSIALISASI</span>
+        </div>
+
+        <div class="tf26-gallery__heading">
+          <div class="tf26-section-kicker">DOKUMENTASI KEGIATAN & SOSIALISASI</div>
+          <h2 class="tf26-display">Galeri <em>Aktivitas Kami</em></h2>
+          <p>Potret langsung rekam jejak bimbingan, in-house training, dan sosialisasi strategi lolos kedinasan Akademi Taruna di berbagai sekolah mitra.</p>
+        </div>
+
+        <div class="tf26-gallery-container">
+          <!-- Slider Wrapper -->
+          <div class="tf26-gallery-slider" id="tf26-gallery-slider">
+            <!-- Carousel Track (Manual Sliding Only) -->
+            <div class="tf26-gallery-track" id="tf26-gallery-track" aria-live="polite">
+
+              <!-- SLIDE 1: SMA Attaqwa Bekasi (IHT) -->
+              <article class="tf26-gallery-slide" data-index="0" aria-label="Slide 1 dari 5: In-House Training SMA Attaqwa Bekasi">
+                <div class="tf26-gallery-card">
+                  <div class="tf26-gallery-img-wrap">
+                    <img src="assets/galeri-iht-sma-attaqwa-bekasi.jpg" alt="In-House Training di SMA Attaqwa Bekasi" class="tf26-gallery-img" loading="lazy">
+                    <div class="tf26-gallery-badge">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <span>SMA Attaqwa Bekasi</span>
+                    </div>
+                  </div>
+                  <div class="tf26-gallery-info">
+                    <div class="tf26-gallery-meta">
+                      <span class="tf26-gallery-tag">In-House Training (IHT)</span>
+                      <span class="tf26-gallery-filename">📁 galeri-iht-sma-attaqwa-bekasi.jpg</span>
+                    </div>
+                    <h3 class="tf26-gallery-title">In-House Training: Pengenalan Pembelajaran & Jalur Kedinasan</h3>
+                    <p class="tf26-gallery-desc">Sesi penguatan kurikulum dan pembekalan strategi tembus sekolah kedinasan (Akmil, Akpol, STAN, IPDN) bersama civitas guru dan siswa SMA Attaqwa Bekasi.</p>
+                    <div class="tf26-gallery-location-box">
+                      <div class="tf26-gallery-location-label">Lokasi Kegiatan</div>
+                      <div class="tf26-gallery-location-val">SMA Attaqwa Bekasi · Jl. KH. Noer Ali No. 2, Pejuang, Kota Bekasi</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- SLIDE 2: Aula Pesantren Attaqwa Bekasi (Sosialisasi Akbar) -->
+              <article class="tf26-gallery-slide" data-index="1" aria-label="Slide 2 dari 5: Sosialisasi Akbar Aula Pesantren Attaqwa Bekasi">
+                <div class="tf26-gallery-card">
+                  <div class="tf26-gallery-img-wrap">
+                    <img src="assets/galeri-kegiatan-aula-pesantren-attaqwa-bekasi.jpg" alt="Sosialisasi Akbar di Aula Pesantren Attaqwa Bekasi" class="tf26-gallery-img" loading="lazy">
+                    <div class="tf26-gallery-badge">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <span>Aula Pesantren Attaqwa Bekasi</span>
+                    </div>
+                  </div>
+                  <div class="tf26-gallery-info">
+                    <div class="tf26-gallery-meta">
+                      <span class="tf26-gallery-tag">Sosialisasi Akbar</span>
+                      <span class="tf26-gallery-filename">📁 galeri-kegiatan-aula-pesantren-attaqwa-bekasi.jpg</span>
+                    </div>
+                    <h3 class="tf26-gallery-title">Sosialisasi Akbar & Pengarahan Ratusan Calon Taruna</h3>
+                    <p class="tf26-gallery-desc">Antusiasme ratusan santri dan siswa mengikuti pengarahan strategi kelulusan kedinasan, persiapan tes fisik kesamaptaan jasmani, serta tes psikologi militer.</p>
+                    <div class="tf26-gallery-location-box">
+                      <div class="tf26-gallery-location-label">Lokasi Kegiatan</div>
+                      <div class="tf26-gallery-location-val">Aula Utama Pesantren Attaqwa Pusat · Babelan, Bekasi</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- SLIDE 3: Auditorium Yayasan Attaqwa Bekasi (Seminar Kedinasan) -->
+              <article class="tf26-gallery-slide" data-index="2" aria-label="Slide 3 dari 5: Seminar Kedinasan Auditorium Attaqwa Bekasi">
+                <div class="tf26-gallery-card">
+                  <div class="tf26-gallery-img-wrap">
+                    <img src="assets/galeri-seminar-kedinasan-aula-attaqwa-bekasi.jpg" alt="Seminar Kedinasan di Auditorium Attaqwa Bekasi" class="tf26-gallery-img" loading="lazy">
+                    <div class="tf26-gallery-badge">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <span>Auditorium Yayasan Attaqwa Bekasi</span>
+                    </div>
+                  </div>
+                  <div class="tf26-gallery-info">
+                    <div class="tf26-gallery-meta">
+                      <span class="tf26-gallery-tag">Seminar Strategi Kedinasan</span>
+                      <span class="tf26-gallery-filename">📁 galeri-seminar-kedinasan-aula-attaqwa-bekasi.jpg</span>
+                    </div>
+                    <h3 class="tf26-gallery-title">Bedah Tahapan Seleksi & Penandatanganan Komitmen Taruna</h3>
+                    <p class="tf26-gallery-desc">Pemaparan sistematis peta persaingan SKD, TKA, dan tes kesehatan oleh narasumber ahli Akademi Taruna, dilanjutkan penandatanganan kesiapan calon taruna.</p>
+                    <div class="tf26-gallery-location-box">
+                      <div class="tf26-gallery-location-label">Lokasi Kegiatan</div>
+                      <div class="tf26-gallery-location-val">Auditorium Yayasan Attaqwa · Kompleks Perguruan Islam Attaqwa Bekasi</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- SLIDE 4: Ruang Kelas SMA Bekasi (Roadshow Kelas) -->
+              <article class="tf26-gallery-slide" data-index="3" aria-label="Slide 4 dari 5: Roadshow Kelas SMA Bekasi">
+                <div class="tf26-gallery-card">
+                  <div class="tf26-gallery-img-wrap">
+                    <img src="assets/galeri-roadshow-sosialisasi-kelas-sma-bekasi.jpg" alt="Roadshow Kelas di SMA Bekasi" class="tf26-gallery-img" loading="lazy">
+                    <div class="tf26-gallery-badge">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <span>Ruang Kelas SMA Bekasi</span>
+                    </div>
+                  </div>
+                  <div class="tf26-gallery-info">
+                    <div class="tf26-gallery-meta">
+                      <span class="tf26-gallery-tag">Classroom Roadshow</span>
+                      <span class="tf26-gallery-filename">📁 galeri-roadshow-sosialisasi-kelas-sma-bekasi.jpg</span>
+                    </div>
+                    <h3 class="tf26-gallery-title">Pendampingan Interaktif: Konsultasi Jurusan & Modul Belajar</h3>
+                    <p class="tf26-gallery-desc">Mentor Akademi Taruna terjun langsung mendampingi siswa di ruang kelas untuk konsultasi minat bakat kedinasan dan pembedahan modul latihan persiapan.</p>
+                    <div class="tf26-gallery-location-box">
+                      <div class="tf26-gallery-location-label">Lokasi Kegiatan</div>
+                      <div class="tf26-gallery-location-val">Ruang Kelas SMA Mitra Bekasi · Sesi Interaktif Roadshow</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- SLIDE 5: Grand Auditorium Yayasan Attaqwa Bekasi (Foto Bersama) -->
+              <article class="tf26-gallery-slide" data-index="4" aria-label="Slide 5 dari 5: Foto Bersama Auditorium Attaqwa Bekasi">
+                <div class="tf26-gallery-card">
+                  <div class="tf26-gallery-img-wrap">
+                    <img src="assets/galeri-foto-bersama-auditorium-attaqwa-bekasi.jpg" alt="Foto Bersama di Auditorium Attaqwa Bekasi" class="tf26-gallery-img" loading="lazy">
+                    <div class="tf26-gallery-badge">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <span>Auditorium Yayasan Attaqwa Bekasi</span>
+                    </div>
+                  </div>
+                  <div class="tf26-gallery-info">
+                    <div class="tf26-gallery-meta">
+                      <span class="tf26-gallery-tag">Deklarasi Calon Taruna</span>
+                      <span class="tf26-gallery-filename">📁 galeri-foto-bersama-auditorium-attaqwa-bekasi.jpg</span>
+                    </div>
+                    <h3 class="tf26-gallery-title">Foto Bersama & Deklarasi Semangat Taruna Fest 2026</h3>
+                    <p class="tf26-gallery-desc">Momen kebersamaan ratusan peserta roadshow bersama tim Akademi Taruna menunjukkan simbol kesiapan berjuang merebut tiket kelulusan sekolah kedinasan impian.</p>
+                    <div class="tf26-gallery-location-box">
+                      <div class="tf26-gallery-location-label">Lokasi Kegiatan</div>
+                      <div class="tf26-gallery-location-val">Grand Auditorium Yayasan Attaqwa Bekasi · Sesi Penutupan Akbar</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Controls Bar (Manual Controls Only: Prev, Next, Dots, Counter) -->
+          <div class="tf26-gallery-controls">
+            <div class="tf26-gallery-counter" id="tf26-gallery-counter" aria-label="Penunjuk Slide">
+              <span class="tf26-gallery-counter-current">01</span> / <span class="tf26-gallery-counter-total">05</span>
+            </div>
+
+            <div class="tf26-gallery-dots" id="tf26-gallery-dots" role="tablist" aria-label="Navigasi Slide">
+              <button type="button" class="tf26-gallery-dot tf26-gallery-dot--active" data-slide="0" aria-label="Pilih Slide 1" aria-selected="true"></button>
+              <button type="button" class="tf26-gallery-dot" data-slide="1" aria-label="Pilih Slide 2" aria-selected="false"></button>
+              <button type="button" class="tf26-gallery-dot" data-slide="2" aria-label="Pilih Slide 3" aria-selected="false"></button>
+              <button type="button" class="tf26-gallery-dot" data-slide="3" aria-label="Pilih Slide 4" aria-selected="false"></button>
+              <button type="button" class="tf26-gallery-dot" data-slide="4" aria-label="Pilih Slide 5" aria-selected="false"></button>
+            </div>
+
+            <div class="tf26-gallery-arrows">
+              <button type="button" class="tf26-gallery-btn tf26-gallery-btn--prev" id="tf26-gallery-prev" aria-label="Slide Sebelumnya (Manual)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button type="button" class="tf26-gallery-btn tf26-gallery-btn--next" id="tf26-gallery-next" aria-label="Slide Berikutnya (Manual)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
             </div>
           </div>
         </div>
@@ -6202,6 +6749,115 @@
 
         ScrollTrigger.refresh();
       });
+    })();
+
+    /* ================================================================
+       GALERI AKTIVITAS · MANUAL SLIDER LOGIC (NON-AUTO)
+       Strictly manual navigation: Prev, Next, Dots, and Touch Swipe.
+       No setInterval / auto-advance.
+       ================================================================ */
+    (function initGallerySlider() {
+      function setupGallery() {
+        var track = document.getElementById('tf26-gallery-track');
+        var prevBtn = document.getElementById('tf26-gallery-prev');
+        var nextBtn = document.getElementById('tf26-gallery-next');
+        var dots = document.querySelectorAll('.tf26-gallery-dot');
+        var counterCurrent = document.querySelector('.tf26-gallery-counter-current');
+        if (!track) return;
+
+        var slides = track.querySelectorAll('.tf26-gallery-slide');
+        var totalSlides = slides.length;
+        if (totalSlides === 0) return;
+        var currentIndex = 0;
+        var isProgrammaticScroll = false;
+
+        function updateUI(index) {
+          currentIndex = index;
+          dots.forEach(function (dot, i) {
+            var isActive = i === index;
+            dot.classList.toggle('tf26-gallery-dot--active', isActive);
+            dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          });
+          if (counterCurrent) {
+            counterCurrent.textContent = ('0' + (index + 1)).slice(-2);
+          }
+        }
+
+        function scrollToSlide(index) {
+          if (index < 0) index = totalSlides - 1;
+          if (index >= totalSlides) index = 0;
+          var targetSlide = slides[index];
+          if (!targetSlide) return;
+
+          isProgrammaticScroll = true;
+          updateUI(index);
+
+          var targetLeft = targetSlide.offsetLeft - track.offsetLeft;
+          track.scrollTo({
+            left: targetLeft,
+            behavior: 'smooth'
+          });
+
+          setTimeout(function () {
+            isProgrammaticScroll = false;
+          }, 450);
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            scrollToSlide(currentIndex - 1);
+          });
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            scrollToSlide(currentIndex + 1);
+          });
+        }
+
+        dots.forEach(function (dot) {
+          dot.addEventListener('click', function (e) {
+            e.preventDefault();
+            var targetIdx = parseInt(dot.getAttribute('data-slide'), 10);
+            if (!isNaN(targetIdx)) {
+              scrollToSlide(targetIdx);
+            }
+          });
+        });
+
+        // Sync on manual swipe / drag / wheel scroll
+        var scrollTimer = null;
+        track.addEventListener('scroll', function () {
+          if (isProgrammaticScroll) return;
+          clearTimeout(scrollTimer);
+          scrollTimer = setTimeout(function () {
+            var scrollPos = track.scrollLeft;
+            var nearestIdx = 0;
+            var minDistance = Infinity;
+
+            slides.forEach(function (slide, idx) {
+              var slidePos = slide.offsetLeft - track.offsetLeft;
+              var dist = Math.abs(slidePos - scrollPos);
+              if (dist < minDistance) {
+                minDistance = dist;
+                nearestIdx = idx;
+              }
+            });
+
+            if (nearestIdx !== currentIndex) {
+              updateUI(nearestIdx);
+            }
+          }, 50);
+        }, { passive: true });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupGallery, { once: true });
+      } else {
+        setupGallery();
+      }
     })();
   </script>
 </body>
