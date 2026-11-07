@@ -2272,17 +2272,18 @@
 
     /* FAQ */
     .tf26-chapter--faq {
-      padding-top: 84px;
-      padding-bottom: 56px;
+      min-height: auto !important;
+      padding-top: clamp(48px, 5.5vw, 76px) !important;
+      padding-bottom: clamp(44px, 5vw, 68px) !important;
     }
 
     .tf26-faq__layout {
       position: relative;
       z-index: 2;
       display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      align-items: center;
-      gap: clamp(35px, 6vw, 90px);
+      grid-template-columns: .85fr 1.15fr;
+      align-items: start;
+      gap: clamp(32px, 5vw, 64px);
       width: min(100%, 1280px);
       margin: 0 auto;
     }
@@ -2292,11 +2293,92 @@
     }
 
     .tf26-faq__intro>p {
-      max-width: 350px;
-      margin: 22px 0 28px;
+      max-width: 420px;
+      margin: 18px 0 20px;
       color: #d1e2f3;
       font-size: 13px;
       line-height: 1.7;
+    }
+
+    .tf26-faq__help-box {
+      margin-top: 20px;
+      padding: 22px 20px;
+      background: linear-gradient(145deg, rgba(5, 44, 88, 0.72), rgba(2, 23, 54, 0.85));
+      border: 1px solid rgba(255, 189, 25, 0.3);
+      border-radius: 14px;
+      box-shadow: 0 12px 32px rgba(0, 10, 30, 0.35);
+    }
+
+    .tf26-faq__help-badge {
+      display: inline-block;
+      background: rgba(255, 189, 25, 0.15);
+      color: var(--tf26-gold);
+      border: 1px solid rgba(255, 189, 25, 0.35);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      padding: 3px 9px;
+      border-radius: 99px;
+      margin-bottom: 10px;
+    }
+
+    .tf26-faq__help-box h4 {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 800;
+      margin: 0 0 6px;
+    }
+
+    .tf26-faq__help-box p {
+      color: #b9d1eb;
+      font-size: 12px;
+      line-height: 1.5;
+      margin: 0 0 16px;
+    }
+
+    .tf26-faq__wa-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 11px 16px;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: #ffffff !important;
+      font-size: 12px;
+      font-weight: 800;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.28);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .tf26-faq__wa-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    .tf26-faq__event-meta {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .tf26-faq__meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #d2e4f7;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .tf26-faq__meta-item span {
+      color: var(--tf26-gold);
+      font-size: 13px;
     }
 
     .tf26-faq__contact {
@@ -2419,8 +2501,9 @@
 
     /* FINAL CTA + FOOTER */
     .tf26-chapter--final {
+      min-height: auto !important;
       justify-content: flex-end;
-      padding-top: 54px;
+      padding-top: clamp(24px, 3.5vw, 44px) !important;
       padding-bottom: 0;
     }
 
@@ -2438,7 +2521,7 @@
       gap: 32px;
       width: min(100%, 1420px);
       min-height: 250px;
-      margin: auto auto 34px;
+      margin: 0 auto clamp(24px, 3vw, 36px) !important;
       padding: 0 40px 0 0;
       overflow: hidden;
       border: 1px solid rgba(255, 189, 25, .28);
@@ -3551,12 +3634,16 @@
     }
 
     .tf26-chapter {
-      min-height: max(760px, 90svh);
+      min-height: auto;
       height: auto;
       overflow: clip;
-      padding-top: clamp(84px, 9vh, 118px);
-      padding-bottom: clamp(76px, 8vh, 108px);
+      padding-top: clamp(64px, 7vh, 100px);
+      padding-bottom: clamp(60px, 6.5vh, 92px);
       scroll-margin-top: calc(var(--tf26-header-h) + 18px);
+    }
+
+    .tf26-chapter--hero {
+      min-height: max(720px, 95svh);
     }
 
     .tf26-chapter:not(.tf26-chapter--hero)::before {
@@ -3778,7 +3865,7 @@
     }
 
     @media (max-width: 1180px) {
-      .tf26-chapter {
+      .tf26-chapter--hero {
         min-height: max(720px, 88svh);
       }
     }
@@ -5486,26 +5573,39 @@
           <div class="tf26-faq__intro">
             <div class="tf26-section-kicker">FAQ · TARUNA FEST 2026</div>
             <h2 class="tf26-display">Pertanyaan<br><em>yang sering muncul.</em></h2>
-            <p>Temukan jawaban dari pertanyaan yang paling sering diajukan calon peserta dan orang tua.</p>
-            <div class="tf26-faq__contact"><span>MASIH ADA YANG INGIN DITANYAKAN?</span><a
-                href="https://wa.me/628132760627?text=Halo%20Akademi%20Taruna%2C%20saya%20ingin%20bertanya%20tentang%20Taruna%20Fest%202026."
-                target="_blank" rel="noopener">Hubungi tim kami ↗</a></div>
+            <p>Temukan jawaban dari pertanyaan yang paling sering diajukan calon peserta dan orang tua seputar acara Taruna Fest 2026.</p>
+
+            <div class="tf26-faq__help-box">
+              <span class="tf26-faq__help-badge">KONSULTASI LANGSUNG</span>
+              <h4>Masih Ada Pertanyaan?</h4>
+              <p>Tim pendaftaran kami siap membantu konsultasi seputar persyaratan kedinasan, pemilihan paket tiket, dan ketersediaan kuota 150 kursi.</p>
+              <a href="https://wa.me/628132760627?text=Halo%20Akademi%20Taruna%2C%20saya%20ingin%20konsultasi%20pendaftaran%20Taruna%20Fest%202026."
+                target="_blank" rel="noopener" class="tf26-faq__wa-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                <span>Tanya Panitia via WhatsApp</span>
+                <i>›</i>
+              </a>
+              <div class="tf26-faq__event-meta">
+                <div class="tf26-faq__meta-item"><span>📅</span> Sabtu, 28 Maret 2026 (08.00 - 17.00 WIB)</div>
+                <div class="tf26-faq__meta-item"><span>📍</span> Ballroom Grand Keisha Hotel Yogyakarta</div>
+                <div class="tf26-faq__meta-item"><span>👥</span> Kuota Terbatas: Maksimal 150 Kursi</div>
+              </div>
+            </div>
           </div>
           <div class="tf26-faq__list">
             <details class="tf26-faq-item" open>
-              <summary><span>Siapa yang bisa mengikuti Taruna Fest?</span><i>+</i></summary>
-              <p>Taruna Fest terbuka untuk siswa SMP/SMA yang ingin mengenal jalur SMA Taruna, TNI/Polri, atau Sekolah
-                Kedinasan. Orang tua juga dapat mengikuti acara.</p>
+              <summary><span>Siapa yang bisa mengikuti Taruna Fest 2026?</span><i>+</i></summary>
+              <p>Taruna Fest terbuka untuk seluruh siswa SMP, SMA/SMK sederajat, serta alumni (gap year) yang berminat masuk sekolah kedinasan, SMA Taruna, maupun TNI &amp; POLRI. Orang tua/wali sangat dianjurkan hadir mendampingi.</p>
+            </details>
+            <details class="tf26-faq-item">
+              <summary><span>Apakah orang tua atau pendamping wajib ikut hadir?</span><i>+</i></summary>
+              <p>Sangat disarankan hadir bersama (memilih <strong>Paket Berdua</strong>). Keputusan memilih jalur kedinasan membutuhkan komitmen dan dukungan penuh keluarga, mulai dari pemetaan biaya, kesiapan mental, hingga penentuan strategi jalur.</p>
             </details>
             <details class="tf26-faq-item">
               <summary><span>Apakah harus sudah mendaftar di Akademi Taruna?</span><i>+</i></summary>
-              <p>Tidak. Taruna Fest dapat diikuti oleh siswa dan orang tua yang ingin mengenal proses seleksi serta
-                memetakan kesiapan sejak awal.</p>
-            </details>
-            <details class="tf26-faq-item">
-              <summary><span>Apa saja yang perlu dibawa saat acara?</span><i>+</i></summary>
-              <p>Peserta disarankan membawa alat tulis dan bukti konfirmasi pendaftaran. Informasi perlengkapan tambahan
-                akan disampaikan oleh panitia melalui WhatsApp.</p>
+              <p>Tidak harus. Taruna Fest diselenggarakan sebagai event terbuka untuk umum agar calon peserta dan keluarga mendapatkan edukasi komprehensif, pemetaan peluang, serta strategi lolos seleksi sejak dini.</p>
             </details>
             <details class="tf26-faq-item">
               <summary><span>Berapa biaya tiket pendaftaran Taruna Fest 2026?</span><i>+</i></summary>
@@ -5517,11 +5617,22 @@
                 akses jejaring komunitas calon taruna.</p>
             </details>
             <details class="tf26-faq-item">
-              <summary><span>Bagaimana cara mendaftar?</span><i>+</i></summary>
+              <summary><span>Apa saja isi Merchandise Eksklusif &amp; Peserta Kit yang didapatkan?</span><i>+</i></summary>
+              <p>Setiap peserta siswa mendapatkan paket merchandise resmi lengkap saat registrasi ulang: <strong>Jersey Resmi Taruna Fest, Goodie Bag Eksklusif, Modul Seleksi Kedinasan, Worksheet Evaluasi Kesiapan Diri, Tumbler Premium, serta Health Kit</strong>.</p>
+            </details>
+            <details class="tf26-faq-item">
+              <summary><span>Bagaimana jika siswa memiliki riwayat minus mata atau kendala fisik?</span><i>+</i></summary>
+              <p>Pada sesi siang terdapat <strong>Interactive Booth Pemeriksaan Kesehatan &amp; Tes Fisik</strong>. Tim dokter dan instruktur akan melakukan skrining awal, menjelaskan batasan toleransi medis masing-masing instansi, serta memberikan rekomendasi penanganan sejak dini.</p>
+            </details>
+            <details class="tf26-faq-item">
+              <summary><span>Apa saja yang perlu dibawa saat acara berlangsung?</span><i>+</i></summary>
+              <p>Peserta disarankan membawa alat tulis dan bukti konfirmasi pendaftaran WhatsApp resmi. Peserta dapat mengenakan pakaian santai rapi atau seragam sekolah saat hadir, dan jersey resmi akan dibagikan di meja registrasi ulang.</p>
+            </details>
+            <details class="tf26-faq-item">
+              <summary><span>Bagaimana cara mendaftar dan batas akhir kuota?</span><i>+</i></summary>
               <p>Pendaftaran dilakukan online dengan mengisi <a href="#pendaftaran"
                   style="color:#ffbd19; font-weight:700; text-decoration:underline;">formulir pendaftaran di atas</a>
-                atau menghubungi WhatsApp Sales. Tim akan memverifikasi ketersediaan kuota (150 Kursi) dan mengirimkan
-                konfirmasi resmi.</p>
+                atau menghubungi WhatsApp Sales. Pendaftaran akan otomatis ditutup saat kuota 150 kursi (75 paket) terpenuhi demi menjaga kualitas konsultasi privat.</p>
             </details>
           </div>
         </div>
