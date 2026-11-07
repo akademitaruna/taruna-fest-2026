@@ -2147,9 +2147,10 @@
     }
 
     .tf26-gallery-container {
-      max-width: 1120px;
+      max-width: 1160px;
+      width: 100%;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0;
       position: relative;
       box-sizing: border-box;
     }
@@ -2158,7 +2159,7 @@
       position: relative;
       width: 100%;
       max-width: 100%;
-      border-radius: 24px;
+      border-radius: 22px;
       overflow: hidden;
       box-sizing: border-box;
     }
@@ -2172,8 +2173,9 @@
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
-      gap: 0;
+      gap: 20px;
       box-sizing: border-box;
+      padding: 10px 4px 20px;
     }
 
     .tf26-gallery-track::-webkit-scrollbar {
@@ -2181,34 +2183,33 @@
     }
 
     .tf26-gallery-slide {
-      flex: 0 0 100%;
-      width: 100%;
-      max-width: 100%;
+      flex: 0 0 clamp(285px, 26vw, 340px);
+      width: clamp(285px, 26vw, 340px);
       min-width: 0;
-      scroll-snap-align: center;
-      scroll-snap-stop: always;
+      scroll-snap-align: start;
+      scroll-snap-stop: normal;
       box-sizing: border-box;
-      padding: 4px;
     }
 
     .tf26-gallery-card {
-      display: grid;
-      grid-template-columns: 1.3fr 1fr;
+      display: flex;
+      flex-direction: column;
       width: 100%;
-      max-width: 100%;
+      height: 100%;
       min-width: 0;
       box-sizing: border-box;
-      background: linear-gradient(135deg, rgba(8, 28, 68, 0.78) 0%, rgba(4, 16, 42, 0.9) 100%);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 20px;
+      background: linear-gradient(145deg, rgba(8, 28, 68, 0.85) 0%, rgba(3, 14, 38, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 20px 48px -10px rgba(0, 10, 30, 0.7);
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 14px 34px -8px rgba(0, 10, 30, 0.65);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.35s ease;
     }
 
     .tf26-gallery-card:hover {
-      border-color: rgba(255, 199, 44, 0.45);
-      box-shadow: 0 24px 54px -10px rgba(0, 10, 30, 0.85), 0 0 24px rgba(255, 199, 44, 0.15);
+      transform: translateY(-8px);
+      border-color: rgba(255, 199, 44, 0.55);
+      box-shadow: 0 22px 48px -10px rgba(0, 10, 30, 0.85), 0 0 22px rgba(255, 199, 44, 0.2);
     }
 
     .tf26-gallery-img-wrap {
@@ -2216,8 +2217,7 @@
       overflow: hidden;
       background: #020b18;
       width: 100%;
-      max-width: 100%;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 16 / 11;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2228,52 +2228,45 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.5s ease;
+      transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .tf26-gallery-card:hover .tf26-gallery-img {
-      transform: scale(1.03);
+      transform: scale(1.06);
     }
 
-    .tf26-gallery-badge {
+    .tf26-gallery-img-shadow {
       position: absolute;
-      top: 14px;
-      left: 14px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(4, 18, 45, 0.92);
-      border: 1px solid rgba(255, 199, 44, 0.55);
-      color: #ffc72c;
-      padding: 6px 13px;
-      border-radius: 999px;
-      font-size: clamp(11px, 2.8vw, 13px);
-      font-weight: 700;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
-      z-index: 2;
-    }
-
-    .tf26-gallery-badge svg {
-      flex-shrink: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 70px;
+      background: linear-gradient(to bottom, rgba(2, 9, 24, 0) 0%, rgba(2, 9, 24, 0.45) 45%, rgba(2, 9, 24, 0.95) 100%);
+      pointer-events: none;
+      z-index: 1;
     }
 
     .tf26-gallery-info {
-      padding: 30px 28px;
+      position: relative;
+      padding: 18px 20px 22px;
+      background: linear-gradient(180deg, rgba(6, 22, 54, 0.98) 0%, rgba(2, 10, 26, 1) 100%);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 -12px 24px -2px rgba(0, 0, 0, 0.8);
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 14px;
+      gap: 8px;
+      flex: 1;
       min-width: 0;
       box-sizing: border-box;
+      z-index: 2;
     }
 
     .tf26-gallery-school-tag {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
+      gap: 6px;
       color: #ffc72c;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 800;
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -2285,42 +2278,33 @@
 
     .tf26-gallery-title {
       color: #ffffff;
-      font-size: clamp(20px, 2vw, 26px);
+      font-size: clamp(15px, 1.25vw, 17px);
       font-weight: 700;
-      line-height: 1.35;
+      line-height: 1.4;
       margin: 0;
       word-break: break-word;
+      min-height: 2.8em;
     }
 
-    .tf26-gallery-filename {
-      background: rgba(147, 197, 253, 0.08);
-      border: 1px solid rgba(147, 197, 253, 0.25);
-      color: #93c5fd;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 8px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      width: fit-content;
-      max-width: 100%;
-      word-break: break-word;
-      line-height: 1.45;
-      margin-top: 2px;
-    }
-
-    @media (max-width: 900px) {
-      .tf26-gallery-card {
-        grid-template-columns: 1fr;
+    @media (max-width: 768px) {
+      .tf26-gallery-slide {
+        flex: 0 0 clamp(260px, 60vw, 300px);
+        width: clamp(260px, 60vw, 300px);
+      }
+      .tf26-gallery-track {
+        gap: 16px;
+        padding: 6px 2px 14px;
       }
       .tf26-gallery-info {
-        padding: 22px 20px 24px;
-        gap: 10px;
+        padding: 16px 18px 20px;
+        gap: 6px;
       }
-      .tf26-gallery-title {
-        font-size: clamp(18px, 4.5vw, 22px);
+    }
+
+    @media (max-width: 480px) {
+      .tf26-gallery-slide {
+        flex: 0 0 clamp(240px, 76vw, 290px);
+        width: clamp(240px, 76vw, 290px);
       }
     }
 
@@ -2405,18 +2389,6 @@
       transform: scale(0.95);
     }
 
-    @media (max-width: 900px) {
-      .tf26-gallery-card {
-        grid-template-columns: 1fr;
-      }
-      .tf26-gallery-info {
-        padding: 22px 18px;
-      }
-      .tf26-gallery-img-wrap {
-        aspect-ratio: 16 / 9;
-      }
-    }
-
     @media (max-width: 600px) {
       .tf26-chapter--gallery {
         padding-top: 50px;
@@ -2443,9 +2415,6 @@
         margin-top: 4px;
       }
       .tf26-gallery-arrows {
-        order: 2;
-      }
-    }
         order: 2;
       }
     }
@@ -5730,18 +5699,14 @@
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
                     <img src="assets/galeri-iht-sma-attaqwa-bekasi.jpg" alt="In-House Training di SMA Attaqwa Bekasi" class="tf26-gallery-img" loading="lazy">
-                    <div class="tf26-gallery-badge">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                      <span>SMA Attaqwa Bekasi</span>
-                    </div>
+                    <div class="tf26-gallery-img-shadow"></div>
                   </div>
                   <div class="tf26-gallery-info">
                     <div class="tf26-gallery-school-tag">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
                       <span>SMA Attaqwa Bekasi</span>
                     </div>
                     <h3 class="tf26-gallery-title">In-House Training (IHT) Jalur Kedinasan</h3>
-                    <div class="tf26-gallery-filename">📁 galeri-iht-sma-attaqwa-bekasi.jpg</div>
                   </div>
                 </div>
               </article>
@@ -5751,18 +5716,14 @@
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
                     <img src="assets/galeri-kegiatan-aula-pesantren-attaqwa-bekasi.jpg" alt="Sosialisasi Akbar di Pesantren Attaqwa Bekasi" class="tf26-gallery-img" loading="lazy">
-                    <div class="tf26-gallery-badge">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                      <span>Pesantren Attaqwa Bekasi</span>
-                    </div>
+                    <div class="tf26-gallery-img-shadow"></div>
                   </div>
                   <div class="tf26-gallery-info">
                     <div class="tf26-gallery-school-tag">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
                       <span>Pesantren Attaqwa Bekasi</span>
                     </div>
                     <h3 class="tf26-gallery-title">Sosialisasi Akbar Calon Taruna</h3>
-                    <div class="tf26-gallery-filename">📁 galeri-kegiatan-aula-pesantren-attaqwa-bekasi.jpg</div>
                   </div>
                 </div>
               </article>
@@ -5772,18 +5733,14 @@
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
                     <img src="assets/galeri-seminar-sma-kebangsaan-lampung.jpg" alt="Seminar Kedinasan di SMA Kebangsaan Lampung" class="tf26-gallery-img" loading="lazy">
-                    <div class="tf26-gallery-badge">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                      <span>SMA Kebangsaan Lampung</span>
-                    </div>
+                    <div class="tf26-gallery-img-shadow"></div>
                   </div>
                   <div class="tf26-gallery-info">
                     <div class="tf26-gallery-school-tag">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
                       <span>SMA Kebangsaan Lampung</span>
                     </div>
                     <h3 class="tf26-gallery-title">Seminar Strategi Kelulusan Kedinasan</h3>
-                    <div class="tf26-gallery-filename">📁 galeri-seminar-sma-kebangsaan-lampung.jpg</div>
                   </div>
                 </div>
               </article>
@@ -5793,18 +5750,14 @@
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
                     <img src="assets/galeri-roadshow-sosialisasi-kelas-sma-bekasi.jpg" alt="Roadshow Kelas di SMA Bekasi" class="tf26-gallery-img" loading="lazy">
-                    <div class="tf26-gallery-badge">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                      <span>SMA Bekasi</span>
-                    </div>
+                    <div class="tf26-gallery-img-shadow"></div>
                   </div>
                   <div class="tf26-gallery-info">
                     <div class="tf26-gallery-school-tag">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
                       <span>SMA Bekasi</span>
                     </div>
                     <h3 class="tf26-gallery-title">Roadshow Kelas &amp; Konsultasi Jurusan</h3>
-                    <div class="tf26-gallery-filename">📁 galeri-roadshow-sosialisasi-kelas-sma-bekasi.jpg</div>
                   </div>
                 </div>
               </article>
@@ -5814,18 +5767,14 @@
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
                     <img src="assets/galeri-foto-bersama-sma-kebangsaan-lampung.jpg" alt="Foto Bersama di SMA Kebangsaan Lampung" class="tf26-gallery-img" loading="lazy">
-                    <div class="tf26-gallery-badge">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                      <span>SMA Kebangsaan Lampung</span>
-                    </div>
+                    <div class="tf26-gallery-img-shadow"></div>
                   </div>
                   <div class="tf26-gallery-info">
                     <div class="tf26-gallery-school-tag">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
                       <span>SMA Kebangsaan Lampung</span>
                     </div>
                     <h3 class="tf26-gallery-title">Foto Bersama Siswa &amp; Tim Akademi Taruna</h3>
-                    <div class="tf26-gallery-filename">📁 galeri-foto-bersama-sma-kebangsaan-lampung.jpg</div>
                   </div>
                 </div>
               </article>
@@ -5835,18 +5784,14 @@
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
                     <img src="assets/galeri-presentasi-interaktif-sma-al-azhar-karawang.jpg" alt="Pemaparan Materi Seleksi di SMA Islam Al Azhar 17 Karawang" class="tf26-gallery-img" loading="lazy">
-                    <div class="tf26-gallery-badge">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                      <span>SMA Islam Al Azhar 17 Karawang</span>
-                    </div>
+                    <div class="tf26-gallery-img-shadow"></div>
                   </div>
                   <div class="tf26-gallery-info">
                     <div class="tf26-gallery-school-tag">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
                       <span>SMA Islam Al Azhar 17 Karawang</span>
                     </div>
                     <h3 class="tf26-gallery-title">Pemaparan Materi di Smart Classroom</h3>
-                    <div class="tf26-gallery-filename">📁 galeri-presentasi-interaktif-sma-al-azhar-karawang.jpg</div>
                   </div>
                 </div>
               </article>
@@ -5856,18 +5801,14 @@
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
                     <img src="assets/galeri-sesi-asesmen-kelas-sma-al-azhar-karawang.jpg" alt="Sesi Asesmen Calon Taruna di SMA Islam Al Azhar 17 Karawang" class="tf26-gallery-img" loading="lazy">
-                    <div class="tf26-gallery-badge">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                      <span>SMA Islam Al Azhar 17 Karawang</span>
-                    </div>
+                    <div class="tf26-gallery-img-shadow"></div>
                   </div>
                   <div class="tf26-gallery-info">
                     <div class="tf26-gallery-school-tag">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
                       <span>SMA Islam Al Azhar 17 Karawang</span>
                     </div>
                     <h3 class="tf26-gallery-title">Sesi Asesmen Online Calon Taruna</h3>
-                    <div class="tf26-gallery-filename">📁 galeri-sesi-asesmen-kelas-sma-al-azhar-karawang.jpg</div>
                   </div>
                 </div>
               </article>
@@ -5877,18 +5818,14 @@
                 <div class="tf26-gallery-card">
                   <div class="tf26-gallery-img-wrap">
                     <img src="assets/galeri-foto-bersama-koridor-sma-al-azhar-karawang.jpg" alt="Foto Bersama di Koridor SMA Islam Al Azhar 17 Karawang" class="tf26-gallery-img" loading="lazy">
-                    <div class="tf26-gallery-badge">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                      <span>SMA Islam Al Azhar 17 Karawang</span>
-                    </div>
+                    <div class="tf26-gallery-img-shadow"></div>
                   </div>
                   <div class="tf26-gallery-info">
                     <div class="tf26-gallery-school-tag">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
                       <span>SMA Islam Al Azhar 17 Karawang</span>
                     </div>
                     <h3 class="tf26-gallery-title">Foto Bersama di Koridor Sekolah</h3>
-                    <div class="tf26-gallery-filename">📁 galeri-foto-bersama-koridor-sma-al-azhar-karawang.jpg</div>
                   </div>
                 </div>
               </article>
