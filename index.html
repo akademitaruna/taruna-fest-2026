@@ -2258,6 +2258,134 @@
       border-radius: 7px;
     }
 
+    /* Form Schedule Highlight Banner */
+    .tf26-form-schedule-highlight {
+      position: relative;
+      margin: 16px 0 22px;
+      padding: 14px 16px;
+      background: linear-gradient(135deg, rgba(255, 189, 25, 0.16) 0%, rgba(4, 34, 72, 0.88) 100%);
+      border: 1.5px solid #ffbd19;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), 0 0 18px rgba(255, 189, 25, 0.18);
+    }
+
+    .tf26-fsh-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .tf26-fsh-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #ffbd19;
+      color: #071d43;
+      font-size: 9.5px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      padding: 3px 10px;
+      border-radius: 99px;
+      box-shadow: 0 2px 8px rgba(255, 189, 25, 0.3);
+    }
+
+    .tf26-fsh-quota {
+      color: #ffbd19;
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: .04em;
+    }
+
+    .tf26-fsh-main {
+      display: grid;
+      grid-template-columns: 1.2fr auto 1fr;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .tf26-fsh-date-col,
+    .tf26-fsh-loc-col {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .tf26-fsh-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: #ffbd19;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 36px;
+      box-shadow: 0 4px 12px rgba(255, 189, 25, 0.35);
+    }
+
+    .tf26-fsh-loc-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex: 0 0 36px;
+    }
+
+    .tf26-fsh-day {
+      display: block;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 850;
+      line-height: 1.25;
+    }
+
+    .tf26-fsh-time {
+      display: block;
+      color: #ffd768;
+      font-size: 11.5px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .tf26-fsh-divider {
+      width: 1px;
+      height: 38px;
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .tf26-fsh-loc-name {
+      display: block;
+      color: #ffffff;
+      font-size: 13.5px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .tf26-fsh-city {
+      display: block;
+      color: #b9d1eb;
+      font-size: 11px;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 600px) {
+      .tf26-fsh-main {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .tf26-fsh-divider {
+        display: none;
+      }
+    }
+
     /* FAQ */
     .tf26-chapter--faq {
       min-height: auto !important;
@@ -5356,6 +5484,41 @@
               kursi.
             </p>
 
+            <!-- HIGHLIGHT JADWAL EVENT DI FORMULIR -->
+            <div class="tf26-form-schedule-highlight" role="region" aria-label="Jadwal Acara Taruna Fest 2026">
+              <div class="tf26-fsh-top">
+                <span class="tf26-fsh-badge">📌 JADWAL ACARA RESMI</span>
+                <span class="tf26-fsh-quota">⚡ KUOTA TERBATAS 150 KURSI</span>
+              </div>
+              <div class="tf26-fsh-main">
+                <div class="tf26-fsh-date-col">
+                  <div class="tf26-fsh-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#071d43" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                      <circle cx="8" cy="14" r="1.2" fill="#071d43"></circle>
+                      <circle cx="12" cy="14" r="1.2" fill="#071d43"></circle>
+                      <circle cx="16" cy="14" r="1.2" fill="#071d43"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <strong class="tf26-fsh-day">Sabtu, 19 Desember 2026</strong>
+                    <span class="tf26-fsh-time">08.00 – 17.00 WIB (Satu Hari Penuh)</span>
+                  </div>
+                </div>
+                <div class="tf26-fsh-divider" aria-hidden="true"></div>
+                <div class="tf26-fsh-loc-col">
+                  <div class="tf26-fsh-loc-icon" aria-hidden="true">📍</div>
+                  <div>
+                    <strong class="tf26-fsh-loc-name">Ballroom Hotel Sahid Raya</strong>
+                    <span class="tf26-fsh-city">Yogyakarta · Tatap Muka Langsung</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <form id="tf26-reg-form" class="tf26-form" autocomplete="on" onsubmit="handleTf26Submit(event)">
               <!-- Pilihan Paket Radio Cards -->
               <div class="tf26-form-group">
@@ -5545,8 +5708,8 @@
               <h4>Tahapan Pendaftaran &amp; Kuota</h4>
               <p>Untuk menjaga ketertiban data dan alokasi kuota 150 kursi, seluruh calon peserta diarahkan untuk <a href="#pendaftaran" style="color:var(--tf26-gold); font-weight:700; text-decoration:underline;">mengisi formulir pendaftaran di atas</a> terlebih dahulu. Setelah data terkirim, sistem otomatis menghubungkan Anda ke WhatsApp Sales resmi untuk tahap verifikasi dan penguncian nomor kursi.</p>
               <div class="tf26-faq__event-meta">
-                <div class="tf26-faq__meta-item"><span>📅</span> Sabtu, 28 Maret 2026 (08.00 - 17.00 WIB)</div>
-                <div class="tf26-faq__meta-item"><span>📍</span> Ballroom Grand Keisha Hotel Yogyakarta</div>
+                <div class="tf26-faq__meta-item"><span>📅</span> Sabtu, 19 Desember 2026 (08.00 – 17.00 WIB)</div>
+                <div class="tf26-faq__meta-item"><span>📍</span> Ballroom Hotel Sahid Raya Yogyakarta</div>
                 <div class="tf26-faq__meta-item"><span>👥</span> Kuota Terbatas: Maksimal 150 Kursi</div>
               </div>
             </div>
