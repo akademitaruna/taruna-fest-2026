@@ -5127,6 +5127,471 @@
       color: #64748b;
     }
 
+    /* Promo Urgency Banner & Countdown */
+    .tf26-urgency-banner {
+      background: linear-gradient(135deg, #071d43 0%, #0c2b5e 60%, #153975 100%);
+      border: 1.5px solid rgba(255, 189, 25, 0.45);
+      border-radius: 16px;
+      padding: 24px 22px;
+      margin: 0 auto 28px;
+      max-width: 900px;
+      box-shadow: 0 12px 32px rgba(7, 29, 67, 0.22), 0 0 20px rgba(255, 189, 25, 0.12);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .tf26-urgency-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 50% 20%, rgba(255, 189, 25, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .tf26-urgency-banner__pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255, 189, 25, 0.15);
+      border: 1px solid rgba(255, 189, 25, 0.5);
+      color: #ffbd19;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 30px;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tf26-urgency-banner__pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ffbd19;
+      box-shadow: 0 0 8px #ffbd19;
+      animation: tf26-pulse 1.5s infinite;
+    }
+
+    .tf26-urgency-banner__title {
+      font-size: clamp(17px, 2.4vw, 22px);
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 6px;
+      line-height: 1.3;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tf26-urgency-banner__title em {
+      font-style: normal;
+      color: #ffbd19;
+      text-shadow: 0 0 14px rgba(255, 189, 25, 0.4);
+    }
+
+    .tf26-urgency-banner__desc {
+      font-size: 12.5px;
+      color: #cbd5e1;
+      max-width: 620px;
+      line-height: 1.5;
+      margin: 0 0 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Countdown Grid */
+    .tf26-countdown-timer {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tf26-cd-block {
+      background: rgba(4, 20, 48, 0.85);
+      border: 1px solid rgba(255, 189, 25, 0.35);
+      border-radius: 10px;
+      padding: 10px 14px;
+      min-width: 66px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 4px 12px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .tf26-cd-num {
+      font-family: 'Cabinet Grotesk', system-ui, -apple-system, sans-serif;
+      font-size: clamp(22px, 3.2vw, 28px);
+      font-weight: 900;
+      color: #ffbd19;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .tf26-cd-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+    }
+
+    .tf26-cd-colon {
+      font-size: 24px;
+      font-weight: 900;
+      color: #ffbd19;
+      opacity: 0.6;
+      margin-top: -12px;
+      user-select: none;
+    }
+
+    /* Urgency meter / seats warning */
+    .tf26-urgency-quota-meter {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: rgba(239, 68, 68, 0.14);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      border-radius: 24px;
+      padding: 7px 18px;
+      font-size: 12px;
+      color: #fecaca;
+      font-weight: 700;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tf26-urgency-flame {
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .tf26-urgency-quota-meter strong {
+      color: #ffffff;
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: #ef4444;
+    }
+
+    /* Price Strikethrough & Promo Styles in Cards */
+    .tf26-price-promo-tag-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    .tf26-price-normal-wrap {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 5px;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    .tf26-price-normal-label {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      color: #64748b;
+    }
+
+    .tf26-price-normal-val {
+      text-decoration: line-through;
+      color: #94a3b8;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .tf26-discount-badge {
+      display: inline-flex;
+      align-items: center;
+      background: #fee2e2;
+      color: #b91c1c;
+      border: 1px solid #fca5a5;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .tf26-price-promo-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: #b45309;
+      text-transform: uppercase;
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .tf26-pkg-del {
+      text-decoration: line-through;
+      color: #94a3b8;
+      font-size: 11px;
+      margin-left: 4px;
+      font-weight: 600;
+    }
+
+    .tf26-pkg-save {
+      background: #fee2e2;
+      color: #dc2626;
+      font-size: 9px;
+      font-weight: 800;
+      padding: 1px 5px;
+      border-radius: 4px;
+      margin-left: 4px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .tf26-form-terms-note {
+      font-size: 11px;
+      color: #94a3b8;
+      text-align: center;
+      margin: 14px 0 0;
+      line-height: 1.5;
+    }
+
+    .tf26-form-terms-note a {
+      color: #ffbd19;
+      text-decoration: underline;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .tf26-form-terms-note a:hover {
+      color: #ffffff;
+    }
+
+    /* Modal Popups (Kebijakan Privasi & Syarat Ketentuan) */
+    .tf26-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(3, 15, 34, 0.82);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .tf26-modal-overlay.tf26-modal-active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .tf26-modal-dialog {
+      background: #071d43;
+      border: 1.5px solid rgba(255, 189, 25, 0.35);
+      border-radius: 18px;
+      max-width: 660px;
+      width: 100%;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 30px rgba(255, 189, 25, 0.15);
+      transform: translateY(20px) scale(0.97);
+      transition: transform 0.25s ease;
+      overflow: hidden;
+      color: #e2e8f0;
+      box-sizing: border-box;
+    }
+
+    .tf26-modal-overlay.tf26-modal-active .tf26-modal-dialog {
+      transform: translateY(0) scale(1);
+    }
+
+    .tf26-modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: rgba(4, 20, 48, 0.7);
+      flex-shrink: 0;
+    }
+
+    .tf26-modal-header-text {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .tf26-modal-tag {
+      font-size: 10px;
+      font-weight: 800;
+      color: #ffbd19;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .tf26-modal-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .tf26-modal-close {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      line-height: 1;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .tf26-modal-close:hover {
+      background: #ffbd19;
+      border-color: #ffbd19;
+      color: #071d43;
+      transform: rotate(90deg);
+    }
+
+    .tf26-modal-body {
+      padding: 24px;
+      overflow-y: auto;
+      font-size: 13px;
+      line-height: 1.65;
+      color: #cbd5e1;
+      overscroll-behavior: contain;
+    }
+
+    .tf26-modal-body::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .tf26-modal-body::-webkit-scrollbar-track {
+      background: rgba(4, 20, 48, 0.3);
+    }
+
+    .tf26-modal-body::-webkit-scrollbar-thumb {
+      background: rgba(255, 189, 25, 0.3);
+      border-radius: 4px;
+    }
+
+    .tf26-modal-body::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 189, 25, 0.6);
+    }
+
+    .tf26-modal-lead {
+      font-size: 13px;
+      color: #f1f5f9;
+      background: rgba(255, 189, 25, 0.08);
+      border-left: 3px solid #ffbd19;
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      margin: 0 0 18px;
+      line-height: 1.55;
+    }
+
+    .tf26-modal-section {
+      margin-bottom: 20px;
+    }
+
+    .tf26-modal-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .tf26-modal-section h4 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #ffbd19;
+      margin: 0 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tf26-modal-section p {
+      margin: 0 0 8px;
+    }
+
+    .tf26-modal-section ul {
+      margin: 6px 0 0;
+      padding-left: 20px;
+    }
+
+    .tf26-modal-section li {
+      margin-bottom: 6px;
+    }
+
+    .tf26-modal-footer {
+      padding: 14px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(4, 20, 48, 0.7);
+      flex-shrink: 0;
+    }
+
+    .tf26-modal-footer-note {
+      font-size: 11.5px;
+      color: #94a3b8;
+    }
+
+    .tf26-modal-btn-close {
+      background: linear-gradient(135deg, #ffbd19, #eead00);
+      color: #071d43;
+      border: none;
+      padding: 9px 20px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tf26-modal-btn-close:hover {
+      background: linear-gradient(135deg, #eead00, #d97706);
+      transform: translateY(-1px);
+    }
+
     @media (max-width: 860px) {
       .tf26-pricing__grid {
         grid-template-columns: 1fr;
@@ -5139,6 +5604,54 @@
 
       .tf26-package-radios {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .tf26-urgency-banner {
+        padding: 18px 14px;
+        margin-bottom: 22px;
+      }
+
+      .tf26-countdown-timer {
+        gap: 6px;
+      }
+
+      .tf26-cd-block {
+        min-width: 52px;
+        padding: 8px 6px;
+      }
+
+      .tf26-cd-colon {
+        font-size: 18px;
+        margin-top: -8px;
+      }
+
+      .tf26-urgency-quota-meter {
+        font-size: 11px;
+        padding: 6px 12px;
+        text-align: center;
+      }
+
+      .tf26-modal-dialog {
+        max-height: 90vh;
+      }
+
+      .tf26-modal-header {
+        padding: 14px 18px;
+      }
+
+      .tf26-modal-body {
+        padding: 18px;
+        font-size: 12px;
+      }
+
+      .tf26-modal-footer {
+        padding: 12px 18px;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 10px;
       }
     }
 
@@ -5911,6 +6424,47 @@
               kesepakatan persiapan karir kedinasan dapat diputuskan bersama secara matang.</p>
           </div>
 
+          <!-- URGENCY & FLASH SALE COUNTDOWN BANNER -->
+          <div class="tf26-urgency-banner" role="region" aria-label="Promo Flash Sale Taruna Fest 2026">
+            <div class="tf26-urgency-banner__pill">
+              <span class="tf26-urgency-banner__pill-dot"></span>
+              <span>PROMO FLASH SALE PENDAFTARAN</span>
+            </div>
+            <h4 class="tf26-urgency-banner__title">Amankan Kuota Promo Spesial Sekarang Sebelum <em>Harga Naik!</em></h4>
+            <p class="tf26-urgency-banner__desc">
+              Tarif promo diskon 40% berlaku selama periode penawaran ini. Segera kunci tiket sebelum kuota 150 kursi terisi penuh oleh calon pendaftar lain.
+            </p>
+
+            <!-- LIVE COUNTDOWN TIMER -->
+            <div class="tf26-countdown-timer" aria-live="polite">
+              <div class="tf26-cd-block">
+                <span class="tf26-cd-num" id="tf26-cd-days">01</span>
+                <span class="tf26-cd-label">Hari</span>
+              </div>
+              <span class="tf26-cd-colon">:</span>
+              <div class="tf26-cd-block">
+                <span class="tf26-cd-num" id="tf26-cd-hours">18</span>
+                <span class="tf26-cd-label">Jam</span>
+              </div>
+              <span class="tf26-cd-colon">:</span>
+              <div class="tf26-cd-block">
+                <span class="tf26-cd-num" id="tf26-cd-mins">42</span>
+                <span class="tf26-cd-label">Menit</span>
+              </div>
+              <span class="tf26-cd-colon">:</span>
+              <div class="tf26-cd-block">
+                <span class="tf26-cd-num" id="tf26-cd-secs">30</span>
+                <span class="tf26-cd-label">Detik</span>
+              </div>
+            </div>
+
+            <!-- SEAT URGENCY BADGE -->
+            <div class="tf26-urgency-quota-meter">
+              <span class="tf26-urgency-flame">⚡</span>
+              <span>Kuota Terbatas: <strong>Hanya Tersisa 19 Kursi Lagi</strong> dari Total 150 Kursi</span>
+            </div>
+          </div>
+
           <div class="tf26-pricing__grid">
             <!-- Card 1: Paket Berdua (Utama & Rekomendasi) -->
             <div class="tf26-price-card tf26-price-card--featured">
@@ -5919,6 +6473,19 @@
                 <h4>Paket Berdua</h4>
                 <div class="tf26-price-target">1 Siswa + 1 Orang Tua / Pendamping</div>
               </div>
+
+              <!-- HARGA NORMAL & DISKON PROMO -->
+              <div class="tf26-price-promo-tag-row">
+                <span class="tf26-price-normal-wrap">
+                  <span class="tf26-price-normal-label">Normal</span>
+                  <del class="tf26-price-normal-val">Rp 2.500.000</del>
+                </span>
+                <span class="tf26-discount-badge">HEMAT 40% (Rp1.000.000)</span>
+              </div>
+              <div class="tf26-price-promo-label">
+                <span class="tf26-promo-sparkle">🔥</span> HARGA PROMO SPESIAL
+              </div>
+
               <div class="tf26-price-amount">
                 <span class="tf26-price-currency">Rp</span>
                 <span class="tf26-price-number">1.500.000</span>
@@ -5955,6 +6522,19 @@
                 <h4>Paket Perorangan</h4>
                 <div class="tf26-price-target">1 Siswa Mandiri</div>
               </div>
+
+              <!-- HARGA NORMAL & DISKON PROMO -->
+              <div class="tf26-price-promo-tag-row">
+                <span class="tf26-price-normal-wrap">
+                  <span class="tf26-price-normal-label">Normal</span>
+                  <del class="tf26-price-normal-val">Rp 1.500.000</del>
+                </span>
+                <span class="tf26-discount-badge">HEMAT 40% (Rp600.000)</span>
+              </div>
+              <div class="tf26-price-promo-label">
+                <span class="tf26-promo-sparkle">🔥</span> HARGA PROMO SPESIAL
+              </div>
+
               <div class="tf26-price-amount">
                 <span class="tf26-price-currency">Rp</span>
                 <span class="tf26-price-number">900.000</span>
@@ -6067,7 +6647,10 @@
                     <div class="tf26-pkg-info">
                       <div class="tf26-pkg-name">Paket Berdua <span class="tf26-pkg-tag">Rekomendasi</span></div>
                       <div class="tf26-pkg-sub">1 Siswa + 1 Orang Tua / Pendamping</div>
-                      <div class="tf26-pkg-cost">Rp1.500.000 <small>(Rp750.000/orang)</small></div>
+                      <div class="tf26-pkg-cost">
+                        Rp1.500.000 <del class="tf26-pkg-del">Rp2.500.000</del> <span class="tf26-pkg-save">Hemat 40%</span>
+                        <small style="display:block;margin-top:2px;">(Rp750.000/orang)</small>
+                      </div>
                     </div>
                   </label>
                   <label class="tf26-pkg-radio-card" id="tf26-pkg-mandiri-label">
@@ -6076,7 +6659,9 @@
                     <div class="tf26-pkg-info">
                       <div class="tf26-pkg-name">Paket Perorangan</div>
                       <div class="tf26-pkg-sub">1 Siswa Mandiri</div>
-                      <div class="tf26-pkg-cost">Rp900.000</div>
+                      <div class="tf26-pkg-cost">
+                        Rp900.000 <del class="tf26-pkg-del">Rp1.500.000</del> <span class="tf26-pkg-save">Hemat 40%</span>
+                      </div>
                     </div>
                   </label>
                 </div>
@@ -6220,6 +6805,10 @@
                 <span class="tf26-arrow" aria-hidden="true">›</span>
               </button>
 
+              <p class="tf26-form-terms-note">
+                Dengan mendaftar, Anda menyetujui <a href="#terms" onclick="openTF26Modal('terms', event)">Syarat &amp; Ketentuan</a> serta <a href="#privacy" onclick="openTF26Modal('privacy', event)">Kebijakan Privasi</a> Taruna Fest 2026.
+              </p>
+
               <div id="tf26-form-status" class="tf26-form-status" style="display:none;" role="status"></div>
             </form>
           </div>
@@ -6333,8 +6922,8 @@
           </div>
           <div class="tf26-footer__bottom">
             <span>© 2026 Akademi Prestasi Indonesia · Taruna Fest 2026. All rights reserved.</span>
-            <span><a href="https://akademitaruna.co.id/">Kebijakan Privasi</a><i></i><a
-                href="https://akademitaruna.co.id/">Syarat &amp; Ketentuan</a></span>
+            <span><a href="#privacy" onclick="openTF26Modal('privacy', event)">Kebijakan Privasi</a><i></i><a
+                href="#terms" onclick="openTF26Modal('terms', event)">Syarat &amp; Ketentuan</a></span>
           </div>
         </footer>
       </section>
@@ -6342,14 +6931,273 @@
   </main>
   </div>
 
+  <!-- MODAL OVERLAY: KEBIJAKAN PRIVASI & SYARAT KETENTUAN -->
+  <div id="tf26-modal-overlay" class="tf26-modal-overlay" onclick="handleOverlayClick(event)" role="dialog" aria-modal="true" aria-labelledby="tf26-active-modal-title">
+    
+    <!-- MODAL 1: KEBIJAKAN PRIVASI -->
+    <div id="tf26-modal-privacy" class="tf26-modal-dialog" style="display:none;">
+      <div class="tf26-modal-header">
+        <div class="tf26-modal-header-text">
+          <span class="tf26-modal-tag">🛡️ PERLINDUNGAN DATA PRIBADI</span>
+          <h3 id="tf26-privacy-title" class="tf26-modal-title">Kebijakan Privasi Peserta</h3>
+        </div>
+        <button type="button" class="tf26-modal-close" onclick="closeTF26Modal()" aria-label="Tutup Kebijakan Privasi">&times;</button>
+      </div>
+      <div class="tf26-modal-body">
+        <div class="tf26-modal-lead">
+          <strong>Akademi Prestasi Indonesia (API)</strong> berkomitmen penuh untuk menjaga keamanan, kerahasiaan, dan integritas data pribadi seluruh calon taruna serta orang tua/wali yang mendaftar pada acara <strong>Taruna Fest 2026</strong>.
+        </div>
+
+        <div class="tf26-modal-section">
+          <h4>1. Data Pribadi yang Kami Kumpulkan</h4>
+          <p>Saat Anda mengisi formulir pendaftaran Taruna Fest 2026, kami mengumpulkan data yang diperlukan untuk verifikasi kepesertaan, antara lain:</p>
+          <ul>
+            <li><strong>Data Calon Taruna:</strong> Nama lengkap, nomor WhatsApp aktif, kota domisili, asal sekolah, tingkat kelas/status pendidikan, serta pilihan instansi target utama (Akpol, Akmil, AAU, AAL, IPDN, Poltekip/Poltekim, STAN, STIS, STIN, BSSN, atau SMA Taruna).</li>
+            <li><strong>Data Orang Tua / Pendamping (Khusus Paket Berdua):</strong> Nama lengkap orang tua/wali, hubungan kekeluargaan, serta nomor WhatsApp pendamping.</li>
+            <li><strong>Catatan Kesiapan:</strong> Informasi opsional seputar kendala persiapan fisik, nilai akademik, atau aspek psikotes yang Anda cantumkan untuk bahan konsultasi.</li>
+          </ul>
+        </div>
+
+        <div class="tf26-modal-section">
+          <h4>2. Tujuan Penggunaan Informasi</h4>
+          <p>Seluruh informasi yang terkumpul hanya digunakan untuk tujuan administratif dan pelaksanaan acara resmi, mencakup:</p>
+          <ul>
+            <li>Verifikasi pendaftaran dan penerbitan kode unik E-Ticket Taruna Fest 2026.</li>
+            <li>Konfirmasi ketersediaan kuota, pengiriman invoice pembayaran, serta panduan teknis acara melalui WhatsApp Sales Resmi (<strong>0813-2760-627</strong>).</li>
+            <li>Alokasi ukuran Jersey Resmi Taruna Fest, penyiapan Peserta Kit (Modul Seleksi, Worksheet, Tumbler, Health Kit), dan pengaturan porsi catering/konsumsi.</li>
+            <li>Pemetaan awal data calon taruna oleh tim psikolog dan asesor Akademi Taruna untuk memaksimalkan efektivitas sesi konsultasi tatap muka.</li>
+          </ul>
+        </div>
+
+        <div class="tf26-modal-section">
+          <h4>3. Keamanan Data &amp; Kerahasiaan</h4>
+          <p>Kami menerapkan standar keamanan berlapis untuk melindungi data Anda:</p>
+          <ul>
+            <li>Formulir dilindungi oleh enkripsi SSL/TLS 256-bit selama proses pengiriman data.</li>
+            <li>Data Anda tersimpan dalam server database internal yang aman dengan akses terbatas hanya bagi petugas resmi registrasi.</li>
+            <li>Kami menjamin bahwa data Anda <strong>TIDAK AKAN PERNAH</strong> dijual, disewakan, ditukar, atau disebarluaskan kepada pihak ketiga mana pun di luar ekosistem Akademi Prestasi Indonesia untuk keperluan iklan pihak ketiga.</li>
+          </ul>
+        </div>
+
+        <div class="tf26-modal-section">
+          <h4>4. Hak Peserta atas Data</h4>
+          <p>Anda berhak untuk mengonfirmasi status pendaftaran, memohon pembetulan jika terdapat kesalahan penulisan nama/kontak, atau meminta klarifikasi data kepesertaan Anda kapan saja sebelum hari H pelaksanaan acara.</p>
+        </div>
+
+        <div class="tf26-modal-section">
+          <h4>5. Kontak Resmi Layanan Informasi</h4>
+          <p>Jika ada pertanyaan atau kendala terkait privasi data Anda, silakan hubungi saluran resmi kami:</p>
+          <ul>
+            <li>WhatsApp Resmi Registrasi: <strong>0813-2760-627</strong></li>
+            <li>Email Resmi: <strong>info@akademitaruna.co.id</strong></li>
+            <li>Website Resmi: <strong>akademitaruna.co.id</strong></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tf26-modal-footer">
+        <span class="tf26-modal-footer-note">Taruna Fest 2026 · Akademi Prestasi Indonesia</span>
+        <button type="button" class="tf26-modal-btn-close" onclick="closeTF26Modal()">Saya Mengerti &amp; Tutup</button>
+      </div>
+    </div>
+
+    <!-- MODAL 2: SYARAT & KETENTUAN -->
+    <div id="tf26-modal-terms" class="tf26-modal-dialog" style="display:none;">
+      <div class="tf26-modal-header">
+        <div class="tf26-modal-header-text">
+          <span class="tf26-modal-tag">📋 REGULASI ACARA &amp; TIKET</span>
+          <h3 id="tf26-terms-title" class="tf26-modal-title">Syarat &amp; Ketentuan Peserta</h3>
+        </div>
+        <button type="button" class="tf26-modal-close" onclick="closeTF26Modal()" aria-label="Tutup Syarat & Ketentuan">&times;</button>
+      </div>
+      <div class="tf26-modal-body">
+        <div class="tf26-modal-lead">
+          Dengan melakukan pengisian formulir pendaftaran dan pembayaran tiket <strong>Taruna Fest 2026</strong>, peserta dan orang tua/wali dianggap telah membaca, memahami, serta menyetujui seluruh syarat dan ketentuan berikut.
+        </div>
+
+        <div class="tf26-modal-section">
+          <h4>1. Jadwal &amp; Lokasi Penyelenggaraan</h4>
+          <p>Taruna Fest 2026 merupakan agenda seminar inspirasi, asesmen komprehensif, dan expo interaktif kedinasan tatap muka yang diadakan pada:</p>
+          <ul>
+            <li><strong>Hari &amp; Tanggal:</strong> Sabtu, 19 Desember 2026</li>
+            <li><strong>Waktu Pelaksanaan:</strong> Pukul 08.00 – 17.00 WIB (Open Gate &amp; Registrasi Ulang: 07.30 WIB)</li>
+            <li><strong>Lokasi:</strong> Ballroom Hotel Sahid Raya Yogyakarta (Jl. Babarsari No. 2, Caturtunggal, Sleman, D.I. Yogyakarta)</li>
+          </ul>
+        </div>
+
+        <div class="tf26-modal-section">
+          <h4>2. Kategori Paket &amp; Hak Peserta</h4>
+          <ul>
+            <li><strong>Paket Berdua (Promo Rp1.500.000 / Normal Rp2.500.000):</strong>
+              Berlaku untuk 2 orang (1 Siswa Calon Taruna + 1 Orang Tua/Wali). Mendapatkan 2 porsi konsumsi (Lunch Box &amp; Coffee Break), 1 Set Jersey Resmi &amp; Full Peserta Kit, Sesi Konsultasi Jalur Privat bersama Asesor API, serta akses penuh ke 4 Interactive Booth Expo.
+            </li>
+            <li><strong>Paket Perorangan (Promo Rp900.000 / Normal Rp1.500.000):</strong>
+              Berlaku untuk 1 orang siswa mandiri. Mendapatkan 1 porsi konsumsi, 1 Set Jersey Resmi &amp; Full Peserta Kit, konsultasi di booth expo, serta akses penuh ke 4 Interactive Booth Expo.
+            </li>
+          </ul>
+        </div>
+
+        <div class="tf26-modal-section">
+          <h4>3. Ketentuan Kuota &amp; Penguncian Kursi</h4>
+          <p>Demi menjaga kenyamanan, ketertiban, dan kedalaman interaksi pada sesi konsultasi eksklusif:</p>
+          <ul>
+            <li>Total kuota peserta dibatasi ketat hanya <strong>150 Kursi</strong> (75 Paket Berdua atau ekuivalen).</li>
+            <li>Pengisian formulir pendaftaran di landing page ini merupakan tahap reservasi data. Penguncian kursi secara sah (valid seat) baru terkonfirmasi setelah peserta menyelesaikan pembayaran dan diverifikasi via WhatsApp Sales (<strong>0813-2760-627</strong>).</li>
+            <li>Panitia berhak menutup pendaftaran sewaktu-waktu tanpa pemberitahuan sebelumnya jika kuota 150 kursi telah terpenuhi.</li>
+          </ul>
+        </div>
+
+        <div class="tf26-modal-section">
+          <h4>4. Tata Tertib, Registrasi Ulang &amp; Dresscode</h4>
+          <ul>
+            <li>Peserta wajib hadir paling lambat pukul 07.45 WIB untuk melakukan registrasi ulang di meja resepsionis dengan memperlihatkan E-Ticket / Bukti Chat WhatsApp Konfirmasi.</li>
+            <li><strong>Dresscode:</strong> Pakaian rapi berkerah, sopan (kemeja / polo shirt / batik / seragam sekolah asal), celana panjang kain/jeans rapi (bukan ripped/sobek), serta mengenakan sepatu tertutup.</li>
+            <li>Peserta dilarang keras membawa senjata tajam, rokok/vape di dalam ballroom, minuman keras, atau barang terlarang lainnya.</li>
+          </ul>
+        </div>
+
+        <div class="tf26-modal-section">
+          <h4>5. Kebijakan Pembatalan &amp; Pengalihan Tiket (Refund Policy)</h4>
+          <ul>
+            <li>Tiket yang telah dibayarkan <strong>bersifat non-refundable</strong> (tidak dapat diuangkan kembali) karena menyangkut reservasi kursi ballroom hotel, katering, dan produksi jersey peserta kustom.</li>
+            <li>Apabila peserta berhalangan hadir secara darurat, tiket <strong>dapat dialihkan (transferable)</strong> kepada peserta lain dengan syarat memberitahukan kepada admin panitia selambat-lambatnya H-7 acara (12 Desember 2026).</li>
+          </ul>
+        </div>
+
+        <div class="tf26-modal-section">
+          <h4>6. Dokumentasi &amp; Hak Publikasi</h4>
+          <p>Selama kegiatan berlangsung, tim panitia akan mengambil foto dan video dokumentasi. Dengan berpartisipasi, peserta memberikan izin wajar kepada penyelenggara untuk menampilkan foto/video dokumentasi tersebut pada materi publikasi dan sosial media resmi Akademi Prestasi Indonesia.</p>
+        </div>
+      </div>
+      <div class="tf26-modal-footer">
+        <span class="tf26-modal-footer-note">Taruna Fest 2026 · Ballroom Hotel Sahid Raya Yogyakarta</span>
+        <button type="button" class="tf26-modal-btn-close" onclick="closeTF26Modal()">Saya Setuju &amp; Tutup</button>
+      </div>
+    </div>
+
+  </div>
+
   <script>
     /* ================================================================
        TARUNA FEST 2026 · LOGIC & INTERACTIONS
-       1. Package Selection Sync
-       2. Google Sheets API Submission & LocalStorage Backup
-       3. WhatsApp Sales Auto-Redirect (0813-2760-627)
-       4. Lenis Smooth Scroll & GSAP ScrollTrigger Animations
+       1. Modal Dialogs (Kebijakan Privasi & Syarat Ketentuan)
+       2. Promo Urgency Countdown Timer
+       3. Package Selection Sync
+       4. Google Sheets API Submission & LocalStorage Backup
+       5. WhatsApp Sales Auto-Redirect (0813-2760-627)
+       6. Lenis Smooth Scroll & GSAP ScrollTrigger Animations
        ================================================================ */
+
+    /* ================================================================
+       MODAL DIALOGS: KEBIJAKAN PRIVASI & SYARAT KETENTUAN
+       ================================================================ */
+    function openTF26Modal(type, event) {
+      if (event && event.preventDefault) event.preventDefault();
+      var overlay = document.getElementById('tf26-modal-overlay');
+      var privacyModal = document.getElementById('tf26-modal-privacy');
+      var termsModal = document.getElementById('tf26-modal-terms');
+
+      if (!overlay || !privacyModal || !termsModal) return;
+
+      if (type === 'privacy') {
+        privacyModal.style.display = 'flex';
+        termsModal.style.display = 'none';
+      } else {
+        termsModal.style.display = 'flex';
+        privacyModal.style.display = 'none';
+      }
+
+      overlay.classList.add('tf26-modal-active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeTF26Modal() {
+      var overlay = document.getElementById('tf26-modal-overlay');
+      if (overlay) {
+        overlay.classList.remove('tf26-modal-active');
+      }
+      document.body.style.overflow = '';
+    }
+
+    function handleOverlayClick(event) {
+      if (event.target && event.target.id === 'tf26-modal-overlay') {
+        closeTF26Modal();
+      }
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' || e.key === 'Esc') {
+        closeTF26Modal();
+      }
+    });
+
+    /* ================================================================
+       PROMO URGENCY COUNTDOWN TIMER
+       ================================================================ */
+    function initPromoCountdown() {
+      var daysEl = document.getElementById('tf26-cd-days');
+      var hoursEl = document.getElementById('tf26-cd-hours');
+      var minsEl = document.getElementById('tf26-cd-mins');
+      var secsEl = document.getElementById('tf26-cd-secs');
+
+      if (!daysEl || !hoursEl || !minsEl || !secsEl) return;
+
+      var STORAGE_KEY = 'tf26_promo_target_deadline';
+      var storedTarget = null;
+      try {
+        storedTarget = localStorage.getItem(STORAGE_KEY);
+      } catch (e) {}
+
+      var targetTime = null;
+      var now = Date.now();
+
+      if (storedTarget) {
+        var parsed = parseInt(storedTarget, 10);
+        if (!isNaN(parsed) && parsed > now + (15 * 60 * 1000)) {
+          targetTime = parsed;
+        }
+      }
+
+      if (!targetTime) {
+        // High-urgency rolling deadline: ~1 day 18 hours 42 minutes
+        targetTime = now + (1 * 24 * 3600 + 18 * 3600 + 42 * 60 + 20) * 1000;
+        try {
+          localStorage.setItem(STORAGE_KEY, targetTime.toString());
+        } catch (e) {}
+      }
+
+      function updateClock() {
+        var current = Date.now();
+        var diff = targetTime - current;
+
+        if (diff <= 0) {
+          targetTime = current + (24 * 3600 + 14 * 3600 + 20 * 60) * 1000;
+          try {
+            localStorage.setItem(STORAGE_KEY, targetTime.toString());
+          } catch (e) {}
+          diff = targetTime - current;
+        }
+
+        var totalSecs = Math.max(0, Math.floor(diff / 1000));
+        var days = Math.floor(totalSecs / 86400);
+        var hours = Math.floor((totalSecs % 86400) / 3600);
+        var minutes = Math.floor((totalSecs % 3600) / 60);
+        var seconds = totalSecs % 60;
+
+        daysEl.textContent = (days < 10 ? '0' : '') + days;
+        hoursEl.textContent = (hours < 10 ? '0' : '') + hours;
+        minsEl.textContent = (minutes < 10 ? '0' : '') + minutes;
+        secsEl.textContent = (seconds < 10 ? '0' : '') + seconds;
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPromoCountdown, { once: true });
+    } else {
+      initPromoCountdown();
+    }
 
     function selectPackage(pkg) {
       var radios = document.querySelectorAll('input[name="paket"]');
