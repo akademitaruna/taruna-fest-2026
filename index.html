@@ -4627,18 +4627,21 @@
       flex-direction: column;
       align-items: flex-start;
       background: #ffffff;
-      padding: 24px 22px 24px;
+      padding: 22px 20px 24px;
       border-radius: 16px;
       border: 1px solid rgba(4, 26, 56, 0.08);
       box-shadow: 0 4px 20px rgba(4, 26, 56, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
       position: relative;
       text-align: left;
+      height: 100%;
+      box-sizing: border-box;
     }
 
     .tf26-speaker:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(4, 26, 56, 0.09);
+      box-shadow: 0 12px 28px rgba(4, 26, 56, 0.1);
+      border-color: rgba(255, 189, 25, 0.45);
     }
 
     .tf26-speaker__header {
@@ -4652,9 +4655,9 @@
     .tf26-speaker__icon {
       display: grid;
       place-items: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 11px;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
       background: #041a38;
       color: #ffbd19;
       box-shadow: 0 4px 12px rgba(4, 26, 56, 0.15);
@@ -4676,23 +4679,91 @@
       text-transform: uppercase;
     }
 
-    .tf26-speaker h3 {
+    /* Speaker Photo Container */
+    .tf26-speaker__photo-wrap {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      margin: 0 0 16px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1.5px solid rgba(4, 26, 56, 0.1);
+      background: #041a38;
+      box-shadow: 0 6px 16px rgba(4, 26, 56, 0.08);
+      flex-shrink: 0;
+    }
+
+    .tf26-speaker__photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .tf26-speaker:hover .tf26-speaker__photo-wrap img {
+      transform: scale(1.04);
+    }
+
+    .tf26-speaker__badge {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(4, 26, 56, 0.9);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      color: #ffbd19;
+      border: 1px solid rgba(255, 189, 25, 0.4);
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .tf26-speaker__badge--exclusive {
+      background: linear-gradient(135deg, #ffbd19, #eead00);
+      color: #041a38;
+      border-color: #ffbd19;
+      font-weight: 900;
+      box-shadow: 0 2px 10px rgba(255, 189, 25, 0.4);
+    }
+
+    .tf26-speaker__meta {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+
+    .tf26-speaker h3,
+    .tf26-speaker__name {
       margin: 0 0 4px;
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 800;
       color: #041a38;
       line-height: 1.25;
       text-align: left;
     }
 
+    .tf26-speaker__jabatan {
+      color: #b45309;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 4px;
+    }
+
     .tf26-speaker p.tf26-speaker__role,
-    .tf26-speaker__role {
-      color: #1a365d !important;
-      font-size: 12px;
+    .tf26-speaker__role,
+    .tf26-speaker__sub {
+      color: #64748b !important;
+      font-size: 11.5px;
       font-weight: 600;
-      margin-bottom: 12px;
-      text-align: left;
       line-height: 1.45;
+      margin: 0;
+      text-align: left;
     }
 
     .tf26-speaker__topic {
@@ -4704,6 +4775,9 @@
       border-top: 1px dashed rgba(4, 26, 56, 0.14);
       text-align: left;
       width: 100%;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .tf26-speaker__topic strong {
@@ -5993,17 +6067,14 @@
                     Peserta Kit</strong><br><small style="color:#64748b;">Khusus siswa: Jersey resmi, goodie bag, modul
                     seleksi, worksheet, tumbler, health kit</small></span></div>
               <div class="tf26-timeline__item"><time>08.45 – 10.15</time><span><strong>Seminar Sesi 1: Roadmap &
-                    Strategi Lolos Seleksi</strong><br><small style="color:#64748b;">Bersama CEO Akademi Prestasi
-                    Group · Pemetaan peluang & persiapan keluarga</small></span></div>
+                    Strategi Lolos Seleksi</strong><br><small style="color:#64748b;">Bersama Danal Firmansyah (CEO &amp; Founder PT. Akademi Prestasi Group) · Pemetaan peluang &amp; persiapan keluarga</small></span></div>
               <div class="tf26-timeline__item"><time>10.15 – 12.00</time><span><strong>Seminar Sesi 2: Tahapan & Standar
-                    Seleksi Lapangan</strong><br><small style="color:#64748b;">Bersama Praktisi Narasumber TNI & POLRI ·
-                    Standar fisik, tes mental & kelulusan</small></span></div>
+                    Seleksi Lapangan</strong><br><small style="color:#64748b;">Bersama Mayor Cke Hermanto, S.I.P (Kepala Staf Kodim 0732/Sleman) · Standar fisik, tes mental &amp; kelulusan</small></span></div>
               <div class="tf26-timeline__item"><time>12.00 – 13.00</time><span><strong>Ishoma (Makan Siang &
                     Sholat)</strong><br><small style="color:#64748b;">Makan siang disediakan bagi seluruh peserta sesuai
                     paket tiket</small></span></div>
               <div class="tf26-timeline__item"><time>13.00 – 14.00</time><span><strong>Seminar Sesi 3: Standar Kesehatan
-                    & Medical Check-Up</strong><br><small style="color:#64748b;">Bersama Dokter Taruna · Faktor gugur
-                    kesehatan dan penanganan sejak dini</small></span></div>
+                    & Medical Check-Up</strong><br><small style="color:#64748b;">Bersama Dokter Spesialis Kedinasan (Exclusive Guest) · Faktor gugur kesehatan dan penanganan sejak dini</small></span></div>
               <div class="tf26-timeline__item"><time>14.15 – 17.00</time><span><strong>Interactive Booth Expo: 4 Booth
                     Eksplorasi</strong><br><small style="color:#64748b;">Simulasi kesehatan, tes fisik, asesmen
                     psikologi & konsultasi jalur privat</small></span></div>
@@ -6070,7 +6141,7 @@
           <h2 class="tf26-display">Wawasan langsung dari pakar.<br><em>Persiapan terarah tanpa salah langkah.</em></h2>
         </div>
         <div class="tf26-speaker-lineup">
-          <!-- 1. CEO Akademi Prestasi Group -->
+          <!-- 1. CEO Akademi Prestasi Group: Danal Firmansyah -->
           <article class="tf26-speaker">
             <div class="tf26-speaker__header">
               <div class="tf26-speaker__icon" aria-hidden="true">
@@ -6082,11 +6153,30 @@
               </div>
               <span class="tf26-speaker__time">Sesi 1 · 08.45 – 10.15 WIB</span>
             </div>
-            <h3>CEO Akademi Prestasi Group</h3>
-            <p class="tf26-speaker__role">Penyelenggara &amp; Tim Ahli Strategi Kelulusan Kedinasan</p>
+
+            <div class="tf26-speaker__photo-wrap">
+              <img src="assets/pembicara-danal-firmansyah.jpg" alt="Danal Firmansyah - CEO &amp; Founder PT. Akademi Prestasi Group" loading="lazy" style="object-position: center 10%; transform: scale(1.18); transform-origin: center top;">
+              <span class="tf26-speaker__badge">Pemateri Utama</span>
+            </div>
+
+            <div class="tf26-speaker__meta">
+              <h3 class="tf26-speaker__name">Danal Firmansyah</h3>
+              <div class="tf26-speaker__jabatan">CEO &amp; Founder PT. Akademi Prestasi Group</div>
+              <p class="tf26-speaker__sub">Penyelenggara &amp; Tim Ahli Strategi Kelulusan Kedinasan</p>
+            </div>
+
+            <div class="tf26-speaker__topic">
+              <strong>Topik Bahasan Sesi 1:</strong>
+              <p>Roadmap &amp; Strategi Lolos Seleksi Kedinasan 2026</p>
+              <ul class="tf26-speaker__points">
+                <li><span>✓</span> <span>Peta persaingan &amp; kuota formasi Akpol, Akmil, dan Kedinasan</span></li>
+                <li><span>✓</span> <span>Formula persiapan akademik, psikologi &amp; strategi nilai aman</span></li>
+                <li><span>✓</span> <span>Panduan sinergi orang tua mendukung persiapan calon taruna</span></li>
+              </ul>
+            </div>
           </article>
 
-          <!-- 2. Narasumber TNI / POLRI -->
+          <!-- 2. Narasumber TNI: Mayor Cke Hermanto, S.I.P -->
           <article class="tf26-speaker">
             <div class="tf26-speaker__header">
               <div class="tf26-speaker__icon" aria-hidden="true">
@@ -6099,11 +6189,30 @@
               </div>
               <span class="tf26-speaker__time">Sesi 2 · 10.15 – 12.00 WIB</span>
             </div>
-            <h3>Narasumber TNI/POLRI</h3>
-            <p class="tf26-speaker__role">Praktisi Lapangan &amp; Penguji Rekrutmen TNI / POLRI</p>
+
+            <div class="tf26-speaker__photo-wrap">
+              <img src="assets/pembicara-hermanto.jpg" alt="Mayor Cke Hermanto, S.I.P - Kepala Staf Kodim 0732/Sleman" loading="lazy" style="object-position: center 15%;">
+              <span class="tf26-speaker__badge">Pemateri TNI</span>
+            </div>
+
+            <div class="tf26-speaker__meta">
+              <h3 class="tf26-speaker__name">Hermanto, S.I.P</h3>
+              <div class="tf26-speaker__jabatan">Mayor Cke · Kepala Staf Kodim 0732/Sleman</div>
+              <p class="tf26-speaker__sub">Praktisi Lapangan &amp; Penguji Rekrutmen TNI / POLRI</p>
+            </div>
+
+            <div class="tf26-speaker__topic">
+              <strong>Topik Bahasan Sesi 2:</strong>
+              <p>Tahapan, Standar &amp; Kriteria Seleksi Lapangan TNI / POLRI</p>
+              <ul class="tf26-speaker__points">
+                <li><span>✓</span> <span>Standar kesamaptaan jasmani (Lari 12 menit, Pull-up, Sit-up, Push-up, Shuttle run, Renang)</span></li>
+                <li><span>✓</span> <span>Kriteria penilaian Mental Ideologi (MI), psikotes lapangan &amp; wawancara</span></li>
+                <li><span>✓</span> <span>Bedah kesalahan umum yang sering menggugurkan calon taruna</span></li>
+              </ul>
+            </div>
           </article>
 
-          <!-- 3. Dokter Taruna -->
+          <!-- 3. Dokter Taruna (Siluet Eksklusif) -->
           <article class="tf26-speaker">
             <div class="tf26-speaker__header">
               <div class="tf26-speaker__icon" aria-hidden="true">
@@ -6114,8 +6223,27 @@
               </div>
               <span class="tf26-speaker__time">Sesi 3 · 13.00 – 14.00 WIB</span>
             </div>
-            <h3>Dokter Taruna</h3>
-            <p class="tf26-speaker__role">Tim Medis &amp; Spesialis Pemeriksaan Kesehatan Seleksi</p>
+
+            <div class="tf26-speaker__photo-wrap">
+              <img src="assets/pembicara-dokter-siluet.png" alt="Dokter Spesialis Pemeriksaan Kesehatan Taruna - Exclusive Guest" loading="lazy">
+              <span class="tf26-speaker__badge tf26-speaker__badge--exclusive">🔒 Exclusive Guest</span>
+            </div>
+
+            <div class="tf26-speaker__meta">
+              <h3 class="tf26-speaker__name">Dokter Spesialis Kedinasan</h3>
+              <div class="tf26-speaker__jabatan">Tim Medis &amp; Spesialis Pemeriksaan Kesehatan Seleksi</div>
+              <p class="tf26-speaker__sub">Pakar Rikkes I &amp; II Seleksi Taruna Kedinasan</p>
+            </div>
+
+            <div class="tf26-speaker__topic">
+              <strong>Topik Bahasan Sesi 3:</strong>
+              <p>Standar Kesehatan (Rikkes 1 &amp; 2) &amp; Medical Check-Up</p>
+              <ul class="tf26-speaker__points">
+                <li><span>✓</span> <span>Bedah faktor gugur kesehatan utama (mata, gigi, varises, skoliosis, jantung, THT)</span></li>
+                <li><span>✓</span> <span>Standar postur, proporsi tinggi/berat badan &amp; rekam medis</span></li>
+                <li><span>✓</span> <span>Strategi tindakan medis, terapi korektif, dan pemulihan sejak dini</span></li>
+              </ul>
+            </div>
           </article>
         </div>
       </section>
