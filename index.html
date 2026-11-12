@@ -6864,7 +6864,7 @@
               </button>
 
               <p class="tf26-form-terms-note">
-                Dengan mendaftar, Anda menyetujui <a href="#terms" onclick="openTF26Modal('terms', event)">Syarat &amp; Ketentuan</a> serta <a href="#privacy" onclick="openTF26Modal('privacy', event)">Kebijakan Privasi</a> Taruna Fest 2026.
+                Dengan mendaftar, Anda menyetujui <a href="javascript:void(0)" role="button" onclick="openTF26Modal('terms', event); return false;">Syarat &amp; Ketentuan</a> serta <a href="javascript:void(0)" role="button" onclick="openTF26Modal('privacy', event); return false;">Kebijakan Privasi</a> Taruna Fest 2026.
               </p>
 
               <div id="tf26-form-status" class="tf26-form-status" style="display:none;" role="status"></div>
@@ -6973,8 +6973,8 @@
           </div>
           <div class="tf26-footer__bottom">
             <span>© 2026 Akademi Prestasi Indonesia · Taruna Fest 2026. All rights reserved.</span>
-            <span><a href="#privacy" onclick="openTF26Modal('privacy', event)">Kebijakan Privasi</a><i></i><a
-                href="#terms" onclick="openTF26Modal('terms', event)">Syarat &amp; Ketentuan</a></span>
+            <span><a href="javascript:void(0)" role="button" onclick="openTF26Modal('privacy', event); return false;">Kebijakan Privasi</a><i></i><a
+                href="javascript:void(0)" role="button" onclick="openTF26Modal('terms', event); return false;">Syarat &amp; Ketentuan</a></span>
           </div>
         </footer>
       </section>
@@ -7142,12 +7142,15 @@
        MODAL DIALOGS: KEBIJAKAN PRIVASI & SYARAT KETENTUAN
        ================================================================ */
     function openTF26Modal(type, event) {
-      if (event && event.preventDefault) event.preventDefault();
+      if (event) {
+        if (event.preventDefault) event.preventDefault();
+        if (event.stopPropagation) event.stopPropagation();
+      }
       var overlay = document.getElementById('tf26-modal-overlay');
       var privacyModal = document.getElementById('tf26-modal-privacy');
       var termsModal = document.getElementById('tf26-modal-terms');
 
-      if (!overlay || !privacyModal || !termsModal) return;
+      if (!overlay || !privacyModal || !termsModal) return false;
 
       if (type === 'privacy') {
         privacyModal.style.display = 'flex';
@@ -7158,7 +7161,14 @@
       }
 
       overlay.classList.add('tf26-modal-active');
+      document.body.classList.add('tf26-modal-open');
       document.body.style.overflow = 'hidden';
+
+      if (window.tf26Lenis) {
+        try { window.tf26Lenis.stop(); } catch (e) {}
+      }
+
+      return false;
     }
 
     function closeTF26Modal() {
@@ -7166,7 +7176,12 @@
       if (overlay) {
         overlay.classList.remove('tf26-modal-active');
       }
+      document.body.classList.remove('tf26-modal-open');
       document.body.style.overflow = '';
+
+      if (window.tf26Lenis) {
+        try { window.tf26Lenis.start(); } catch (e) {}
+      }
     }
 
     function handleOverlayClick(event) {
@@ -7543,7 +7558,10 @@
         page.querySelectorAll('a[href^="#"]').forEach(function (link) {
           link.addEventListener("click", function (event) {
             var hash = link.getAttribute("href");
-            if (!hash || hash === "#") return;
+            if (!hash || hash === "#" || hash === "#privacy" || hash === "#terms") {
+              if (hash === "#privacy" || hash === "#terms") event.preventDefault();
+              return;
+            }
             var target = page.querySelector(hash) || document.querySelector(hash);
             if (!target) {
               var index = Number(link.getAttribute("data-tf26-go"));
